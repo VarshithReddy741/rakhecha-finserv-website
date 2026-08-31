@@ -9,42 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script src="tailwind-config.js"></script>
 <link rel="stylesheet" href="theme.css"/>
-<style>
-  @keyframes valuesRingPulse {
-    0%   { transform: scale(0.15); opacity: 0; }
-    18%  { opacity: 0.9; }
-    100% { transform: scale(1.9); opacity: 0; }
-  }
-  .values-bg-ring {
-    fill: none;
-    stroke: red;
-    stroke-width: 4;
-    opacity: 0;
-    transform-box: fill-box;
-    transform-origin: center;
-    will-change: transform, opacity;
-    animation: valuesRingPulse 9s linear infinite;
-  }
-  .values-bg-ring:nth-child(1) { animation-delay: 0s; }
-  .values-bg-ring:nth-child(2) { animation-delay: 2.25s; }
-  .values-bg-ring:nth-child(3) { animation-delay: 4.5s; }
-  .values-bg-ring:nth-child(4) { animation-delay: 6.75s; }
-
-  @media (max-width: 767px) {
-    .values-bg-ring { animation: none; opacity: 0; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .values-bg-ring {
-      animation: none !important;
-      opacity: 0.16;
-    }
-    .values-bg-ring:nth-child(1) { transform: scale(0.5); }
-    .values-bg-ring:nth-child(2) { transform: scale(0.95); }
-    .values-bg-ring:nth-child(3) { transform: scale(1.4); }
-    .values-bg-ring:nth-child(4) { transform: scale(1.85); }
-  }
-</style>
 </head>
 <body class="bg-white text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
@@ -53,7 +17,7 @@
 <span class="material-symbols-outlined text-3xl" id="mobile-nav-icon">menu</span>
 </button>
 <div class="flex-shrink-0 w-40 md:w-64 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"><a href="Home%20Page.html"><img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCB1d4MUkOZYdq6TnWLDlbaNlkJiznVdFxQUyJLGJQXqp7wuFpGTYRMQtOWkM-S58Nspjm8zDG5sQT51xnt8QlxkiskJfT11JyPO4fR0yB-rJpf9ihbTOJetIoG2gMBYeQSkqdgAk7TeX9DJwjjZLLSh0ChOwH8hLCHjoDaXtK5RLuCNQ4mGhN6Tka3_VJxQpzKfkW6wHM_F18BSDRyVMurwxEiuDaLrUXxuVh-FFCvx18bqU_SziUpmDZ2uWszAU0ZA"/></a></div>
-<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Story</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Values</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Leadership</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="javascript:void(0)">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Upcoming Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Past Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Article%20Page.html">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
+<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary-light transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="About%20us.html#our-story">Our Story</a></li><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="About%20us.html#core-values-section">Our Values</a></li><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="About%20us.html#our-leadership">Our Leadership</a></li><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="About%20us.html#awards-recognition">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary-light transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="javascript:void(0)">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary-light transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="Knowledge%20hub.html#upcoming-events">Upcoming Events</a></li><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="Knowledge%20hub.html#past-events">Past Events</a></li><li><a class="text-primary hover:text-primary-light transition-colors cursor-pointer font-body-md block" href="Knowledge%20hub.html#reports">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary-light transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
 <div class="hidden md:block"><div class="flex items-center gap-6"><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button><a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-2 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a><a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-2 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a></div></div>
 <!-- Mobile Nav Panel -->
 <div class="hidden md:hidden absolute top-full left-0 w-full max-h-[80vh] overflow-y-auto bg-surface-container-lowest dark:bg-surface-dim shadow-lg z-40" id="mobile-nav-panel">
@@ -64,10 +28,10 @@
 <span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-about">expand_more</span>
 </button>
 <div class="hidden pb-4 space-y-3" id="mobile-section-about">
-<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Story</a>
-<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Values</a>
-<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Leadership</a>
-<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Awards and Recognition</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html#our-story">Our Story</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html#core-values-section">Our Values</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html#our-leadership">Our Leadership</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html#awards-recognition">Awards and Recognition</a>
 </div>
 </div>
 <div>
@@ -87,9 +51,9 @@
 <span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-knowledge">expand_more</span>
 </button>
 <div class="hidden pb-4 space-y-3" id="mobile-section-knowledge">
-<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Upcoming Events</a>
-<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Past Events</a>
-<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Article%20Page.html">Insights</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Knowledge%20hub.html#upcoming-events">Upcoming Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Knowledge%20hub.html#past-events">Past Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Knowledge%20hub.html#reports">Insights</a>
 </div>
 </div>
 <a class="py-5 text-headline-md font-headline-md text-primary block" href="careers.html">Careers</a>
@@ -103,7 +67,7 @@
 <script src="main.js"></script>
 <main>
 <!-- Company Story -->
-<section class="py-14 bg-surface-yellow-light">
+<section class="py-14 bg-surface-yellow-light scroll-mt-24" id="our-story">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="flex flex-col md:flex-row items-start gap-16">
 <div class="flex-1 w-full md:sticky md:top-28 aspect-[4/5] md:aspect-[3/4] relative rounded-2xl overflow-hidden shadow-xl">
@@ -121,20 +85,29 @@
 </div>
 </section>
 <!-- Stats Strip -->
-<section class="bg-surface text-on-surface py-16 mt-8">
+<section class="bg-surface py-10 mt-8">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center divide-x-0 md:divide-x divide-outline-variant">
-<div class="flex flex-col items-center justify-center space-y-2">
-<span class="font-display-lg text-display-lg text-primary">₹<span class="count-up" data-target="200">200</span> Cr+</span>
-<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Assets Under Management</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-outline-variant">
+<div class="flex items-center justify-center sm:justify-start gap-4 pt-8 sm:pt-0 first:pt-0">
+<div class="flex items-center justify-center w-14 h-14 rounded-full border-2 border-primary text-primary shrink-0"><span class="material-symbols-outlined text-2xl">apartment</span></div>
+<div class="text-left">
+<span class="block font-display-lg text-headline-md md:text-display-lg text-primary">₹<span class="count-up" data-target="200">200</span> Cr+</span>
+<span class="block font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Assets Under Management</span>
 </div>
-<div class="flex flex-col items-center justify-center space-y-2">
-<span class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="10">10</span>+</span>
-<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Years in Business</span>
 </div>
-<div class="flex flex-col items-center justify-center space-y-2">
-<span class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="300">300</span>+</span>
-<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Clients Served Globally across Family Offices, UHNIs, NRIs</span>
+<div class="flex items-center justify-center sm:justify-start gap-4 pt-8 sm:pt-0 sm:pl-6">
+<div class="flex items-center justify-center w-14 h-14 rounded-full border-2 border-primary text-primary shrink-0"><span class="material-symbols-outlined text-2xl">calendar_month</span></div>
+<div class="text-left">
+<span class="block font-display-lg text-headline-md md:text-display-lg text-primary"><span class="count-up" data-target="10">10</span>+</span>
+<span class="block font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Years in Business</span>
+</div>
+</div>
+<div class="flex items-center justify-center sm:justify-start gap-4 pt-8 sm:pt-0 sm:pl-6">
+<div class="flex items-center justify-center w-14 h-14 rounded-full border-2 border-primary text-primary shrink-0"><span class="material-symbols-outlined text-2xl">groups</span></div>
+<div class="text-left">
+<span class="block font-display-lg text-headline-md md:text-display-lg text-primary"><span class="count-up" data-target="300">300</span>+</span>
+<span class="block font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Clients Served Globally across Family Offices, UHNIs, NRIs</span>
+</div>
 </div>
 </div>
 </div>
@@ -144,83 +117,65 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-32" data-mission-vision="" id="about-mission-vision"></div>
 </section>
 <!-- Core Values -->
-<section id="core-values-section" class="py-14 bg-surface relative overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center opacity-[0.07]" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDvJb2Kk72G6dUnn1GDHFgNhxiC7Budcjzdo8c4lJ4vaVVCdfg4s3BSggNL-fSlO-FVfY7XcY-Kq8375vb-qTyJjznsuIFAwTBSbll2ZMhdfiEatRO0aqP1XZ1y4XRrdkoQ23zSaZ5ar8N1xxOlTyGkyUDEHHrysKdFi_pldu78W2mIhd-3QDPl5BO8I66VWm4dreb72__sKRrhA-4GSbukjMNH_zQoWnhZ3ummDT2NQDm70C2UU8l9Ow&quot;);"></div>
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-secondary-container/25 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute bottom-0 right-0 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
-  <svg id="values-bg-pattern" class="hidden md:block absolute inset-0 w-full h-full pointer-events-none z-0" aria-hidden="true">
-    <g id="values-ring-group">
-      <circle class="values-bg-ring" r="60"></circle>
-      <circle class="values-bg-ring" r="60"></circle>
-      <circle class="values-bg-ring" r="60"></circle>
-      <circle class="values-bg-ring" r="60"></circle>
-    </g>
-  </svg>
+<section id="core-values-section" class="py-14 bg-surface relative overflow-hidden scroll-mt-24">
   <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
   <div class="text-center mb-16">
     <h3 class="font-headline-lg text-headline-lg text-primary mb-4">The Pillars of Our Practice</h3>
       </div>
 
-  <div class="flex flex-col md:flex-row items-center gap-10 md:gap-2">
-    <!-- Values Badge -->
-    <div class="values-badge hidden md:block shrink-0 relative w-48 h-48 md:w-60 md:h-60">
+  <div class="flex flex-col gap-5 md:grid md:grid-cols-[1fr_auto_1fr] md:grid-rows-[auto_auto] md:gap-x-14 md:gap-y-14 md:items-center">
+    <!-- Values Badge (desktop only, centered) -->
+    <div class="values-badge hidden md:flex shrink-0 relative w-48 h-48 md:w-56 md:h-56 md:col-start-2 md:row-start-1 md:row-span-2 md:justify-self-center items-center justify-center">
       <svg class="absolute inset-0 w-full h-full -rotate-90 z-0" viewbox="0 0 100 100">
         <circle cx="50" cy="50" fill="none" r="47" stroke="#123B5D" stroke-opacity="0.15" stroke-width="3"></circle>
         <circle id="values-ring-progress" cx="50" cy="50" fill="none" r="47" stroke="#123B5D" stroke-dasharray="295.31" stroke-dashoffset="295.31" stroke-linecap="round" stroke-width="3" style="transition: stroke-dashoffset 1.2s ease-in-out;"></circle>
       </svg>
-      <div class="absolute inset-[7px] z-10 rounded-full bg-secondary-fixed border-2 border-primary/15 flex items-center justify-center text-center shadow-xl overflow-hidden">
-        <span class="relative z-10 font-headline-lg text-3xl md:text-4xl font-extrabold uppercase leading-tight text-primary">Our<br/>Values</span>
+      <div class="absolute inset-[7px] z-10 rounded-full bg-surface-yellow-light border-2 border-primary/15 flex items-center justify-center text-center shadow-xl overflow-hidden p-6">
+        <img alt="Rakhecha Finserv" class="relative z-10 w-full h-full object-contain" src="favicon.png"/>
       </div>
     </div>
 
-    <!-- Value Rows -->
-    <div class="flex-1 w-full max-w-2xl space-y-5">
-      <!-- Row 1: Trust -->
-      <div class="value-row flex items-center md:ml-0">
-        <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300">
-          <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">shield_locked</span>
-          <span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center ring-2 ring-surface">01</span>
-        </div>
-        <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300">
-          <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Trust</h4>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">The foundation of every relationship, earned daily through unwavering reliability.</p>
-        </div>
+    <!-- Row 1: Trust -->
+    <div class="value-row flex items-center md:block md:relative md:col-start-1 md:row-start-1">
+      <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-14 md:h-14 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300 md:absolute md:-top-6 md:left-6">
+        <span class="material-symbols-outlined text-primary text-2xl md:text-2xl">shield_locked</span>
       </div>
-
-      <!-- Row 2: Transparency -->
-      <div class="value-row flex items-center md:ml-10">
-        <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300">
-          <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">visibility</span>
-          <span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center ring-2 ring-surface">02</span>
-        </div>
-        <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300">
-          <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Transparency</h4>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Absolute clarity in our fees, strategies, and communication, with no hidden agendas.</p>
-        </div>
+      <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300 md:ml-0 md:pl-8 md:pr-8 md:pt-10 md:pb-6 md:rounded-2xl">
+        <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Trust</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">The foundation of every relationship, earned daily through unwavering reliability.</p>
       </div>
+    </div>
 
-      <!-- Row 3: Integrity -->
-      <div class="value-row flex items-center md:ml-16">
-        <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300">
-          <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">verified</span>
-          <span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center ring-2 ring-surface">03</span>
-        </div>
-        <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300">
-          <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Integrity</h4>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Holding ourselves to the highest ethical standards, especially when it's difficult.</p>
-        </div>
+    <!-- Row 2: Transparency -->
+    <div class="value-row flex items-center md:block md:relative md:col-start-3 md:row-start-1">
+      <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-14 md:h-14 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300 md:absolute md:-top-6 md:left-6">
+        <span class="material-symbols-outlined text-primary text-2xl md:text-2xl">visibility</span>
       </div>
+      <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300 md:ml-0 md:pl-8 md:pr-8 md:pt-10 md:pb-6 md:rounded-2xl">
+        <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Transparency</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Absolute clarity in our fees, strategies, and communication, with no hidden agendas.</p>
+      </div>
+    </div>
 
-      <!-- Row 4: Excellence -->
-      <div class="value-row flex items-center md:ml-8">
-        <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300">
-          <span class="material-symbols-outlined text-primary text-2xl md:text-3xl">workspace_premium</span>
-          <span class="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-primary text-white text-[11px] font-bold flex items-center justify-center ring-2 ring-surface">04</span>
-        </div>
-        <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300">
-          <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Excellence</h4>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">A relentless pursuit of superior outcomes, refining our craft to deliver lasting value.</p>
-        </div>
+    <!-- Row 3: Integrity -->
+    <div class="value-row flex items-center md:block md:relative md:col-start-1 md:row-start-2">
+      <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-14 md:h-14 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300 md:absolute md:-top-6 md:left-6">
+        <span class="material-symbols-outlined text-primary text-2xl md:text-2xl">verified</span>
+      </div>
+      <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300 md:ml-0 md:pl-8 md:pr-8 md:pt-10 md:pb-6 md:rounded-2xl">
+        <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Integrity</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Holding ourselves to the highest ethical standards, especially when it's difficult.</p>
+      </div>
+    </div>
+
+    <!-- Row 4: Excellence -->
+    <div class="value-row flex items-center md:block md:relative md:col-start-3 md:row-start-2">
+      <div class="value-icon relative shrink-0 z-10 w-16 h-16 md:w-14 md:h-14 rounded-full bg-surface-container-lowest border border-outline-variant/40 shadow-md flex items-center justify-center transition-all duration-300 md:absolute md:-top-6 md:left-6">
+        <span class="material-symbols-outlined text-primary text-2xl md:text-2xl">workspace_premium</span>
+      </div>
+      <div class="value-pill flex-1 -ml-8 pl-12 pr-6 py-4 rounded-full bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md hover:border-primary-light transition-all duration-300 md:ml-0 md:pl-8 md:pr-8 md:pt-10 md:pb-6 md:rounded-2xl">
+        <h4 class="font-label-bold text-label-bold text-primary uppercase tracking-wide mb-1">Excellence</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">A relentless pursuit of superior outcomes, refining our craft to deliver lasting value.</p>
       </div>
     </div>
   </div>
@@ -231,13 +186,17 @@
   if (!rows.length) return;
   const ring = document.getElementById('values-ring-progress');
   const circumference = 295.31;
-  let idx = 0;
+  // Rows are laid out top-left, top-right, bottom-left, bottom-right in the
+  // DOM; this order visits them clockwise: TL -> TR -> BR -> BL.
+  const order = [0, 1, 3, 2];
+  let step = 0;
 
   function highlight() {
+    const activeIdx = order[step];
     rows.forEach((row, i) => {
       const icon = row.querySelector('.value-icon');
       const pill = row.querySelector('.value-pill');
-      if (i === idx) {
+      if (i === activeIdx) {
         icon.classList.add('scale-110', 'ring-4', 'ring-primary/30', 'shadow-lg');
         pill.classList.add('scale-[1.02]', 'border-primary', 'shadow-lg', 'bg-primary-container/40');
       } else {
@@ -246,8 +205,8 @@
       }
     });
     if (ring) {
-      const frac = (idx + 1) / rows.length;
-      if (idx === 0) {
+      const frac = (step + 1) / rows.length;
+      if (step === 0) {
         ring.style.transition = 'none';
         ring.style.strokeDashoffset = circumference;
         ring.getBoundingClientRect();
@@ -257,35 +216,16 @@
         ring.style.strokeDashoffset = circumference * (1 - frac);
       });
     }
-    idx = (idx + 1) % rows.length;
+    step = (step + 1) % rows.length;
   }
 
   highlight();
   setInterval(highlight, 1500);
 })();
-
-(function() {
-  const section = document.getElementById('core-values-section');
-  const badge = section && section.querySelector('.values-badge');
-  const group = document.getElementById('values-ring-group');
-  if (!section || !badge || !group) return;
-
-  function positionRings() {
-    const sectionRect = section.getBoundingClientRect();
-    const badgeRect = badge.getBoundingClientRect();
-    const cx = badgeRect.left + badgeRect.width / 2 - sectionRect.left;
-    const cy = badgeRect.top + badgeRect.height / 2 - sectionRect.top;
-    group.setAttribute('transform', 'translate(' + cx + ',' + cy + ')');
-  }
-
-  positionRings();
-  window.addEventListener('resize', positionRings);
-  window.addEventListener('load', positionRings);
-})();
 </script>
 </section>
 <!-- Leadership Team -->
-<section class="py-14 bg-surface-yellow-light">
+<section class="py-14 bg-surface-yellow-light scroll-mt-24" id="our-leadership">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="text-center mb-16">
 <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Our Leadership</h3>
@@ -298,7 +238,7 @@
 </div>
 </section>
 <!-- Awards & Recognitions -->
-<section class="py-14 bg-surface">
+<section class="py-14 bg-surface scroll-mt-24" id="awards-recognition">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
 <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Industry Recognition</h3>
 <div class="auto-scroll-x flex overflow-x-auto gap-6 pb-8 no-scrollbar text-left mt-12">
