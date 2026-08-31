@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rakhecha Finserv - Inquiry Received</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="tailwind-config.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar: Suppressed due to Transactional/Success intent -->
+<main class="flex-grow flex items-center justify-center py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-[600px] w-full bg-surface-container-lowest rounded shadow-[0_4px_24px_rgba(27,58,107,0.04)] border border-outline-variant p-10 md:p-16 text-center animate-fade-in">
+<div class="mb-8 flex justify-center animate-fade-in delay-100">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed/20 flex items-center justify-center border border-secondary-fixed-dim">
+<span class="material-symbols-outlined text-secondary font-display-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 animate-fade-in delay-200">
+                Thank You for Reaching Out
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-[480px] mx-auto animate-fade-in delay-300">
+                Your inquiry has been received. Our advisory team will review your requirements and get in touch with you shortly to discuss bespoke solutions.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in delay-300">
+<a class="w-full sm:w-auto px-8 py-3 bg-secondary-fixed-dim text-primary font-cta-text text-cta-text rounded hover:bg-secondary-fixed transition-colors duration-300 flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-body-md">home</span>
+                    Return Home
+                </a>
+<a class="w-full sm:w-auto px-8 py-3 bg-primary text-on-primary font-cta-text text-cta-text rounded hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2" href="#">
+                    Explore Services
+                    <span class="material-symbols-outlined text-body-md">arrow_forward</span>
+</a>
+</div>
+</div>
+</main>
+<!-- Footer: Suppressed due to Transactional/Success intent -->
+</body></html>

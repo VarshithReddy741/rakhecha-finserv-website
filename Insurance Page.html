@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Insurance - Rakhecha Finserv</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="tailwind-config.js"></script>
+<style>
+.hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+</style>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="bg-white text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm dark:shadow-none">
+<button class="md:hidden text-primary order-1" id="mobile-nav-toggle" onclick="toggleMobileNav()">
+<span class="material-symbols-outlined text-3xl" id="mobile-nav-icon">menu</span>
+</button>
+<div class="flex-shrink-0 w-36 md:w-64 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"><a href="Home%20Page.html"><img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCB1d4MUkOZYdq6TnWLDlbaNlkJiznVdFxQUyJLGJQXqp7wuFpGTYRMQtOWkM-S58Nspjm8zDG5sQT51xnt8QlxkiskJfT11JyPO4fR0yB-rJpf9ihbTOJetIoG2gMBYeQSkqdgAk7TeX9DJwjjZLLSh0ChOwH8hLCHjoDaXtK5RLuCNQ4mGhN6Tka3_VJxQpzKfkW6wHM_F18BSDRyVMurwxEiuDaLrUXxuVh-FFCvx18bqU_SziUpmDZ2uWszAU0ZA"/></a></div>
+<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Story</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Values</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Meet the Team</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="#">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Upcoming Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Past Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Article%20Page.html">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
+<div class="hidden md:block"><div class="flex items-center gap-6"><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button><a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-2 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a><a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-2 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a></div></div>
+<a href="Client%20Login%20page.html" class="md:hidden order-2 bg-white border border-secondary text-primary font-cta-text px-3 py-1.5 rounded text-sm hover:bg-surface-container-low transition-colors inline-block text-center">Login</a>
+<!-- Mobile Nav Panel -->
+<div class="hidden md:hidden absolute top-full left-0 w-full max-h-[80vh] overflow-y-auto bg-surface-container-lowest dark:bg-surface-dim shadow-lg z-40" id="mobile-nav-panel">
+<div class="flex flex-col divide-y divide-outline-variant px-margin-mobile">
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('about')">
+<span class="text-headline-md font-headline-md text-primary">About Us</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-about">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-about">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Story</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Values</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Meet the Team</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Awards and Recognition</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('services')">
+<span class="text-headline-md font-headline-md text-primary">Our Services</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-services">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-services">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="IB.html">Investment Banking</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Wealth%20Management.html">Wealth Management</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Insurance%20Page.html">Insurance</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('knowledge')">
+<span class="text-headline-md font-headline-md text-primary">Knowledge Hub</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-knowledge">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-knowledge">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Upcoming Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Past Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Article%20Page.html">Insights</a>
+</div>
+</div>
+<a class="py-5 text-headline-md font-headline-md text-primary block" href="careers.html">Careers</a>
+</div>
+<div class="px-margin-mobile py-6 flex flex-col gap-3 border-t border-outline-variant">
+<a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-3 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</div>
+</header>
+<script src="main.js"></script>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Insurance hero" class="w-full h-full object-cover" src="Insurance%20hero%20card.png"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h1 class="text-display-lg font-display-lg text-white mb-6 max-w-4xl">
+                    Comprehensive Protection and Risk Stewardship
+                </h1>
+<p class="font-body-md md:font-body-lg md:text-body-lg text-white/90 max-w-2xl mb-10">
+                    Safeguarding legacy and enterprise through bespoke risk management strategies, engineered for those who demand unparalleled security and discretion.
+                </p>
+</div>
+</section>
+<!-- Services Interactive Section -->
+<section class="py-section-gap bg-white relative z-20 -mt-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12 scroll-mt-28" id="insurance-capabilities-heading">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Capabilities</h3>
+</div>
+<div class="relative md:min-h-[600px] w-full" id="insurance-interactive-container"><!-- Desktop Grid View -->
+<div class="hidden md:grid md:grid-cols-2 gap-6 mb-8" id="desktop-grid">
+<!-- Individual -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-individual" onclick="toggleInsurancePanel('individual')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAU67RzXXMY2F3R4DFMFMo3sDPn_4nS4IsNsfe_4Vd9M_Gy6xZ-MwTbYmyUcBhQx_mUQqs2ArAf_A--l-gmAopg2i82mJFdENeWZDnrCvsdmj8aCjcGy9m1tkBtJKox4fwUkzi4P53fM3mNSYgHfCCSIvVpqQ4pm7PXnj9gyDTp6uv4QatQQPjkMGZ4FmbEXJXzRFP4wV3ra6Tjpgba_Q2lpTdBXWNjmZjHzTkuu52Bd2VRa1gkFIdb-Q&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Individual Insurance</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Life and Health insurance solutions meticulously tailored for UHNW individuals.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Business -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-business" onclick="toggleInsurancePanel('business')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBHPHHYJ9JbZ9rZsABmf4kiY3lfcbQmZXXJfXHb0b5WUwywGP-bGpxYalVDRzd1W0h0eWvWFvqoFKqMNrpXAwGNgOsStCXh-WU2iqw5yPbiG5vCXh8we4G4OjL2RmuiwDCmMgPbv8rbj6OgPPwzepkoJiejckI9Mztc1tIqqnZy3OEmauE0rMaVmd9r9i-vp4wcIpQTrK-VqSiytWz1E3MvOF7o0J5OKwCS5Y26Bgiq-a15YuihCitPpg&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Business Insurance</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Strategic risk management and comprehensive coverage for corporate entities.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Desktop Detail Panel: sits beside the clicked card, in the same grid row -->
+<div class="hidden md:col-span-1" id="insurance-desktop-panel">
+<div class="bg-white rounded-xl p-8 relative border border-secondary shadow-xl h-[440px] overflow-y-auto">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary" onclick="closeInsurancePanel()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div id="insurance-desktop-panel-content"></div>
+</div>
+</div>
+</div>
+<!-- Mobile Accordion View -->
+<div class="md:hidden flex flex-col gap-4" id="insurance-mobile-accordion"></div>
+</div>
+<script>
+const insuranceData = {
+    individual: {
+        title: 'Individual Insurance',
+        desc: 'Life and Health insurance solutions meticulously tailored for UHNW individuals.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAU67RzXXMY2F3R4DFMFMo3sDPn_4nS4IsNsfe_4Vd9M_Gy6xZ-MwTbYmyUcBhQx_mUQqs2ArAf_A--l-gmAopg2i82mJFdENeWZDnrCvsdmj8aCjcGy9m1tkBtJKox4fwUkzi4P53fM3mNSYgHfCCSIvVpqQ4pm7PXnj9gyDTp6uv4QatQQPjkMGZ4FmbEXJXzRFP4wV3ra6Tjpgba_Q2lpTdBXWNjmZjHzTkuu52Bd2VRa1gkFIdb-Q',
+        items: [
+            { name: 'Term Life', desc: 'Comprehensive life cover for long-term financial security.' },
+            { name: 'Individual Health Plans', desc: 'Personalized medical coverage for high-net-worth individuals.' },
+            { name: 'Family Floater Plans', desc: 'Unified health protection for the entire household.' },
+            { name: 'Critical Illness Cover', desc: 'Lump-sum benefits for major medical contingencies.' }
+        ]
+    },
+    business: {
+        title: 'Business Insurance',
+        desc: 'Strategic risk management and comprehensive coverage for corporate entities.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHPHHYJ9JbZ9rZsABmf4kiY3lfcbQmZXXJfXHb0b5WUwywGP-bGpxYalVDRzd1W0h0eWvWFvqoFKqMNrpXAwGNgOsStCXh-WU2iqw5yPbiG5vCXh8we4G4OjL2RmuiwDCmMgPbv8rbj6OgPPwzepkoJiejckI9Mztc1tIqqnZy3OEmauE0rMaVmd9r9i-vp4wcIpQTrK-VqSiytWz1E3MvOF7o0J5OKwCS5Y26Bgiq-a15YuihCitPpg',
+        items: [
+            { name: 'Employee Group Health (GMC)', desc: 'Comprehensive medical benefits for your entire workforce.' },
+            { name: 'Group Personal Accident', desc: '24/7 worldwide protection against accidental risks.' },
+            { name: 'Directors & Officers (D&O)', desc: 'Protection for management against personal liability claims.' },
+            { name: 'Professional Indemnity', desc: 'Coverage against errors and omissions in professional services.' }
+        ]
+    }
+};
+
+let activeInsurancePanel = null;
+
+function generateInsuranceContent(type) {
+    const data = insuranceData[type];
+    return `
+        <h2 class="font-headline-lg text-primary mb-6">${data.title}</h2>
+        <p class="font-body-md text-on-surface-variant mb-8 border-l-2 border-secondary pl-4">${data.desc}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            ${data.items.map(item => `
+                <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
+                    <div>
+                        <h3 class="font-headline-md text-[18px] text-primary">${item.name}</h3>
+                        <p class="font-body-sm text-on-surface-variant">${item.desc}</p>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
+function toggleInsurancePanel(type) {
+    const grid = document.getElementById('desktop-grid');
+    const panel = document.getElementById('insurance-desktop-panel');
+    const content = document.getElementById('insurance-desktop-panel-content');
+    const clickedCard = document.getElementById('card-' + type);
+
+    if (activeInsurancePanel === type) {
+        closeInsurancePanel();
+        return;
+    }
+
+    content.innerHTML = generateInsuranceContent(type);
+
+    const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
+
+    // Clicked card moves to the left of row 1 (order 1) and grows slightly;
+    // the panel fills the rest of row 1 (order 2); the other card drops
+    // below (order 3), shrinking and dimming.
+    cards.forEach(c => {
+        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-60', 'border-secondary', 'shadow-lg', 'scale-105', 'z-10');
+        const desc = c.querySelector('p');
+        if (c === clickedCard) {
+            c.style.order = '1';
+            c.classList.add('h-[440px]', 'border-secondary', 'shadow-lg', 'scale-105', 'z-10');
+            if (desc) desc.classList.remove('hidden');
+        } else {
+            c.style.order = '3';
+            c.classList.add('h-[260px]', 'opacity-60');
+            if (desc) desc.classList.add('hidden');
+        }
+    });
+
+    panel.style.order = '2';
+    panel.classList.remove('hidden');
+    panel.classList.add('animate-fade-in');
+
+    activeInsurancePanel = type;
+
+    // Every card lands in the same spot once clicked, so we always just
+    // scroll to the same fixed point: the "Capabilities" heading, so it
+    // stays visible above the grid.
+    document.getElementById('insurance-capabilities-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closeInsurancePanel() {
+    const grid = document.getElementById('desktop-grid');
+    const panel = document.getElementById('insurance-desktop-panel');
+    const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
+
+    cards.forEach(c => {
+        c.style.order = '';
+        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-secondary', 'shadow-lg', 'scale-105', 'z-10');
+        c.classList.add('h-[400px]');
+        const desc = c.querySelector('p');
+        if (desc) desc.classList.remove('hidden');
+    });
+
+    panel.style.order = '';
+    panel.classList.add('hidden');
+    panel.classList.remove('animate-fade-in');
+    activeInsurancePanel = null;
+}
+
+function initMobileAccordion() {
+    const container = document.getElementById('insurance-mobile-accordion');
+    container.innerHTML = Object.keys(insuranceData).map(key => {
+        const data = insuranceData[key];
+        return `
+            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden">
+                <div class="flex items-stretch cursor-pointer min-h-24" onclick="toggleInsuranceMobile('${key}')">
+                    <img class="w-24 h-24 object-cover flex-shrink-0 self-stretch" src="${data.img}" alt="${data.title}">
+                    <div class="flex items-center flex-grow min-w-0 gap-2 p-4">
+                        <div class="flex-grow min-w-0">
+                            <h3 class="font-headline-md text-base text-primary truncate">${data.title}</h3>
+                            <p class="text-sm text-on-surface-variant truncate">${data.desc}</p>
+                        </div>
+                        <span class="material-symbols-outlined text-primary flex-shrink-0" id="insurance-icon-${key}">add</span>
+                    </div>
+                </div>
+                <div class="hidden px-4 pt-4 pb-6 animate-fade-in border-t border-outline-variant/30" id="insurance-content-mobile-${key}">
+                    ${generateInsuranceContent(key)}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+let activeInsuranceMobile = null;
+function toggleInsuranceMobile(type) {
+    if (activeInsuranceMobile === type) {
+        document.getElementById('insurance-content-mobile-' + type).classList.add('hidden');
+        document.getElementById('insurance-icon-' + type).textContent = 'add';
+        activeInsuranceMobile = null;
+        return;
+    }
+    if (activeInsuranceMobile) {
+        document.getElementById('insurance-content-mobile-' + activeInsuranceMobile).classList.add('hidden');
+        document.getElementById('insurance-icon-' + activeInsuranceMobile).textContent = 'add';
+    }
+    document.getElementById('insurance-content-mobile-' + type).classList.remove('hidden');
+    document.getElementById('insurance-icon-' + type).textContent = 'remove';
+    activeInsuranceMobile = type;
+}
+
+initMobileAccordion();
+</script></div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="bg-primary py-20 px-margin-mobile md:px-margin-desktop text-center">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-surface mb-4">Ready to Protect What Matters Most?</h2>
+<p class="font-body-md text-body-md text-surface-variant max-w-2xl mx-auto mb-8">Speak with our advisory team to find the right coverage for your needs.</p>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-8 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white py-16 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Brand & QR -->
+<div class="flex flex-col gap-6">
+<div class="w-48">
+<img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_AVmSf0lRo81EVepg3eiqO-lK5Ar3-EjOnaJfKxsUlZ6B-wiA9eKAWop0IQxzjjznFEuPMZxnJEIyGwhVUMZ3ipJdSQVqlEtPFg_8tSChHp5j1Y7xRVOSynhxCnwUeYcGcGUJ4GDpVI1dQ-8ETfc4zSszbzI6FKgFc7gZ4uDpqaalTK7BQn8as3HQeQjnBKysdEjAOhdWfoXVICFLJURw44Nri5OJhrk6HVqZc4GAkTNnSGjwKptcxKOkUf7rPX4oGa8"/>
+</div>
+<div class="space-y-4">
+<p class="text-label-bold font-label-bold uppercase tracking-widest">SCAN THIS!</p>
+<div class="w-32 h-32 bg-white p-2 rounded">
+<img alt="QR Code" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI_pd5mBaYFC78HurnIgN_urBGvSGqsYWepPFvBjYnJoInJ1l-4jYjxgkFgjfWWyen_WE0Y7k7dFXhGt1yROHYV9r11r0HeWnigQSJo6E0z2FvVdeoMB55vuji_b3PL_H9WI75HcwMXORKMhYR0nVVTGgswk1nq0jUyg6aU5hciNWZ40AU4VxU4BfhWYqVMwHRXtXihX2kuR-ksW3VYjanfmUssZfM9fD6WgauMX72EYMfS2bdEXTvSQ"/>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Client%20Login%20page.html">Client Login</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Invest Online</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Schedule a Meeting</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Sign Up</a></li>
+</ul>
+</div>
+<!-- Our Services -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="IB.html">Investment Banking</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Wealth%20Management.html">Wealth Management</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Insurance%20Page.html">Insurance</a></li>
+</ul>
+</div>
+<!-- Get In Touch -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Get In Touch</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-gold" data-icon="location_on">location_on</span>
+<span class="text-body-md">13th Floor (1303) 8, Camac Street Shantiniketan Building, Kolkata - 700071</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="call">call</span>
+<span class="text-body-md">9748976371, 9836233380</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="mail">mail</span>
+<span class="text-body-md">customer.service@rakhechafinserv.com</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Compliance & Legal -->
+<div class="border-t border-white/10 pt-12 space-y-8">
+<div class="text-body-sm text-white/70 leading-relaxed">
+<p class="mb-4"><strong>Risk Factors –</strong> Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes. We deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.</p>
+<p class="text-center font-bold">AMFI Registered Mutual Fund Distributor – ARN 305993 | Date of initial registration – 20/08/2024 | Current validity of ARN – 19/08/2027</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-body-sm text-white/70">
+<div class="">© Copyright 2024 Rakhecha Finserv. All rights reserved.</div>
+<nav class="flex flex-wrap gap-4 justify-center">
+<a class="hover:text-gold transition-colors" href="#">Disclaimer</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Disclosure</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Privacy Policy</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SID/SAI/KIM</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Code of Conduct</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SEBI Circulars</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">AMFI Risk Factors</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

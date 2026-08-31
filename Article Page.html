@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rakhecha Finserv - Insights</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="tailwind-config.js"></script>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm dark:shadow-none">
+<button class="md:hidden text-primary order-1" id="mobile-nav-toggle" onclick="toggleMobileNav()">
+<span class="material-symbols-outlined text-3xl" id="mobile-nav-icon">menu</span>
+</button>
+<div class="flex-shrink-0 w-36 md:w-64 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"><a href="Home%20Page.html"><img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCB1d4MUkOZYdq6TnWLDlbaNlkJiznVdFxQUyJLGJQXqp7wuFpGTYRMQtOWkM-S58Nspjm8zDG5sQT51xnt8QlxkiskJfT11JyPO4fR0yB-rJpf9ihbTOJetIoG2gMBYeQSkqdgAk7TeX9DJwjjZLLSh0ChOwH8hLCHjoDaXtK5RLuCNQ4mGhN6Tka3_VJxQpzKfkW6wHM_F18BSDRyVMurwxEiuDaLrUXxuVh-FFCvx18bqU_SziUpmDZ2uWszAU0ZA"/></a></div>
+<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Story</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Values</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Meet the Team</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="#">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Upcoming Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Past Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Article%20Page.html">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
+<div class="hidden md:block"><div class="flex items-center gap-6"><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button><a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-2 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a><a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-2 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a></div></div>
+<a href="Client%20Login%20page.html" class="md:hidden order-2 bg-white border border-secondary text-primary font-cta-text px-3 py-1.5 rounded text-sm hover:bg-surface-container-low transition-colors inline-block text-center">Login</a>
+<!-- Mobile Nav Panel -->
+<div class="hidden md:hidden absolute top-full left-0 w-full max-h-[80vh] overflow-y-auto bg-surface-container-lowest dark:bg-surface-dim shadow-lg z-40" id="mobile-nav-panel">
+<div class="flex flex-col divide-y divide-outline-variant px-margin-mobile">
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('about')">
+<span class="text-headline-md font-headline-md text-primary">About Us</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-about">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-about">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Story</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Values</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Meet the Team</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Awards and Recognition</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('services')">
+<span class="text-headline-md font-headline-md text-primary">Our Services</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-services">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-services">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="IB.html">Investment Banking</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Wealth%20Management.html">Wealth Management</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Insurance%20Page.html">Insurance</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('knowledge')">
+<span class="text-headline-md font-headline-md text-primary">Knowledge Hub</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-knowledge">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-knowledge">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Upcoming Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Past Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Article%20Page.html">Insights</a>
+</div>
+</div>
+<a class="py-5 text-headline-md font-headline-md text-primary block" href="careers.html">Careers</a>
+</div>
+<div class="px-margin-mobile py-6 flex flex-col gap-3 border-t border-outline-variant">
+<a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-3 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</div>
+</header>
+<script src="main.js"></script>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20 flex flex-col lg:flex-row gap-gutter">
+<!-- Article Canvas -->
+<article class="w-full lg:w-8/12 flex flex-col gap-8">
+<!-- Error State Mimic based on user text (usually this would be hidden, but following prompt strictly for content) -->
+<!-- Fallback Editorial Content (To fulfill the UI design request despite error text) -->
+<div class="mt-8 flex flex-col gap-6 border-t border-outline-variant pt-12">
+<div class="flex items-center gap-4">
+<span class="bg-surface-container text-primary px-3 py-1 rounded-full font-label-bold uppercase tracking-wider text-[10px]">Wealth Management</span>
+<span class="text-on-surface-variant font-body-sm">October 24, 2024</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-display-lg text-primary">What the Rise of SIFs Signals for Indian Wealth</h1>
+<div class="flex items-center gap-4 mt-2">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="A close-up portrait of a thoughtful Indian financial analyst, wearing a tailored navy suit. Warm, natural lighting highlighting professional expertise against a minimalist white and subtle gold background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpKpJPtYAvMOt6WcIEBeoKBYLoLL2PUGR85-jYeDT03cuMq9D1-WU_4KYDgvqh0m5WUsx3xRU73ekdJ3dYn7ty1RLd0mku5J_XNgHhikHeENlg9NcICbDrSG09dKaxl8GAV7ksE5rk3haItaKW99PqQYmVJHOgYkWNsYyK27enlzV0cwl_cFa7nAxNL7vhnbFe3oIIW-VgpEXNjPA0NU_B1YBITpCoR0vvnoqVyqRydG0392X0ogpcFw"/>
+<div>
+<div class="font-cta-text text-on-surface">Rajiv Mehta</div>
+<div class="font-body-sm text-on-surface-variant">Senior Partner, Wealth Advisory</div>
+</div>
+</div>
+<div class="w-full h-64 md:h-96 rounded-xl overflow-hidden my-6">
+<img class="w-full h-full object-cover" data-alt="A sophisticated abstract representation of financial growth and Indian wealth. Features subtle geometric charts in deep navy and rich gold ascending upwards. The composition is clean, high-contrast, and minimalist, conveying premium advisory services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMkEsfnprbFyf8mwmGFQHp51D8ep_RjVbk9UrLtOWSVTaCOPKqkQ41H2VWMRFxrpX_iHPhtYyBykzb6FSnqg_Z59kpoqUBAuE-2iSCM-rnT0l4TxhB4S0zK-hcZKrr6d5XlUDO3URZpGzD8TbaCNM-5c9MMemk_Z18P_zFewBiOZ-YDAcduBJxHYbMdFWTh2u9nwmqK5YFtpfFWRBzCNUfOhyeKvXLdBa9GQ-JJkJ8gZDfd10im4ZxiQ"/>
+</div>
+<div class="prose max-w-none font-body-lg text-on-surface-variant leading-relaxed flex flex-col gap-6">
+<p class="text-xl text-on-surface font-body-lg">The landscape of Indian wealth management is undergoing a structural shift. With the maturation of domestic capital pools, Systematic Investment Funds (SIFs) are no longer a niche strategy but a core component of legacy planning.</p>
+<h3 class="font-headline-md text-primary mt-8 mb-4">The Evolution of Domestic Capital</h3>
+<p class="">Historically, high-net-worth families in India leaned heavily on real estate and traditional fixed-income instruments. However, the last decade has seen a dramatic pivot towards structured financial products that offer both alpha generation and risk mitigation.</p>
+<blockquote class="border-l-4 border-secondary pl-6 py-2 my-8 bg-surface-container-lowest shadow-sm rounded-r">
+<p class="font-display-lg text-[24px] leading-tight text-primary italic mb-0">"The modern Indian patriarch is looking beyond wealth preservation; they are demanding sophisticated structures that ensure multi-generational growth in a complex regulatory environment."</p>
+</blockquote>
+<p class="">Understanding this shift requires a deep dive into the regulatory frameworks that have fostered this environment, particularly the recent SEBI guidelines aimed at enhancing transparency in AIFs.</p>
+<div class="mt-12 pt-8 border-t border-outline-variant/30 flex flex-col gap-4"><span class="font-label-bold uppercase tracking-wider text-on-surface-variant text-[10px]">Share this Insight</span><div class="flex gap-4"><button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors duration-300"><span class="material-symbols-outlined text-[20px]">share</span></button><button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors duration-300"><span class="material-symbols-outlined text-[20px]">mail</span></button><button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors duration-300"><span class="material-symbols-outlined text-[20px]">link</span></button></div></div></div>
+</div>
+</article>
+<!-- Sidebar / Related -->
+<aside class="w-full lg:w-4/12 flex flex-col gap-8 lg:pl-12 lg:border-l border-outline-variant">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_24px_rgba(27,58,107,0.04)] border border-outline-variant/30 flex flex-col gap-6">
+<h3 class="font-headline-md text-primary border-b border-outline-variant/50 pb-4">Recommended Insights</h3>
+<div class="flex flex-col gap-6">
+<a class="group flex flex-col gap-2" href="#">
+<span class="text-secondary font-label-bold uppercase text-[10px]">Legacy Planning</span>
+<h4 class="font-cta-text text-on-surface group-hover:text-primary transition-colors">Structuring Family Offices for the Next Decade</h4>
+<span class="font-body-sm text-on-surface-variant">5 min read</span>
+</a>
+<div class="h-px w-full bg-outline-variant/30"></div>
+<a class="group flex flex-col gap-2" href="#">
+<span class="text-secondary font-label-bold uppercase text-[10px]">Market Outlook</span>
+<h4 class="font-cta-text text-on-surface group-hover:text-primary transition-colors">Navigating Yield Curves in Q4</h4>
+<span class="font-body-sm text-on-surface-variant">8 min read</span>
+</a>
+<div class="h-px w-full bg-outline-variant/30"></div>
+<a class="group flex flex-col gap-2" href="#">
+<span class="text-secondary font-label-bold uppercase text-[10px]">Taxation</span>
+<h4 class="font-cta-text text-on-surface group-hover:text-primary transition-colors">Implications of the New Capital Gains Regime</h4>
+<span class="font-body-sm text-on-surface-variant">12 min read</span>
+</a>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white py-16 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Brand & QR -->
+<div class="flex flex-col gap-6">
+<div class="w-48">
+<img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_AVmSf0lRo81EVepg3eiqO-lK5Ar3-EjOnaJfKxsUlZ6B-wiA9eKAWop0IQxzjjznFEuPMZxnJEIyGwhVUMZ3ipJdSQVqlEtPFg_8tSChHp5j1Y7xRVOSynhxCnwUeYcGcGUJ4GDpVI1dQ-8ETfc4zSszbzI6FKgFc7gZ4uDpqaalTK7BQn8as3HQeQjnBKysdEjAOhdWfoXVICFLJURw44Nri5OJhrk6HVqZc4GAkTNnSGjwKptcxKOkUf7rPX4oGa8"/>
+</div>
+<div class="space-y-4">
+<p class="text-label-bold font-label-bold uppercase tracking-widest">SCAN THIS!</p>
+<div class="w-32 h-32 bg-white p-2 rounded">
+<img alt="QR Code" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI_pd5mBaYFC78HurnIgN_urBGvSGqsYWepPFvBjYnJoInJ1l-4jYjxgkFgjfWWyen_WE0Y7k7dFXhGt1yROHYV9r11r0HeWnigQSJo6E0z2FvVdeoMB55vuji_b3PL_H9WI75HcwMXORKMhYR0nVVTGgswk1nq0jUyg6aU5hciNWZ40AU4VxU4BfhWYqVMwHRXtXihX2kuR-ksW3VYjanfmUssZfM9fD6WgauMX72EYMfS2bdEXTvSQ"/>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Client%20Login%20page.html">Client Login</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Invest Online</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Schedule a Meeting</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Sign Up</a></li>
+</ul>
+</div>
+<!-- Our Services -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="IB.html">Investment Banking</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Wealth%20Management.html">Wealth Management</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Insurance%20Page.html">Insurance</a></li>
+</ul>
+</div>
+<!-- Get In Touch -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Get In Touch</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-gold" data-icon="location_on">location_on</span>
+<span class="text-body-md">13th Floor (1303) 8, Camac Street Shantiniketan Building, Kolkata - 700071</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="call">call</span>
+<span class="text-body-md">9748976371, 9836233380</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="mail">mail</span>
+<span class="text-body-md">customer.service@rakhechafinserv.com</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Compliance & Legal -->
+<div class="border-t border-white/10 pt-12 space-y-8">
+<div class="text-body-sm text-white/70 leading-relaxed">
+<p class="mb-4"><strong>Risk Factors –</strong> Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes. We deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.</p>
+<p class="text-center font-bold">AMFI Registered Mutual Fund Distributor – ARN 305993 | Date of initial registration – 20/08/2024 | Current validity of ARN – 19/08/2027</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-body-sm text-white/70">
+<div class="">© Copyright 2024 Rakhecha Finserv. All rights reserved.</div>
+<nav class="flex flex-wrap gap-4 justify-center">
+<a class="hover:text-gold transition-colors" href="#">Disclaimer</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Disclosure</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Privacy Policy</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SID/SAI/KIM</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Code of Conduct</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SEBI Circulars</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">AMFI Risk Factors</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

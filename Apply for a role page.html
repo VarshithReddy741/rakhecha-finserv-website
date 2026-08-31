@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Application - Rakhecha Finserv</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="tailwind-config.js"></script>
+<style data-purpose="base-styles">
+    body {
+      background-color: theme('colors.surface');
+      color: theme('colors.on-surface');
+      font-family: theme('fontFamily.body-md');
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: theme('fontFamily.headline-md');
+    }
+    .form-input, .form-select {
+      border-color: theme('colors.outline-variant');
+      border-radius: theme('borderRadius.4');
+      padding: 0.75rem 1rem;
+      width: 100%;
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .form-input:focus, .form-select:focus {
+      border-color: theme('colors.primary');
+      box-shadow: 0 0 0 1px theme('colors.primary');
+      outline: none;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: theme('colors.on-surface-variant');
+    }
+    .required-asterisk {
+      color: theme('colors.error');
+      margin-left: 0.25rem;
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- BEGIN: TopNavBar -->
+<header class="sticky top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm dark:shadow-none">
+<button class="md:hidden text-primary order-1" id="mobile-nav-toggle" onclick="toggleMobileNav()">
+<span class="material-symbols-outlined text-3xl" id="mobile-nav-icon">menu</span>
+</button>
+<div class="flex-shrink-0 w-36 md:w-64 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"><a href="Home%20Page.html"><img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCB1d4MUkOZYdq6TnWLDlbaNlkJiznVdFxQUyJLGJQXqp7wuFpGTYRMQtOWkM-S58Nspjm8zDG5sQT51xnt8QlxkiskJfT11JyPO4fR0yB-rJpf9ihbTOJetIoG2gMBYeQSkqdgAk7TeX9DJwjjZLLSh0ChOwH8hLCHjoDaXtK5RLuCNQ4mGhN6Tka3_VJxQpzKfkW6wHM_F18BSDRyVMurwxEiuDaLrUXxuVh-FFCvx18bqU_SziUpmDZ2uWszAU0ZA"/></a></div>
+<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Story</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Values</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Meet the Team</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="#">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Upcoming Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Past Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Article%20Page.html">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
+<div class="hidden md:block"><div class="flex items-center gap-6"><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button><a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-2 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a><a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-2 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a></div></div>
+<a href="Client%20Login%20page.html" class="md:hidden order-2 bg-white border border-secondary text-primary font-cta-text px-3 py-1.5 rounded text-sm hover:bg-surface-container-low transition-colors inline-block text-center">Login</a>
+<!-- Mobile Nav Panel -->
+<div class="hidden md:hidden absolute top-full left-0 w-full max-h-[80vh] overflow-y-auto bg-surface-container-lowest dark:bg-surface-dim shadow-lg z-40" id="mobile-nav-panel">
+<div class="flex flex-col divide-y divide-outline-variant px-margin-mobile">
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('about')">
+<span class="text-headline-md font-headline-md text-primary">About Us</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-about">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-about">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Story</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Values</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Meet the Team</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Awards and Recognition</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('services')">
+<span class="text-headline-md font-headline-md text-primary">Our Services</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-services">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-services">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="IB.html">Investment Banking</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Wealth%20Management.html">Wealth Management</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Insurance%20Page.html">Insurance</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('knowledge')">
+<span class="text-headline-md font-headline-md text-primary">Knowledge Hub</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-knowledge">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-knowledge">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Upcoming Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Past Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Article%20Page.html">Insights</a>
+</div>
+</div>
+<a class="py-5 text-headline-md font-headline-md text-primary block" href="careers.html">Careers</a>
+</div>
+<div class="px-margin-mobile py-6 flex flex-col gap-3 border-t border-outline-variant">
+<a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-3 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</div>
+</header>
+<script src="main.js"></script>
+<!-- END: TopNavBar -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow container mx-auto px-margin-desktop py-8 max-w-4xl">
+<!-- Job Header Section -->
+<div class="bg-surface-pure rounded-lg p-8 mb-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<h1 class="text-2xl font-bold text-on-surface">Senior Manager- Legal &amp; Compliance</h1>
+<span class="bg-surface-container text-on-surface-variant text-xs px-2 py-1 rounded-full font-medium">Job ID: 381562</span>
+</div>
+<div class="flex flex-wrap gap-4 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Human Resources (HR)
+          </div>
+<div class="flex items-center gap-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            In-Office
+          </div>
+<div class="flex items-center gap-1">
+            Mumbai, Maharashtra, India
+          </div>
+<div class="flex items-center gap-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            6 - 14 years
+          </div>
+</div>
+</div>
+<a href="Job%20detail.html" class="px-4 py-2 border border-outline rounded-4 text-primary font-medium hover:bg-surface-container transition-colors inline-block text-center">See Job Details</a>
+</div>
+<!-- Application Form -->
+<div class="bg-surface-pure rounded-lg p-8 shadow-sm border border-outline-variant/30">
+<form action="Application%20Success.html" class="space-y-6" method="GET">
+<!-- Personal Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="form-label" for="firstName">First Name<span class="required-asterisk">*</span></label>
+<input class="form-input" id="firstName" name="firstName" placeholder="First Name" required="" type="text"/>
+</div>
+<div>
+<label class="form-label" for="lastName">Last Name<span class="required-asterisk">*</span></label>
+<input class="form-input" id="lastName" name="lastName" placeholder="Last Name" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="form-label" for="contactNumber">Contact Number<span class="required-asterisk">*</span></label>
+<div class="flex">
+<div class="flex-shrink-0 relative">
+<select class="form-select rounded-r-none border-r-0 pl-3 pr-8 w-24" id="countryCode" name="countryCode">
+<option value="+91">🇮🇳 +91</option>
+<!-- Add more options if needed -->
+</select>
+</div>
+<input class="form-input rounded-l-none" id="contactNumber" name="contactNumber" placeholder="" required="" type="tel"/>
+<button class="ml-2 px-3 py-2 border border-outline-variant rounded-4 text-primary hover:bg-surface-container" type="button">+</button>
+</div>
+</div>
+<div>
+<label class="form-label" for="email">Email Address<span class="required-asterisk">*</span></label>
+<div class="flex">
+<div class="flex-shrink-0 flex items-center justify-center px-3 border border-r-0 border-outline-variant rounded-l-4 bg-surface-container/30 text-on-surface-variant">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<input class="form-input rounded-l-none" id="email" name="email" placeholder="Email Address" required="" type="email"/>
+<button class="ml-2 px-3 py-2 border border-outline-variant rounded-4 text-primary hover:bg-surface-container" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Location -->
+<div>
+<label class="form-label" for="currentLocation">Current Location<span class="required-asterisk">*</span></label>
+<select class="form-select" id="currentLocation" name="currentLocation" required="">
+<option disabled="" selected="" value="">City</option>
+<option value="mumbai">Mumbai</option>
+<option value="delhi">Delhi</option>
+<option value="bangalore">Bangalore</option>
+</select>
+</div>
+<!-- Experience -->
+<div>
+<label class="form-label">Total years of experience<span class="required-asterisk">*</span></label>
+<div class="flex items-center gap-2 mb-3">
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer border-outline-variant" id="toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-outline-variant/30 cursor-pointer" for="toggle"></label>
+</div>
+<span class="text-sm text-on-surface-variant">I am a fresher</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<select aria-label="Years" class="form-select">
+<option disabled="" selected="" value="">Years</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="6">6</option>
+</select>
+<select aria-label="Months" class="form-select">
+<option disabled="" selected="" value="">Months</option>
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+</select>
+</div>
+</div>
+<!-- CTC -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="form-label" for="currentCtc">Current CTC (Annual) <span class="text-outline font-normal">(Optional)</span></label>
+<div class="flex relative">
+<span class="inline-flex items-center px-3 border border-r-0 border-outline-variant rounded-l-4 bg-surface-container/30 text-on-surface-variant text-sm">INR</span>
+<input class="form-input rounded-l-none pl-3" id="currentCtc" name="currentCtc" placeholder="450,000" type="text"/>
+</div>
+</div>
+<div>
+<label class="form-label" for="expectedCtc">Expected CTC (Annual) <span class="text-outline font-normal">(Optional)</span></label>
+<div class="flex relative">
+<span class="inline-flex items-center px-3 border border-r-0 border-outline-variant rounded-l-4 bg-surface-container/30 text-on-surface-variant text-sm">INR</span>
+<input class="form-input rounded-l-none pl-3" id="expectedCtc" name="expectedCtc" placeholder="850,000" type="text"/>
+</div>
+</div>
+</div>
+<!-- Resume Upload Browse -->
+<div>
+<label class="form-label">Resume <span class="required-asterisk">*</span></label>
+<div class="border-2 border-dashed border-outline-variant/50 rounded-lg p-8 text-center bg-surface-container/30 hover:bg-surface-container/50 transition-colors cursor-pointer">
+<p class="text-on-surface font-medium mb-1">Upload your resume or drag and drop it here</p>
+<p class="text-sm text-on-surface-variant">Only .doc, .docx, .pdf, .odt, .rtf</p>
+</div>
+</div>
+<!-- Submit -->
+<div class="pt-6 border-t border-outline-variant/30 flex justify-end">
+<button class="bg-black text-white px-8 py-3 rounded-4 font-medium hover:bg-gray-800 transition-colors" type="submit">
+            Submit Application
+          </button>
+</div>
+</form>
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="bg-primary text-white py-16 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Brand & QR -->
+<div class="flex flex-col gap-6">
+<div class="w-48">
+<img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_AVmSf0lRo81EVepg3eiqO-lK5Ar3-EjOnaJfKxsUlZ6B-wiA9eKAWop0IQxzjjznFEuPMZxnJEIyGwhVUMZ3ipJdSQVqlEtPFg_8tSChHp5j1Y7xRVOSynhxCnwUeYcGcGUJ4GDpVI1dQ-8ETfc4zSszbzI6FKgFc7gZ4uDpqaalTK7BQn8as3HQeQjnBKysdEjAOhdWfoXVICFLJURw44Nri5OJhrk6HVqZc4GAkTNnSGjwKptcxKOkUf7rPX4oGa8"/>
+</div>
+<div class="space-y-4">
+<p class="text-label-bold font-label-bold uppercase tracking-widest">SCAN THIS!</p>
+<div class="w-32 h-32 bg-white p-2 rounded">
+<img alt="QR Code" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI_pd5mBaYFC78HurnIgN_urBGvSGqsYWepPFvBjYnJoInJ1l-4jYjxgkFgjfWWyen_WE0Y7k7dFXhGt1yROHYV9r11r0HeWnigQSJo6E0z2FvVdeoMB55vuji_b3PL_H9WI75HcwMXORKMhYR0nVVTGgswk1nq0jUyg6aU5hciNWZ40AU4VxU4BfhWYqVMwHRXtXihX2kuR-ksW3VYjanfmUssZfM9fD6WgauMX72EYMfS2bdEXTvSQ"/>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Client%20Login%20page.html">Client Login</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Invest Online</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Schedule a Meeting</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Sign Up</a></li>
+</ul>
+</div>
+<!-- Our Services -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="IB.html">Investment Banking</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Wealth%20Management.html">Wealth Management</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Insurance%20Page.html">Insurance</a></li>
+</ul>
+</div>
+<!-- Get In Touch -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Get In Touch</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-gold" data-icon="location_on">location_on</span>
+<span class="text-body-md">13th Floor (1303) 8, Camac Street Shantiniketan Building, Kolkata - 700071</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="call">call</span>
+<span class="text-body-md">9748976371, 9836233380</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="mail">mail</span>
+<span class="text-body-md">customer.service@rakhechafinserv.com</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Compliance & Legal -->
+<div class="border-t border-white/10 pt-12 space-y-8">
+<div class="text-body-sm text-white/70 leading-relaxed">
+<p class="mb-4"><strong>Risk Factors –</strong> Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes. We deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.</p>
+<p class="text-center font-bold">AMFI Registered Mutual Fund Distributor – ARN 305993 | Date of initial registration – 20/08/2024 | Current validity of ARN – 19/08/2027</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-body-sm text-white/70">
+<div class="">© Copyright 2024 Rakhecha Finserv. All rights reserved.</div>
+<nav class="flex flex-wrap gap-4 justify-center">
+<a class="hover:text-gold transition-colors" href="#">Disclaimer</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Disclosure</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Privacy Policy</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SID/SAI/KIM</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Code of Conduct</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SEBI Circulars</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">AMFI Risk Factors</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

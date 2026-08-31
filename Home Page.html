@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home | Rakhecha Finserv - Credibility Integrated</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="tailwind-config.js"></script>
+<style>
+        /* Custom styles for high-end feel */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid #E2E8F0;
+        }
+</style>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="bg-white text-on-surface font-body-md antialiased selection:bg-gold-light selection:text-white">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm dark:shadow-none">
+<button class="md:hidden text-primary order-1" id="mobile-nav-toggle" onclick="toggleMobileNav()">
+<span class="material-symbols-outlined text-3xl" id="mobile-nav-icon">menu</span>
+</button>
+<div class="flex-shrink-0 w-36 md:w-64 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"><a href="Home%20Page.html"><img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCB1d4MUkOZYdq6TnWLDlbaNlkJiznVdFxQUyJLGJQXqp7wuFpGTYRMQtOWkM-S58Nspjm8zDG5sQT51xnt8QlxkiskJfT11JyPO4fR0yB-rJpf9ihbTOJetIoG2gMBYeQSkqdgAk7TeX9DJwjjZLLSh0ChOwH8hLCHjoDaXtK5RLuCNQ4mGhN6Tka3_VJxQpzKfkW6wHM_F18BSDRyVMurwxEiuDaLrUXxuVh-FFCvx18bqU_SziUpmDZ2uWszAU0ZA"/></a></div>
+<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Story</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Values</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Leadership</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="#">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Upcoming Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Past Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Article%20Page.html">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
+<div class="hidden md:block"><div class="flex items-center gap-6"><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button><a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-2 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a><a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-2 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a></div></div>
+<a href="Client%20Login%20page.html" class="md:hidden order-2 bg-white border border-secondary text-primary font-cta-text px-3 py-1.5 rounded text-sm hover:bg-surface-container-low transition-colors inline-block text-center">Login</a>
+<!-- Mobile Nav Panel -->
+<div class="hidden md:hidden absolute top-full left-0 w-full max-h-[80vh] overflow-y-auto bg-surface-container-lowest dark:bg-surface-dim shadow-lg z-40" id="mobile-nav-panel">
+<div class="flex flex-col divide-y divide-outline-variant px-margin-mobile">
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('about')">
+<span class="text-headline-md font-headline-md text-primary">About Us</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-about">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-about">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Story</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Values</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Leadership</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Awards and Recognition</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('services')">
+<span class="text-headline-md font-headline-md text-primary">Our Services</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-services">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-services">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="IB.html">Investment Banking</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Wealth%20Management.html">Wealth Management</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Insurance%20Page.html">Insurance</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('knowledge')">
+<span class="text-headline-md font-headline-md text-primary">Knowledge Hub</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-knowledge">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-knowledge">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Upcoming Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Past Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Article%20Page.html">Insights</a>
+</div>
+</div>
+<a class="py-5 text-headline-md font-headline-md text-primary block" href="careers.html">Careers</a>
+</div>
+<div class="px-margin-mobile py-6 flex flex-col gap-3 border-t border-outline-variant">
+<a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-3 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</div>
+</header>
+<script src="main.js"></script>
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] min-h-[600px] flex items-center bg-white overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Modern glass skyscraper against a clear sky" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1748989431275-3fc7d4c51030?fit=crop&amp;crop=focalpoint&amp;fp-x=0.02&amp;fp-y=0.35&amp;fp-z=2.0&amp;w=2400&amp;h=1050&amp;q=80"/>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-2xl">
+<h1 class="text-display-lg font-display-lg text-primary mb-6 leading-tight">Meticulous Financial Stewardship</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-xl">
+                    Independent, bespoke financial advisory and wealth management for institutions and ultra-high-net-worth individuals. We align our interests exclusively with yours.
+                </p>
+<div class="flex gap-4">
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary px-8 py-3 rounded text-cta-text font-cta-text hover:bg-primary-dark transition-colors duration-300 inline-block text-center">
+                        Contact Us
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Strip -->
+<section class="bg-surface text-on-surface py-16">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center divide-x-0 md:divide-x divide-outline-variant">
+<div class="flex flex-col items-center justify-center space-y-2">
+<span class="font-display-lg text-display-lg text-primary">₹<span class="count-up" data-target="200">200</span> Cr+</span>
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Assets Under Management</span>
+</div>
+<div class="flex flex-col items-center justify-center space-y-2">
+<span class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="10">10</span>+</span>
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Years in Business</span>
+</div>
+<div class="flex flex-col items-center justify-center space-y-2">
+<span class="font-display-lg text-display-lg text-primary"><span class="count-up" data-target="300">300</span>+</span>
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Clients Served Globally across Family Offices, UHNIs, NRIs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Expertise Section -->
+<!-- Mission & Vision -->
+<section class="py-section-gap bg-surface-yellow-light">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop space-y-32">
+<!-- Mission -->
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-6">
+<h2 class="font-headline-md text-headline-md uppercase tracking-widest text-primary mb-4">Our Mission</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To simplify complex wealth management by delivering research-driven asset allocation, proactive portfolio adaptation, and transparent client education. We commit to maximizing risk-adjusted returns while fostering a resilient community of informed, financially independent investors.</p>
+</div>
+<div class="flex-1 w-full aspect-[1.5] relative rounded-2xl overflow-hidden shadow-xl">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest to-transparent z-10 w-1/4"></div>
+<img alt="Premium financial district skyline at dusk" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC99FH5a2fdS4dthUMM5JpHAxWqTxcaJlggugh7hP6jM8mIixw99iV_J2YW-Yp19KT5yDkfwj1HUVtfqVNFh1jKzQGZZHE5xLhipTvPG7UJ25WKtprvfrteRAynYa2fGMiZEcGNWvqkvhtGdmpFgJ2SFghgIamA8zD6fakpggXI_kTk0XZPAUmEiQyp-oNGrYgJk3hzKu566Bn6jSPbrtsJ_2rIr-fnlRBrNUpT81sIHZj9PNXj_8apGQ"/>
+</div>
+</div>
+<!-- Vision -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="flex-1 space-y-6">
+<h2 class="font-headline-md text-headline-md uppercase tracking-widest text-primary mb-4">Our Vision</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To be the most trusted and preferred financial growth partner, empowering families, entrepreneurs, and professionals to achieve lifelong financial security through data-backed, tailored wealth strategies.</p>
+</div>
+<div class="flex-1 w-full aspect-[1.5] relative rounded-2xl overflow-hidden shadow-xl">
+<div class="absolute inset-0 bg-gradient-to-l from-surface-container-lowest to-transparent z-10 w-1/4"></div>
+<img alt="Professional advisor consultation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtUA51QJOOE4lq-9vk-JqBWVhPLuWswhe8sxOiHtCY7HKlQuFC9e2UJX-1tgJAYFY5n9o2UBtjaHDP29i97QrI3C31_pON_xoxV0Ln4sSKTg2YuUaqwuaRHqoIDm4Ree_mDKXjxW0VcmpjIITG5qFLIEOy-IwCc2G2jdQ4zt6THMfYpaLoIcpxAEV9cXAj3hAJUdf-S5dsj5F4kD1yG6eqCXPdNzsIhjd3C5QUaHbe38UVUqABAvoQFw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry Recognition Strip -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface max-w-container-max mx-auto"><div class="mb-12 md:mb-16">
+<h2 class="text-headline-lg md:text-display-lg font-display-lg text-primary mb-4">Our Businesses</h2>
+</div>
+<!-- Desktop Layout: Vertical Strips -->
+<div class="hidden md:flex h-[600px] w-full gap-2 overflow-hidden">
+<!-- Wealth Management -->
+<a href="Wealth%20Management.html" class="group relative flex-grow transition-all duration-500 ease-in-out hover:flex-[3] cursor-pointer overflow-hidden rounded-lg">
+<img alt="Wealth Management" class="absolute inset-0 w-full h-full object-cover brightness-50 group-hover:brightness-75 transition-all duration-500" src="Wealth%20home.jpg"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="space-y-2">
+<h3 class="text-headline-md font-headline-md text-white">Wealth Management</h3>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+<p class="text-white/90 text-body-md mb-6 max-w-md">Comprehensive wealth structuring and portfolio management tailored to generational wealth preservation and targeted growth objectives.</p>
+<span class="flex items-center gap-2 text-gold font-cta-text group-hover:text-white transition-colors">
+                    READ MORE <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+</div>
+</div>
+</a>
+<!-- Investment Banking -->
+<a href="IB.html" class="group relative flex-grow transition-all duration-500 ease-in-out hover:flex-[3] cursor-pointer overflow-hidden rounded-lg">
+<img alt="Investment Banking" class="absolute inset-0 w-full h-full object-cover brightness-50 group-hover:brightness-75 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvDTKe5HB9Q3kJxn9c8dg5I370Ew5IAng4K3CcfGvSp6f_dJYS9p9UzQIwnXTubm5o-Z5IeEwGf0ez9qBkrKyaIWVtKxRl8KWVVNICZPbUQ3VJG-LC0G4o4erH-_6LMTBG9d3v_TY9zr59BIcFFmSw_MdadFyCq_L1pFKh080wE6VrWCZYHVSnMdXSQ7MaVxh8YD5lA2NcA_ygDsE71u4b2Nan88PsxySN9xFy4YAy2H-MU05etuMkCw"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="space-y-2">
+<h3 class="text-headline-md font-headline-md text-white">Investment Banking</h3>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+<p class="text-white/90 text-body-md mb-6 max-w-md">Strategic advisory for mergers, acquisitions, and capital raising, delivering bespoke solutions for complex corporate transactions.</p>
+<span class="flex items-center gap-2 text-gold font-cta-text group-hover:text-white transition-colors">
+                    READ MORE <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+</div>
+</div>
+</a>
+<!-- Insurance -->
+<a href="Insurance%20Page.html" class="group relative flex-grow transition-all duration-500 ease-in-out hover:flex-[3] cursor-pointer overflow-hidden rounded-lg">
+<img alt="Insurance" class="absolute inset-0 w-full h-full object-cover brightness-50 group-hover:brightness-75 transition-all duration-500" src="Insurance%20home%20page.png"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="space-y-2">
+<h3 class="text-headline-md font-headline-md text-white">Insurance</h3>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+<p class="text-white/90 text-body-md mb-6 max-w-md">Insurance solutions designed to protect your assets and provide peace of mind.</p>
+<span class="flex items-center gap-2 text-gold font-cta-text group-hover:text-white transition-colors">
+                    READ MORE <span class="material-symbols-outlined">arrow_forward</span>
+</span>
+</div>
+</div>
+</a>
+</div>
+<!-- Mobile Layout: Horizontal Scroll -->
+<div class="auto-scroll-x md:hidden flex overflow-x-auto gap-4 pb-6 no-scrollbar px-margin-mobile">
+<!-- Wealth Management Mobile -->
+<a href="Wealth%20Management.html" class="flex-shrink-0 w-[85%] snap-center relative h-[450px] rounded-lg overflow-hidden">
+<img alt="Wealth Management" class="absolute inset-0 w-full h-full object-cover brightness-50" src="Wealth%20home.jpg"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<div class="space-y-2">
+<h3 class="text-headline-md font-headline-md text-white">Wealth Management</h3>
+</div>
+<div>
+<p class="text-white/90 text-body-sm mb-4">Comprehensive wealth structuring and portfolio management tailored to generational wealth preservation.</p>
+<span class="flex items-center gap-2 text-gold font-cta-text">
+                    READ MORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</a>
+<!-- Investment Banking Mobile -->
+<a href="IB.html" class="flex-shrink-0 w-[85%] snap-center relative h-[450px] rounded-lg overflow-hidden">
+<img alt="Investment Banking" class="absolute inset-0 w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvDTKe5HB9Q3kJxn9c8dg5I370Ew5IAng4K3CcfGvSp6f_dJYS9p9UzQIwnXTubm5o-Z5IeEwGf0ez9qBkrKyaIWVtKxRl8KWVVNICZPbUQ3VJG-LC0G4o4erH-_6LMTBG9d3v_TY9zr59BIcFFmSw_MdadFyCq_L1pFKh080wE6VrWCZYHVSnMdXSQ7MaVxh8YD5lA2NcA_ygDsE71u4b2Nan88PsxySN9xFy4YAy2H-MU05etuMkCw"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<div class="space-y-2">
+<h3 class="text-headline-md font-headline-md text-white">Investment Banking</h3>
+</div>
+<div>
+<p class="text-white/90 text-body-sm mb-4">Strategic advisory for mergers, acquisitions, and capital raising for complex corporate transactions.</p>
+<span class="flex items-center gap-2 text-gold font-cta-text">
+                    READ MORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</a>
+<!-- Insurance Mobile -->
+<a href="Insurance%20Page.html" class="flex-shrink-0 w-[85%] snap-center relative h-[450px] rounded-lg overflow-hidden">
+<img alt="Insurance" class="absolute inset-0 w-full h-full object-cover brightness-50" src="Insurance%20home%20page.png"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-between">
+<div class="space-y-2">
+<h3 class="text-headline-md font-headline-md text-white">Insurance</h3>
+</div>
+<div>
+<p class="text-white/90 text-body-sm mb-4">Comprehensive insurance solutions designed to protect your assets and provide peace of mind.</p>
+<span class="flex items-center gap-2 text-gold font-cta-text">
+                    READ MORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</a>
+</div></section>
+<!-- Philosophy Split Section -->
+<section class="py-section-gap bg-surface-yellow-light">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Our Leadership</h3>
+</div>
+<div class="auto-scroll-x flex overflow-x-auto pb-8 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+<!-- Dev Piyush -->
+<div class="group"><div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-surface-variant shrink-0 w-[85vw] md:w-auto">
+<img alt="Dev Piyush Rakhecha" class="w-full h-full object-cover object-top transition-all duration-500" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.3&amp;fp-z=1.0&amp;w=1200&amp;h=900&amp;q=80"/>
+</div>
+<div class="space-y-3 relative">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md text-primary">Dev Piyush Rakhecha</h4>
+<p class="font-label-bold text-label-bold text-secondary-fixed-dim uppercase tracking-wider">Managing Partner &amp; Chief Investment Officer</p>
+</div>
+<a class="text-surface-tint hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Chartered Accountant, CFA Charterholder</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Dev leads the firm's investment strategy and portfolio management, bringing over two decades of expertise in global capital markets.</p>
+<div class="flex justify-end pt-2">
+<a class="inline-flex items-center gap-1 text-primary font-cta-text text-body-sm hover:gap-2 transition-all" href="Founder%20Detail%20Page.html">
+Know More <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div></div>
+<!-- Nidhhi -->
+<div class="group"><div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-surface-variant shrink-0 w-[85vw] md:w-auto">
+<img alt="Nidhhi" class="w-full h-full object-cover object-top transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxqa00qyNg2-dbxEmYXxD5ha4mJwx1dwSpAgL-_dERGQxbWSsju0_GW6QXo3gXhH-oB06zD9aUH4LqOs-e0EGtsCDUeEd365qWgBs_jvS5zbVpla4KQ3H0XDmLt06zrx0_djCdaE7nR3r0P7Xod6R7WUpayN00Jyfd_lQwx1qI3GCNU61nxXjoflLAZ3bKJUZoCXQFbRgNNF-WgfV7CykPx1amzO_E2zp-Q4lFLewV45JGabNgzU7llA"/>
+</div>
+<div class="space-y-3 relative">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md text-primary">Nidhhi Rakhecha</h4>
+<p class="font-label-bold text-label-bold text-secondary-fixed-dim uppercase tracking-wider">Partner, Private Wealth</p>
+</div>
+<a class="text-surface-tint hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">IIM calcutta</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Nidhhi spearheads our private wealth division, specializing in multi-generational wealth transfer and family office solutions.</p>
+<div class="flex justify-end pt-2">
+<a class="inline-flex items-center gap-1 text-primary font-cta-text text-body-sm hover:gap-2 transition-all" href="Founder%20Detail%20Page.html">
+Know More <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div></div>
+<!-- Nitish -->
+<div class="group"><div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-surface-variant shrink-0 w-[85vw] md:w-auto">
+<img alt="Nitish" class="w-full h-full object-cover object-top transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFoWv51WZJsShiTfbBr5e4KL9J5PyyeZlZyYl7wwUBib_KZ0c2d20x5Ao7AQR3TTnGd5nHrTx7PeqKJUQxn9iHjpSA3DWgtQJHVmcK-U9PibrD8xPfJWQiQi8t_KJjF9xSiUx6njqBNJs360pbVGuOEoCpIhehMtJJ26eolVwhZ7TLa0-eAXfugqINXZb4Q9GdL5QXPKFQG6mN5FWG9myczPy9Pqz1UtN11ophHowaMJs4Qjjdv7Saww"/>
+</div>
+<div class="space-y-3 relative">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md text-primary">Nitish Rakhecha</h4>
+<p class="font-label-bold text-label-bold text-secondary-fixed-dim uppercase tracking-wider">Partner, Corporate Advisory</p>
+</div>
+<a class="text-surface-tint hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">FCA, Institute of Chartered Accountants</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Nitish leads the corporate advisory practice, bringing deep expertise in structuring and complex corporate finance.</p>
+<div class="flex justify-end pt-2">
+<a class="inline-flex items-center gap-1 text-primary font-cta-text text-body-sm hover:gap-2 transition-all" href="Founder%20Detail%20Page.html">
+Know More <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div></div>
+<!-- Megha -->
+<div class="group"><div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-surface-variant shrink-0 w-[85vw] md:w-auto">
+<img alt="Megha" class="w-full h-full object-cover object-top transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnuFZXYIY7-QqhRA7Ihuxw2pqCYca9Oqm6KtpqE9Mk1RQbysOuPSpSOc10HC5u7byXMrxFrZQ0penwMEFZf99F_Cuo7hsreMn3EqojDcBDcby-ZAGTNQjn4S2xWmJWVNU23kUDKhBnoWn5wjmaAdS7-V2s1u3tlFly6R4kYd-vCdV8WKLeCiK-s5Kf7LH_Juoo-gEHGNJoCB3320t4euzjqB9LJ-A9_cdysDuuDLHRKJwwYd938zIlyw"/>
+</div>
+<div class="space-y-3 relative">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md text-primary">Megha Rakhecha</h4>
+<p class="font-label-bold text-label-bold text-secondary-fixed-dim uppercase tracking-wider">Director, Client Success</p>
+</div>
+<a class="text-surface-tint hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">MSc, Columbia University</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Megha ensures the flawless execution of our strategic initiatives and oversees the holistic client experience.</p>
+<div class="flex justify-end pt-2">
+<a class="inline-flex items-center gap-1 text-primary font-cta-text text-body-sm hover:gap-2 transition-all" href="Founder%20Detail%20Page.html">
+Know More <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div></div>
+</div>
+</div>
+</section>
+<!-- Stats / Trust Section -->
+<section class="py-section-gap bg-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-12 flex flex-col items-center gap-6">
+<div>
+<h2 class="text-headline-lg md:text-display-lg font-display-lg text-primary mb-4 text-center">Testimonials</h2>
+</div>
+<div class="hidden md:flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="auto-scroll-x auto-scroll-x-hover-pause flex gap-8 overflow-x-auto no-scrollbar pb-8 md:justify-center">
+<!-- Testimonial 1 -->
+<div class="flex-shrink-0 w-full md:w-[400px] snap-center p-8 border border-outline-variant rounded-lg bg-surface-container-lowest">
+<p class="text-body-lg font-body-lg text-primary mb-8 italic">"The level of precision and independent thinking Rakhecha Finserv brings to our family office is unparalleled in the industry."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<div class="font-bold text-primary">Managing Director</div>
+<div class="text-body-sm text-on-surface-variant">Global Technology Firm</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="flex-shrink-0 w-full md:w-[400px] snap-center p-8 border border-outline-variant rounded-lg bg-surface-container-lowest">
+<p class="text-body-lg font-body-lg text-primary mb-8 italic">"Their conflict-free approach gave us the confidence to restructure our entire global portfolio during a period of extreme volatility."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<div class="font-bold text-primary">Chief Investment Officer</div>
+<div class="text-body-sm text-on-surface-variant">Private Equity Group</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="flex-shrink-0 w-full md:w-[400px] snap-center p-8 border border-outline-variant rounded-lg bg-surface-container-lowest">
+<p class="text-body-lg font-body-lg text-primary mb-8 italic">"A true partner in wealth stewardship. They understand the nuances of generational wealth better than any traditional bank."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<div class="font-bold text-primary">Founder &amp; CEO</div>
+<div class="text-body-sm text-on-surface-variant">Industrial Conglomerate</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 4 -->
+<div class="flex-shrink-0 w-full md:w-[400px] snap-center p-8 border border-outline-variant rounded-lg bg-surface-container-lowest">
+<p class="text-body-lg font-body-lg text-primary mb-8 italic">"Their proactive portfolio adaptation during market shifts has consistently protected our downside while capturing upside we would have otherwise missed."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<div class="font-bold text-primary">Partner</div>
+<div class="text-body-sm text-on-surface-variant">Family Office</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 5 -->
+<div class="flex-shrink-0 w-full md:w-[400px] snap-center p-8 border border-outline-variant rounded-lg bg-surface-container-lowest">
+<p class="text-body-lg font-body-lg text-primary mb-8 italic">"Transparent, research-backed advice with none of the conflicted incentives we experienced with our previous bank-led advisors."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant"></div>
+<div>
+<div class="font-bold text-primary">Director of Finance</div>
+<div class="text-body-sm text-on-surface-variant">NRI Client, Singapore</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-section-gap bg-surface-yellow-light overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+<h2 class="text-headline-lg md:text-display-lg font-display-lg text-primary text-center mb-4">Our Clients</h2>
+</div>
+<div class="space-y-12">
+<!-- Row 1: Institutional Partnerships -->
+<div class="relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-4">
+<span class="text-primary font-label-bold text-body-md tracking-widest uppercase block text-center">Senior Executives of</span>
+</div>
+<div class="flex overflow-hidden group">
+<div class="flex gap-8 py-4 animate-scroll group-hover:[animation-play-state:paused]">
+<!-- Logos -->
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Microsoft" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/microsoft.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Boston Consulting Group" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/bcg.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="McKinsey &amp; Company" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/mckinsey.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="HP" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/hp.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Bajaj Finserv" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/bajaj-finserv.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="ITC Limited" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/itc.png"/></div>
+<!-- Duplicate for seamless loop -->
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Microsoft" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/microsoft.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Boston Consulting Group" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/bcg.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="McKinsey &amp; Company" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/mckinsey.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="HP" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/hp.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Bajaj Finserv" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/bajaj-finserv.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="ITC Limited" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/itc.png"/></div>
+</div>
+</div>
+</div>
+<!-- Row 2: Private Wealth Network -->
+<div class="relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-4">
+<span class="text-primary font-label-bold text-body-md tracking-widest uppercase block text-center">Family Offices</span>
+</div>
+<div class="flex overflow-hidden group">
+<div class="flex gap-8 py-4 animate-scroll-reverse group-hover:[animation-play-state:paused]">
+<!-- Logos -->
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Citizen Umbrella" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/citizen-umbrella.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="SafeRef" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/saferef.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="JB Group" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/jb-group.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="MINISO" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/miniso.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="ServiceCare" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/servicecare.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Choice Group" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/choice-group.png"/></div>
+<!-- Duplicate for seamless loop -->
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Citizen Umbrella" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/citizen-umbrella.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="SafeRef" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/saferef.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="JB Group" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/jb-group.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="MINISO" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/miniso.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="ServiceCare" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/servicecare.png"/></div>
+<div class="w-48 h-24 shrink-0 bg-surface-container-lowest rounded-lg border border-outline-variant/40 p-4 flex items-center justify-center"><img alt="Choice Group" class="max-h-12 max-w-[85%] object-contain" src="assets/logos/choice-group.png"/></div>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes scroll-reverse {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .animate-scroll {
+      animation: scroll 30s linear infinite;
+    }
+    .animate-scroll-reverse {
+      animation: scroll-reverse 30s linear infinite;
+    }
+  </style>
+</section>
+<!-- Footer -->
+<!-- Insights Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<h2 class="text-headline-lg md:text-display-lg font-display-lg text-primary max-w-2xl">Insights</h2>
+<button class="border border-primary text-primary px-6 py-2 rounded font-cta-text text-cta-text hover:bg-primary hover:text-white transition-colors">Explore All Insights</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Featured Insight -->
+<div class="lg:col-span-7 group cursor-pointer">
+<div class="relative h-[400px] mb-6 overflow-hidden rounded-lg">
+<img alt="Financial Markets" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ3IxSWjlmhSNWObBh0S2jp4qCJY-0FbKF9xT7HajjMwHYqB9GXuKrO1iza1TpsZIYSEE1fraUVAoHqGoLSMCYXCGEOfTuUvXh4apQeHQnq5qdYRtEkJUTz-AJJ6AlYcEnhPwAlWsqsafSLmbsyn9yDrhPy8-BzLizWKC2ZTR19rG8pyLbyV4IuCN3qyb4yFyz6izPHjATMXMTquRouUmzkZXIOWh-QfOYfZ4wXDmBEeMKjaSTWGVFOw"/>
+</div>
+<span class="text-on-surface-variant font-label-bold text-label-bold uppercase tracking-wider mb-2 block">EXCHANGES</span>
+<h3 class="text-headline-md font-headline-md text-primary mb-3 group-hover:text-gold transition-colors">Why the US and Japan Coordinated to Stabilize the Yen</h3>
+<div class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">podcasts</span>
+<span class="">Podcast | Aug 12, 2026</span>
+</div>
+</div>
+<!-- Side Insights -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-32 h-24 flex-shrink-0 rounded overflow-hidden">
+<img alt="Stocks" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkw2aKSqPcdbUuJxguWna_mrnXS7uigf1gx49UPpWMiqkwYvB6ISXiFM0LN2qqRU6KLwv5ITJNPrEi4C8IcL5rntKf4w0pO_VYRZJa9VlJSWSdBmHmAdeLI3gB0hVHEjzP599g31BBGSmCr4_OwvPaZinZ9mnRiVVGuxIgVXhLfv0Kflb3FimC4hWeWgs58PiMA7-JNaBT34dRDFmKJg23lW0fZ9pXnd7hjPwem3UY_FR4DOrc4BDM_g"/>
+</div>
+<div>
+<span class="text-on-surface-variant font-label-bold text-[10px] uppercase tracking-wider mb-1 block">THE MARKETS</span>
+<h4 class="text-body-md font-bold text-primary mb-2 group-hover:text-gold transition-colors">Why US Stocks May Grind Higher</h4>
+<div class="flex items-center gap-2 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">podcasts</span>
+<span class="">Podcast | Aug 7, 2026</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-32 h-24 flex-shrink-0 rounded overflow-hidden">
+<img alt="AI" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj5uWUt95q-Fh3KM9dqOuy0ZqtGax2Jp6ZxFlm5sAnjYwaMEsUiwK_vtn-Iypo8Uy7CfEVLHGEiDh783UHx6ft1m-pYXm4-XH5KfSifiyEmvoxAEhHy5sT2W9MJuX7GZcmV4E_qyBwMYKffoodUWSp3z0Cj8uT8-jj25Aj-CzoaefK9U9oc36PIDvFvvqPUkDtuJkoeQQjtPUoACRwZEef9LJ_c66TdViKSg973VMDgUJKjiHhQ7YFqA"/>
+</div>
+<div>
+<span class="text-on-surface-variant font-label-bold text-[10px] uppercase tracking-wider mb-1 block">ARTIFICIAL INTELLIGENCE</span>
+<h4 class="text-body-md font-bold text-primary mb-2 group-hover:text-gold transition-colors">Global AI Investment Is Forecast to Exceed $1 Trillion in 2026</h4>
+<div class="text-[12px] text-on-surface-variant">Aug 7, 2026</div>
+</div>
+</div>
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-32 h-24 flex-shrink-0 rounded overflow-hidden">
+<img alt="Talks" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkCEsNptm3XmgeglQc72P-czi62pePLGeM8ONx7mnbMx49e0yDY-7wzr8JAro8lQWH2zYw74G3KcGyr2YgCf2KU8ArvGX9GsWeAF3gcsiTGVJhLVcX4c5bJXFbgtXxsHJMnHJlsvL92MXbUKQCQD6v7y5b68HuUmNC5PKISZ3AkiKmD2IuWN45iZH3PPseUqZzQJj8Fqz8ugSN9bESnW-rWYk3vT5-tG3qdBggbFukl2FJclDqnX2G0w"/>
+</div>
+<div>
+<span class="text-on-surface-variant font-label-bold text-[10px] uppercase tracking-wider mb-1 block">TALKS AT GS</span>
+<h4 class="text-body-md font-bold text-primary mb-2 group-hover:text-gold transition-colors">Demond Martin on Purpose, Community, and Giving What You Have</h4>
+<div class="flex items-center gap-2 text-[12px] text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+<span class="">Video | Aug 5, 2026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Events Section -->
+<section class="py-section-gap bg-surface-yellow-light">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-headline-lg md:text-display-lg font-display-lg text-primary mb-4">Upcoming Events</h2>
+</div>
+<button class="border border-primary text-primary px-6 py-2 rounded font-cta-text text-cta-text hover:bg-primary hover:text-white transition-colors">Explore All Events</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Event 1 -->
+<div class="glass-card rounded-lg p-8 ambient-shadow flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/3 h-48 rounded overflow-hidden">
+<img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ3IxSWjlmhSNWObBh0S2jp4qCJY-0FbKF9xT7HajjMwHYqB9GXuKrO1iza1TpsZIYSEE1fraUVAoHqGoLSMCYXCGEOfTuUvXh4apQeHQnq5qdYRtEkJUTz-AJJ6AlYcEnhPwAlWsqsafSLmbsyn9yDrhPy8-BzLizWKC2ZTR19rG8pyLbyV4IuCN3qyb4yFyz6izPHjATMXMTquRouUmzkZXIOWh-QfOYfZ4wXDmBEeMKjaSTWGVFOw"/>
+</div>
+<div class="flex-grow flex flex-col">
+<span class="bg-primary text-white font-label-bold text-[10px] uppercase px-2 py-1 rounded w-max mb-4">Online Exclusive</span>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Global Market Outlook 2024: Navigating Volatility</h3>
+<div class="text-on-surface-variant text-body-sm mb-6">
+<div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Oct 24, 2024</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> 10:00 AM EST</div>
+</div>
+<button class="mt-auto bg-primary text-white px-6 py-2 rounded font-cta-text text-cta-text hover:bg-primary-dark transition-colors">Register Now</button>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="glass-card rounded-lg p-8 ambient-shadow flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/3 h-48 rounded overflow-hidden">
+<img alt="Event" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkCEsNptm3XmgeglQc72P-czi62pePLGeM8ONx7mnbMx49e0yDY-7wzr8JAro8lQWH2zYw74G3KcGyr2YgCf2KU8ArvGX9GsWeAF3gcsiTGVJhLVcX4c5bJXFbgtXxsHJMnHJlsvL92MXbUKQCQD6v7y5b68HuUmNC5PKISZ3AkiKmD2IuWN45iZH3PPseUqZzQJj8Fqz8ugSN9bESnW-rWYk3vT5-tG3qdBggbFukl2FJclDqnX2G0w"/>
+</div>
+<div class="flex-grow flex flex-col">
+<span class="bg-gold text-primary font-label-bold text-[10px] uppercase px-2 py-1 rounded w-max mb-4">Roundtable</span>
+<h3 class="text-headline-md font-headline-md text-primary mb-4">Private Equity Masterclass: Sourcing Alpha</h3>
+<div class="text-on-surface-variant text-body-sm mb-6">
+<div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Nov 05, 2024</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> New York, NY</div>
+</div>
+<button class="mt-auto border border-primary text-primary px-6 py-2 rounded font-cta-text text-cta-text hover:bg-primary hover:text-white transition-colors">Register Interest</button>
+</div>
+</div>
+</div>
+</div>
+</section><footer class="bg-primary text-white py-16 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Brand & QR -->
+<div class="flex flex-col gap-6">
+<div class="w-48">
+<img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_AVmSf0lRo81EVepg3eiqO-lK5Ar3-EjOnaJfKxsUlZ6B-wiA9eKAWop0IQxzjjznFEuPMZxnJEIyGwhVUMZ3ipJdSQVqlEtPFg_8tSChHp5j1Y7xRVOSynhxCnwUeYcGcGUJ4GDpVI1dQ-8ETfc4zSszbzI6FKgFc7gZ4uDpqaalTK7BQn8as3HQeQjnBKysdEjAOhdWfoXVICFLJURw44Nri5OJhrk6HVqZc4GAkTNnSGjwKptcxKOkUf7rPX4oGa8"/>
+</div>
+<div class="space-y-4">
+<p class="text-label-bold font-label-bold uppercase tracking-widest">SCAN THIS!</p>
+<div class="w-32 h-32 bg-white p-2 rounded">
+<img alt="QR Code" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI_pd5mBaYFC78HurnIgN_urBGvSGqsYWepPFvBjYnJoInJ1l-4jYjxgkFgjfWWyen_WE0Y7k7dFXhGt1yROHYV9r11r0HeWnigQSJo6E0z2FvVdeoMB55vuji_b3PL_H9WI75HcwMXORKMhYR0nVVTGgswk1nq0jUyg6aU5hciNWZ40AU4VxU4BfhWYqVMwHRXtXihX2kuR-ksW3VYjanfmUssZfM9fD6WgauMX72EYMfS2bdEXTvSQ"/>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Client%20Login%20page.html">Client Login</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Invest Online</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Schedule a Meeting</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Sign Up</a></li>
+</ul>
+</div>
+<!-- Our Services -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="IB.html">Investment Banking</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Wealth%20Management.html">Wealth Management</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Insurance%20Page.html">Insurance</a></li>
+</ul>
+</div>
+<!-- Get In Touch -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Get In Touch</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-gold" data-icon="location_on">location_on</span>
+<span class="text-body-md">13th Floor (1303) 8, Camac Street Shantiniketan Building, Kolkata - 700071</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="call">call</span>
+<span class="text-body-md">9748976371, 9836233380</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="mail">mail</span>
+<span class="text-body-md">customer.service@rakhechafinserv.com</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Compliance & Legal -->
+<div class="border-t border-white/10 pt-12 space-y-8">
+<div class="text-body-sm text-white/70 leading-relaxed">
+<p class="mb-4"><strong>Risk Factors –</strong> Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes. We deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.</p>
+<p class="text-center font-bold">AMFI Registered Mutual Fund Distributor – ARN 305993 | Date of initial registration – 20/08/2024 | Current validity of ARN – 19/08/2027</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-body-sm text-white/70">
+<div class="">© Copyright 2024 Rakhecha Finserv. All rights reserved.</div>
+<nav class="flex flex-wrap gap-4 justify-center">
+<a class="hover:text-gold transition-colors" href="#">Disclaimer</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Disclosure</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Privacy Policy</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SID/SAI/KIM</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Code of Conduct</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SEBI Circulars</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">AMFI Risk Factors</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll('.count-up');
+
+        const animateCountUp = (el) => {
+            const target = +el.getAttribute('data-target');
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+
+            const step = (currentTime) => {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+
+                // Easing function (easeOutQuart) for smoother finish
+                const easeProgress = 1 - Math.pow(1 - progress, 4);
+
+                const currentValue = Math.floor(easeProgress * target);
+                el.innerText = currentValue;
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    el.innerText = target;
+                }
+            };
+
+            window.requestAnimationFrame(step);
+        };
+
+        // Use IntersectionObserver to start animation when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCountUp(entry.target);
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% visible
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    });
+</script>
+</body></html>

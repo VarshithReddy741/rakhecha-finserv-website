@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Senior Manager - Legal &amp; Compliance | Rakhecha Finserv</title>
+<!-- Include Tailwind CSS via CDN with forms and container-queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<!-- Tailwind Configuration based on Sovereign Financial Design System -->
+<script src="tailwind-config.js"></script>
+<style data-purpose="custom-typography">
+    /* Applying Playfair Display specifically to headings as per design system hints */
+    h1, h2, h3, h4, h5, h6, .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    body {
+      background-color: theme('colors.surface');
+      color: theme('colors.on-surface');
+    }
+  </style>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="antialiased font-sans bg-surface">
+<!-- BEGIN: TopNavBar -->
+<header class="sticky top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm dark:shadow-none">
+<button class="md:hidden text-primary order-1" id="mobile-nav-toggle" onclick="toggleMobileNav()">
+<span class="material-symbols-outlined text-3xl" id="mobile-nav-icon">menu</span>
+</button>
+<div class="flex-shrink-0 w-36 md:w-64 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"><a href="Home%20Page.html"><img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCB1d4MUkOZYdq6TnWLDlbaNlkJiznVdFxQUyJLGJQXqp7wuFpGTYRMQtOWkM-S58Nspjm8zDG5sQT51xnt8QlxkiskJfT11JyPO4fR0yB-rJpf9ihbTOJetIoG2gMBYeQSkqdgAk7TeX9DJwjjZLLSh0ChOwH8hLCHjoDaXtK5RLuCNQ4mGhN6Tka3_VJxQpzKfkW6wHM_F18BSDRyVMurwxEiuDaLrUXxuVh-FFCvx18bqU_SziUpmDZ2uWszAU0ZA"/></a></div>
+<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Story</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Values</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Meet the Team</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="#">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Upcoming Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Past Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Article%20Page.html">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
+<div class="hidden md:block"><div class="flex items-center gap-6"><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button><a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-2 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a><a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-2 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a></div></div>
+<a href="Client%20Login%20page.html" class="md:hidden order-2 bg-white border border-secondary text-primary font-cta-text px-3 py-1.5 rounded text-sm hover:bg-surface-container-low transition-colors inline-block text-center">Login</a>
+<!-- Mobile Nav Panel -->
+<div class="hidden md:hidden absolute top-full left-0 w-full max-h-[80vh] overflow-y-auto bg-surface-container-lowest dark:bg-surface-dim shadow-lg z-40" id="mobile-nav-panel">
+<div class="flex flex-col divide-y divide-outline-variant px-margin-mobile">
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('about')">
+<span class="text-headline-md font-headline-md text-primary">About Us</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-about">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-about">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Story</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Values</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Meet the Team</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Awards and Recognition</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('services')">
+<span class="text-headline-md font-headline-md text-primary">Our Services</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-services">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-services">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="IB.html">Investment Banking</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Wealth%20Management.html">Wealth Management</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Insurance%20Page.html">Insurance</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('knowledge')">
+<span class="text-headline-md font-headline-md text-primary">Knowledge Hub</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-knowledge">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-knowledge">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Upcoming Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Past Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Article%20Page.html">Insights</a>
+</div>
+</div>
+<a class="py-5 text-headline-md font-headline-md text-primary block" href="careers.html">Careers</a>
+</div>
+<div class="px-margin-mobile py-6 flex flex-col gap-3 border-t border-outline-variant">
+<a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-3 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</div>
+</header>
+<script src="main.js"></script>
+<!-- END: TopNavBar -->
+<!-- BEGIN: MainContent -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+<!-- BEGIN: JobHeader -->
+<section class="mb-12" data-purpose="job-header">
+<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+<!-- Job Title and Meta -->
+<div class="flex-1">
+<div class="flex items-center gap-4 mb-4">
+<h1 class="text-3xl sm:text-4xl font-serif font-bold text-primary">Senior Manager- Legal &amp; Compliance</h1>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-high text-on-surface">
+              Job ID: 381562
+            </span>
+</div>
+<div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">schema</span>
+<span>Human Resources (HR)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>In-Office</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">map</span>
+<span>Mumbai, Maharashtra, India</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">work</span>
+<span>6 - 14 years</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-4 shrink-0 mt-4 lg:mt-0">
+<a href="careers.html" class="px-6 py-2.5 border border-outline text-primary rounded-md font-medium hover:bg-surface-container transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 inline-block text-center">
+            See all jobs
+          </a>
+<a href="Apply%20for%20a%20role%20page.html" class="px-6 py-2.5 bg-primary text-on-primary rounded-md font-medium hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-sm inline-block text-center">
+            Apply
+          </a>
+</div>
+</div>
+</section>
+<!-- END: JobHeader -->
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- BEGIN: JobDetails (Main Column) -->
+<section class="flex-1" data-purpose="job-description">
+<div class="prose prose-sm sm:prose-base prose-blue max-w-none text-on-surface-variant space-y-6">
+<ul class="list-disc pl-5 space-y-3">
+<li>Serve as the principal legal advisor to the Board of Directors, senior management, and business teams on legal, regulatory, governance, and strategic matters.</li>
+<li>Ensure compliance with the Companies Act, RBI regulations, FEMA, labour laws, contract laws, data privacy laws, and other applicable statutory requirements.</li>
+<li>Develop, implement, and maintain legal, compliance, governance, and risk management frameworks across the organization.</li>
+<li>Drive corporate governance initiatives and advise the Board on governance best practices.</li>
+<li>Oversee all corporate secretarial functions, including statutory registers, filings, board resolutions, annual filings, and regulatory submissions.</li>
+<li>Plan and manage Board Meetings, Committee Meetings, Annual General Meetings (AGMs), and Extraordinary General Meetings (EGMs), including agenda preparation, board papers, minutes, and statutory documentation.</li>
+</ul>
+<h3 class="text-lg font-semibold text-primary mt-8 mb-4">Contract Management</h3>
+<ul class="list-disc pl-5 space-y-3">
+<li>Draft, review, negotiate, and finalize commercial contracts, customer agreements, vendor agreements, partnership agreements, confidentiality agreements, technology agreements, employment contracts, and other legal documentation.</li>
+<li>Ensure all contracts adequately protect the Company's commercial, legal, operational, and financial interests.</li>
+<li>Standardize legal documentation and maintain contract governance across the organization.</li>
+</ul>
+<h3 class="text-lg font-semibold text-primary mt-8 mb-4">Regulatory Compliance</h3>
+<ul class="list-disc pl-5 space-y-3">
+<li>Develop and oversee the Company's enterprise-wide compliance framework.</li>
+<li>Ensure ongoing compliance with RBI regulations, NBFC regulatory requirements, AML/KYC/CFT guidelines, data protection laws, outsourcing guidelines, digital lending regulations, and other applicable regulatory frameworks.</li>
+<li>Monitor regulatory developments and ensure timely implementation of new legal and compliance requirements.</li>
+</ul>
+</div>
+</section>
+<!-- END: JobDetails -->
+<!-- BEGIN: SidebarInfo (Right Column) -->
+<aside class="w-full lg:w-80 shrink-0 border-t lg:border-t-0 lg:border-l border-outline-variant pt-8 lg:pt-0 lg:pl-8 space-y-8" data-purpose="job-sidebar">
+<div>
+<p class="text-on-surface-variant">Full-Time</p>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary mb-2">Experience Level</h4>
+<p class="text-on-surface-variant">Director-Vp</p>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary mb-2">Work Experience (years)</h4>
+<p class="text-on-surface-variant">6 - 14 years</p>
+</div>
+<div>
+<h4 class="text-base font-semibold text-primary mb-3">Skills</h4>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-md text-sm bg-surface-container text-on-surface-variant border border-outline-variant">Regulations</span>
+<span class="inline-flex items-center px-3 py-1 rounded-md text-sm bg-surface-container text-on-surface-variant border border-outline-variant">Legal</span>
+<span class="inline-flex items-center px-3 py-1 rounded-md text-sm bg-surface-container text-on-surface-variant border border-outline-variant">Compliance</span>
+<span class="inline-flex items-center px-3 py-1 rounded-md text-sm bg-surface-container text-on-surface-variant border border-outline-variant">Rbi</span>
+<span class="inline-flex items-center px-3 py-1 rounded-md text-sm bg-surface-container text-on-surface-variant border border-outline-variant">Sebi</span>
+</div>
+</div>
+</aside>
+<!-- END: SidebarInfo -->
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="bg-primary text-white py-16 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Brand & QR -->
+<div class="flex flex-col gap-6">
+<div class="w-48">
+<img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_AVmSf0lRo81EVepg3eiqO-lK5Ar3-EjOnaJfKxsUlZ6B-wiA9eKAWop0IQxzjjznFEuPMZxnJEIyGwhVUMZ3ipJdSQVqlEtPFg_8tSChHp5j1Y7xRVOSynhxCnwUeYcGcGUJ4GDpVI1dQ-8ETfc4zSszbzI6FKgFc7gZ4uDpqaalTK7BQn8as3HQeQjnBKysdEjAOhdWfoXVICFLJURw44Nri5OJhrk6HVqZc4GAkTNnSGjwKptcxKOkUf7rPX4oGa8"/>
+</div>
+<div class="space-y-4">
+<p class="text-label-bold font-label-bold uppercase tracking-widest">SCAN THIS!</p>
+<div class="w-32 h-32 bg-white p-2 rounded">
+<img alt="QR Code" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI_pd5mBaYFC78HurnIgN_urBGvSGqsYWepPFvBjYnJoInJ1l-4jYjxgkFgjfWWyen_WE0Y7k7dFXhGt1yROHYV9r11r0HeWnigQSJo6E0z2FvVdeoMB55vuji_b3PL_H9WI75HcwMXORKMhYR0nVVTGgswk1nq0jUyg6aU5hciNWZ40AU4VxU4BfhWYqVMwHRXtXihX2kuR-ksW3VYjanfmUssZfM9fD6WgauMX72EYMfS2bdEXTvSQ"/>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Client%20Login%20page.html">Client Login</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Invest Online</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Schedule a Meeting</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Sign Up</a></li>
+</ul>
+</div>
+<!-- Our Services -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="IB.html">Investment Banking</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Wealth%20Management.html">Wealth Management</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Insurance%20Page.html">Insurance</a></li>
+</ul>
+</div>
+<!-- Get In Touch -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Get In Touch</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-gold" data-icon="location_on">location_on</span>
+<span class="text-body-md">13th Floor (1303) 8, Camac Street Shantiniketan Building, Kolkata - 700071</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="call">call</span>
+<span class="text-body-md">9748976371, 9836233380</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="mail">mail</span>
+<span class="text-body-md">customer.service@rakhechafinserv.com</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Compliance & Legal -->
+<div class="border-t border-white/10 pt-12 space-y-8">
+<div class="text-body-sm text-white/70 leading-relaxed">
+<p class="mb-4"><strong>Risk Factors –</strong> Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes. We deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.</p>
+<p class="text-center font-bold">AMFI Registered Mutual Fund Distributor – ARN 305993 | Date of initial registration – 20/08/2024 | Current validity of ARN – 19/08/2027</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-body-sm text-white/70">
+<div class="">© Copyright 2024 Rakhecha Finserv. All rights reserved.</div>
+<nav class="flex flex-wrap gap-4 justify-center">
+<a class="hover:text-gold transition-colors" href="#">Disclaimer</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Disclosure</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Privacy Policy</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SID/SAI/KIM</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Code of Conduct</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SEBI Circulars</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">AMFI Risk Factors</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>

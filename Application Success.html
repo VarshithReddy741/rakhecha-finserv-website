@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Application Received - Rakhecha Finserv</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="tailwind-config.js"></script>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md antialiased">
+<!-- Navbar Suppressed as per Task Intent Guidelines for Transactional/Success Screens -->
+<main class="flex-grow flex items-center justify-center py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-2xl w-full flex flex-col items-center text-center">
+<!-- Success Icon -->
+<div class="mb-8 w-24 h-24 rounded-full bg-secondary-container/20 flex items-center justify-center border border-secondary-container relative overflow-hidden">
+<span class="material-symbols-outlined text-secondary-container text-[48px] icon-fill z-10" data-icon="check_circle">check_circle</span>
+<!-- Subtle glow effect -->
+<div class="absolute inset-0 bg-gradient-to-tr from-transparent via-secondary-container/10 to-transparent animate-[spin_4s_linear_infinite]"></div>
+</div>
+<!-- Typography Content -->
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Application Received</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-12">
+                Thank you for your interest in Rakhecha Finserv. Our talent acquisition team will review your profile and reach out if there is a potential match.
+            </p>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto items-center">
+<a class="inline-flex items-center justify-center px-8 py-3 bg-secondary-container text-on-secondary-container font-cta-text text-cta-text rounded hover:bg-secondary-fixed transition-colors duration-300 w-full sm:w-auto shadow-sm" href="careers.html">
+                    Back to Careers
+                </a>
+<a class="inline-flex items-center justify-center px-8 py-3 bg-transparent text-primary border border-outline-variant hover:border-primary hover:text-primary font-cta-text text-cta-text rounded transition-colors duration-300 w-full sm:w-auto group" href="Home%20Page.html">
+                    Return Home
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Decorative Divider -->
+<div class="w-16 h-px bg-outline-variant mt-16 mb-8"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/70">
+                A confirmation email has been sent to your provided address.
+            </p>
+</div>
+</main>
+<!-- Footer Suppressed as per Task Intent Guidelines for Transactional/Success Screens to focus on canvas -->
+</body></html>

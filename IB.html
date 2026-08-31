@@ -1,0 +1,655 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Investment Banking Hub - Rakhecha Finserv</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="tailwind-config.js"></script>
+<style>
+.hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+</style>
+<link rel="stylesheet" href="theme.css"/>
+</head>
+<body class="bg-white text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface-container-lowest dark:bg-surface-dim shadow-sm dark:shadow-none">
+<button class="md:hidden text-primary order-1" id="mobile-nav-toggle" onclick="toggleMobileNav()">
+<span class="material-symbols-outlined text-3xl" id="mobile-nav-icon">menu</span>
+</button>
+<div class="flex-shrink-0 w-36 md:w-64 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"><a href="Home%20Page.html"><img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCB1d4MUkOZYdq6TnWLDlbaNlkJiznVdFxQUyJLGJQXqp7wuFpGTYRMQtOWkM-S58Nspjm8zDG5sQT51xnt8QlxkiskJfT11JyPO4fR0yB-rJpf9ihbTOJetIoG2gMBYeQSkqdgAk7TeX9DJwjjZLLSh0ChOwH8hLCHjoDaXtK5RLuCNQ4mGhN6Tka3_VJxQpzKfkW6wHM_F18BSDRyVMurwxEiuDaLrUXxuVh-FFCvx18bqU_SziUpmDZ2uWszAU0ZA"/></a></div>
+<nav class="hidden md:flex gap-8 items-center"><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="About%20us.html">About Us <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Story</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Our Values</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Meet the Team</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="About%20us.html">Awards and Recognition</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="#">Our Services <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="IB.html">Investment Banking</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Wealth%20Management.html">Wealth Management</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Insurance%20Page.html">Insurance</a></li></ul></div></div></div><div class="relative group"><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md flex items-center gap-1" href="Knowledge%20hub.html">Knowledge Hub <span class="material-symbols-outlined text-sm">expand_more</span></a><div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 w-64"><div class="bg-white rounded-lg shadow-xl border border-outline-variant overflow-hidden p-6"><ul class="space-y-4"><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Upcoming Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="#">Past Events</a></li><li><a class="text-primary hover:text-gold transition-colors cursor-pointer font-body-md block" href="Article%20Page.html">Insights</a></li></ul></div></div></div><a class="text-on-surface-variant dark:text-outline-variant hover:text-primary hover:text-secondary-container transition-colors duration-300 cursor-pointer transition-all active:scale-95 text-body-md font-body-md" href="careers.html">Careers</a></nav>
+<div class="hidden md:block"><div class="flex items-center gap-6"><button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button><a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-2 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a><a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-2 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a></div></div>
+<a href="Client%20Login%20page.html" class="md:hidden order-2 bg-white border border-secondary text-primary font-cta-text px-3 py-1.5 rounded text-sm hover:bg-surface-container-low transition-colors inline-block text-center">Login</a>
+<!-- Mobile Nav Panel -->
+<div class="hidden md:hidden absolute top-full left-0 w-full max-h-[80vh] overflow-y-auto bg-surface-container-lowest dark:bg-surface-dim shadow-lg z-40" id="mobile-nav-panel">
+<div class="flex flex-col divide-y divide-outline-variant px-margin-mobile">
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('about')">
+<span class="text-headline-md font-headline-md text-primary">About Us</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-about">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-about">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Story</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Our Values</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Meet the Team</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="About%20us.html">Awards and Recognition</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('services')">
+<span class="text-headline-md font-headline-md text-primary">Our Services</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-services">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-services">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="IB.html">Investment Banking</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Wealth%20Management.html">Wealth Management</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Insurance%20Page.html">Insurance</a>
+</div>
+</div>
+<div>
+<button class="w-full flex justify-between items-center py-5 text-left" onclick="toggleMobileSection('knowledge')">
+<span class="text-headline-md font-headline-md text-primary">Knowledge Hub</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-300" id="mobile-arrow-knowledge">expand_more</span>
+</button>
+<div class="hidden pb-4 space-y-3" id="mobile-section-knowledge">
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Upcoming Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="#">Past Events</a>
+<a class="block text-on-surface-variant hover:text-primary py-1 text-body-md font-body-md" href="Article%20Page.html">Insights</a>
+</div>
+</div>
+<a class="py-5 text-headline-md font-headline-md text-primary block" href="careers.html">Careers</a>
+</div>
+<div class="px-margin-mobile py-6 flex flex-col gap-3 border-t border-outline-variant">
+<a href="Client%20Login%20page.html" class="bg-white border border-secondary text-primary font-cta-text px-6 py-3 rounded hover:bg-surface-container-low transition-colors inline-block text-center">Client Login</a>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-6 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</div>
+</header>
+<script src="main.js"></script>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Distinctive glass skyscraper with an observation deck against a clear sky" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1750810977337-43176811e758?flip=h&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.5&amp;fp-y=0.3&amp;fp-z=1.0&amp;w=2400&amp;h=1050&amp;q=80"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h1 class="text-display-lg font-display-lg text-primary mb-6 max-w-4xl">
+                    Authoritative Stewardship for Global Capital.
+                </h1>
+<p class="font-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-2xl mb-10">
+                    Navigating complex financial landscapes with precision, heritage, and uncompromising expertise.
+                </p>
+<div class="flex gap-4"></div>
+</div>
+</section>
+<!-- Services Interactive Section -->
+<section class="py-section-gap bg-white relative z-20 -mt-20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12 scroll-mt-28" id="ib-capabilities-heading">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Capabilities</h3>
+</div>
+<div class="relative min-h-[600px] w-full" id="ib-interactive-container"><!-- Desktop Grid View -->
+<div class="hidden md:grid md:grid-cols-3 gap-6 mb-8" id="desktop-grid">
+<!-- Fundraising -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-fundraising" onclick="toggleIBPanel('fundraising')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB8wDT0AuV3Y9LgtB2Ptcpx0_UUwFGnsJTwFr21y0Akqvfq1vNZ6uZXzR2YYoKshUSfoMrH8W3iMgBqMXxIK1TQ0smWozp7mf3aebxiwjL0dJAN_wTZq5dfsgYThb4CExytfvxKTFxu6o132prZSDtrc9yCUei73G4oWL_dbG2zCH-4pnFouxHoFLFK5-jqOzOSmK-wMUrTLcRkuj9_jsQfMbT8e-_Vl6-NxhYUXWWUUU-vuwISvszi5A&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Fundraising</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Strategic capital structuring across Equity &amp; Debt markets.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- IPO Advisory -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-ipo" onclick="toggleIBPanel('ipo')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCZnCOhnHsxW1svgOr6KZ2Pzfku9uhd95Uc1_6OsdTRSjWbyNObqmt4pIwAsPBbG5c7fbalczx8fRulDQbJOD9rnJRC0uqOgVhSCfMW3AungX_G1qGx4nzRFePE-FTzwSPHWC7derCzR6rvHiMQjqhAtMhXssqbKMSno-tGSAfTpSX1JInif_eqvUOM0qaUIb5ZW4nFpD-0CntioUA1j-5xO7ylQ9bOFnPpu1SEk79eMqmfBcr9e_pD-g&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">IPO Listing Advisory</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">End-to-end guidance for public market debuts.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Valuation -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-valuation" onclick="toggleIBPanel('valuation')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD3pfWPG63ggufyafojzxs4wER5zmRWITQ9R60GsIlW-kSePeAmOWey9lhgC9PCFA8b0eLu4A8ijcbuU_0TCt7aQG-CgAN45kQcK98mzh0xZtmcrb9Y5HpaBWWDDNUhG2vZO97ChMarU1WHg5gZ7Hnk6zsDaV84U_DLZrI6FSkaOje1aAzqG1tr9MITJYH1Dwo-DzasvBCUvQwSK8TPO4BdzFPnXDFwCYRzWU6AoeenEGOAZYCr52CiVQ&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Valuation</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Rigorous independent valuation services.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- M&A -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-ma" onclick="toggleIBPanel('ma')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBf-_CzPPnq9smPMXFOw7Ud_Zexnjy4e437YmcSBmJffid0KCf2yqYDuhxpnPxUqfXrfHqIbB4IIK3PKUPNf2_RU8-8P5e4VRfbFmXib6ZunVr5VxeTb5PZhsOiq0AFX7ZMOlQm3P40S-7TSscZ8sSlbENuPxRnfH1qxEN9WAHU8DOKh1TsM8iylS7lno4r2bfpDo4PjjsVQHvqbwpWD8jdLWwJa9NzZnwVSMFUfXjWyqQLYpGV2AwHkg&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Mergers &amp; Acquisitions</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Strategic advisory from identification to execution.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Secondary Deals -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-secondary" onclick="toggleIBPanel('secondary')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDUEnu6RIH38D_vXOb9RbpGy-gsME02DNFYAHFE8AcNdw9-YVN5PN64IKkcGjeZotddmhu2wcVjIWpMeMdM_3aJvgLejhtSIpFdF3gwEG80ILw_UV3d3beKrGSl_rT0K-2l0wFyZm_1R_kv0zsg0aOmwGYL-OcSkn0VkkQF7u3rLDl43NBLPONtX9CphYUelb3fmZSYwPh1LFWYJn3_6V_tlOQfWFBTNcnBCSGIfIjEIfxyd9qznmESzQ&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Secondary Deals</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Navigating the unlisted space with discretion.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- FPI Hub -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-fpi" onclick="toggleIBPanel('fpi')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAySjA5w2Ujf9qweKQ77AarSNKgX14PDH_LuAc8LfyUnzisVa3iORcykQ1wc6Thycoa6w9WrI9pAynXwOV3_i1XQFOwKuFaQeXOiVG5diZFtr9NYULpO8-rpXbsuEiMMv8yVfDz4ZI2bhR6CyIpAGVI4AynKEeqT6MHVZVCMA6rAFSpe8ZANnA6qaapRzvgopzVDi-ktF3tStz3KvbJv83xTvHaq2czyoUputCfzc6UtDZh7gFbYlN7VA&quot;);"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">FPI Hub</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Streamlined access for Foreign Portfolio Investors.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Credit Papers -->
+<div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-credit" onclick="toggleIBPanel('credit')">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-color: #0B2A45;"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Credit Papers</h3>
+<p class="font-body-sm text-body-sm text-surface-dim">Lender-ready credit papers for your financing needs.</p>
+<div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
+<span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Desktop Detail Panel: sits beside the clicked card, in the same grid row -->
+<div class="hidden md:col-span-2" id="ib-desktop-panel">
+<div class="bg-white rounded-xl p-8 relative border border-secondary shadow-xl h-[440px] overflow-y-auto">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary" onclick="closeIBPanel()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div id="ib-desktop-panel-content"></div>
+</div>
+</div>
+</div>
+<!-- Mobile Accordion View -->
+<div class="md:hidden flex flex-col gap-4" id="ib-mobile-accordion"></div>
+</div>
+<script>
+const ibData = {
+    fundraising: {
+        title: 'Fundraising',
+        desc: 'Strategic capital structuring across Equity &amp; Debt markets.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB8wDT0AuV3Y9LgtB2Ptcpx0_UUwFGnsJTwFr21y0Akqvfq1vNZ6uZXzR2YYoKshUSfoMrH8W3iMgBqMXxIK1TQ0smWozp7mf3aebxiwjL0dJAN_wTZq5dfsgYThb4CExytfvxKTFxu6o132prZSDtrc9yCUei73G4oWL_dbG2zCH-4pnFouxHoFLFK5-jqOzOSmK-wMUrTLcRkuj9_jsQfMbT8e-_Vl6-NxhYUXWWUUU-vuwISvszi5A',
+        body: `
+<h2 class="font-headline-lg text-primary mb-4">Fundraising, Equity &amp; Debt</h2>
+<p class="font-body-md text-on-surface-variant mb-8 border-l-2 border-secondary pl-4">We advise startups, growth-stage companies, and established businesses in raising capital across equity, quasi-equity, and structured debt instruments. Our end-to-end fundraising mandate covers everything from pitch preparation to investor outreach, term sheet negotiation, and deal closure.</p>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">What we offer</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Equity fundraising (Seed, Series A to E, Pre-IPO)</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Debt fundraising (NCDs, venture debt, structured finance)</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Strategic investor identification</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Business plan &amp; financial model review</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Investor deck &amp; data room preparation</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Term sheet review</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Post-deal IR support</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Credit paper preparation</p></div></li>
+</ul>
+</div>
+<div class="mt-6">
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">Who should use this</h4>
+<p class="font-body-sm text-on-surface-variant">Startups seeking capital, Growth-stage companies planning expansion, Promoters looking for PE/VC, Companies preparing to go public.</p>
+</div>
+</div>
+`
+    },
+    ipo: {
+        title: 'IPO Listing Advisory',
+        desc: 'End-to-end guidance for public market debuts.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZnCOhnHsxW1svgOr6KZ2Pzfku9uhd95Uc1_6OsdTRSjWbyNObqmt4pIwAsPBbG5c7fbalczx8fRulDQbJOD9rnJRC0uqOgVhSCfMW3AungX_G1qGx4nzRFePE-FTzwSPHWC7derCzR6rvHiMQjqhAtMhXssqbKMSno-tGSAfTpSX1JInif_eqvUOM0qaUIb5ZW4nFpD-0CntioUA1j-5xO7ylQ9bOFnPpu1SEk79eMqmfBcr9e_pD-g',
+        body: `
+<h2 class="font-headline-lg text-primary mb-4">IPO Listing Advisory</h2>
+<p class="font-body-md text-on-surface-variant mb-8 border-l-2 border-secondary pl-4">End-to-end advisory for your journey to the public markets.</p>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">What we offer</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">IPO readiness</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Pre-IPO structuring</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">DRHP preparation/SEBI filing</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Coordination with BRLM/registrars</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Mainboard IPO (BSE/NSE)</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">SME IPO (BSE SME/NSE Emerge)</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Investor roadshow</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Grey market/anchor investor strategy</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Post-listing compliance</p></div></li>
+</ul>
+</div>
+</div>
+`
+    },
+    valuation: {
+        title: 'Valuation',
+        desc: 'Rigorous independent valuation services.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3pfWPG63ggufyafojzxs4wER5zmRWITQ9R60GsIlW-kSePeAmOWey9lhgC9PCFA8b0eLu4A8ijcbuU_0TCt7aQG-CgAN45kQcK98mzh0xZtmcrb9Y5HpaBWWDDNUhG2vZO97ChMarU1WHg5gZ7Hnk6zsDaV84U_DLZrI6FSkaOje1aAzqG1tr9MITJYH1Dwo-DzasvBCUvQwSK8TPO4BdzFPnXDFwCYRzWU6AoeenEGOAZYCr52CiVQ',
+        body: `
+<h2 class="font-headline-lg text-primary mb-4">Valuation</h2>
+<p class="font-body-md text-on-surface-variant mb-8 border-l-2 border-secondary pl-4">Helping you understand and unlock the value of your business.</p>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">What we offer</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Business and enterprise valuation</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Early-stage to pre-IPO valuation</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">ESOPs and ESOP trust valuation</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Intangible asset and brand valuation</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Real estate and investment portfolio valuation</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Valuation for regulatory compliance (FEMA, SEBI, RBI)</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Fairness opinions for M&amp;A</p></div></li>
+</ul>
+</div>
+</div>
+`
+    },
+    ma: {
+        title: 'Mergers &amp; Acquisitions',
+        desc: 'Strategic advisory from identification to execution.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBf-_CzPPnq9smPMXFOw7Ud_Zexnjy4e437YmcSBmJffid0KCf2yqYDuhxpnPxUqfXrfHqIbB4IIK3PKUPNf2_RU8-8P5e4VRfbFmXib6ZunVr5VxeTb5PZhsOiq0AFX7ZMOlQm3P40S-7TSscZ8sSlbENuPxRnfH1qxEN9WAHU8DOKh1TsM8iylS7lno4r2bfpDo4PjjsVQHvqbwpWD8jdLWwJa9NzZnwVSMFUfXjWyqQLYpGV2AwHkg',
+        body: `
+<h2 class="font-headline-lg text-primary mb-4">Mergers &amp; Acquisitions</h2>
+<p class="font-body-md text-on-surface-variant mb-8 border-l-2 border-secondary pl-4">Supporting businesses through strategic transactions, from opportunity to execution.</p>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">What we offer</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Buy-side M&amp;A</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Sell-side M&amp;A</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Deal structuring</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Regulatory approvals (CCI, NCLT, RBI, SEBI)</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Integration planning</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Cross-border M&amp;A advisory</p></div></li>
+</ul>
+</div>
+</div>
+`
+    },
+    secondary: {
+        title: 'Secondary Deals',
+        desc: 'Navigating the unlisted space with discretion.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDUEnu6RIH38D_vXOb9RbpGy-gsME02DNFYAHFE8AcNdw9-YVN5PN64IKkcGjeZotddmhu2wcVjIWpMeMdM_3aJvgLejhtSIpFdF3gwEG80ILw_UV3d3beKrGSl_rT0K-2l0wFyZm_1R_kv0zsg0aOmwGYL-OcSkn0VkkQF7u3rLDl43NBLPONtX9CphYUelb3fmZSYwPh1LFWYJn3_6V_tlOQfWFBTNcnBCSGIfIjEIfxyd9qznmESzQ',
+        body: `
+<h2 class="font-headline-lg text-primary mb-4">Secondary Deals</h2>
+<p class="font-body-md text-on-surface-variant mb-8 border-l-2 border-secondary pl-4">Solving for liquidity in private markets. Navigate India's unlisted and pre-IPO opportunities.</p>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">What we offer</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Buying/selling unlisted shares</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Pre-IPO investment facilitation</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Co-investment with institutional VCs</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Promoter stake sales</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Employee stock liquidity/ESOP buyouts</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Block deals</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Due diligence on unlisted targets</p></div></li>
+</ul>
+</div>
+<div class="mt-10 mb-10">
+<h4 class="font-label-bold text-label-bold text-secondary mb-6 uppercase tracking-wider">Active Secondary Inventory</h4>
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant/30 overflow-hidden shadow-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant/30">
+<th class="py-4 px-6 font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Company</th>
+<th class="py-4 px-6 font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Sector</th>
+<th class="py-4 px-6 font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Series/Stage</th>
+<th class="py-4 px-6 font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider text-right">Indicative Price</th>
+<th class="py-4 px-6 font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30">
+<tr class="hover:bg-surface transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center font-bold mr-4 text-xs">A</div>
+<span class="font-body-md text-body-md font-semibold text-primary">Apex Technologies</span>
+</div>
+</td>
+<td class="py-5 px-6 font-body-sm text-body-sm text-on-surface-variant">Fintech</td>
+<td class="py-5 px-6"><span class="inline-block px-3 py-1 bg-surface-variant text-primary-fixed-variant rounded-full font-label-bold text-[10px]">Pre-IPO</span></td>
+<td class="py-5 px-6 font-body-md text-body-md font-semibold text-primary text-right">₹1,250</td>
+<td class="py-5 px-6 text-center"><span class="material-symbols-outlined text-secondary">chevron_right</span></td>
+</tr>
+<tr class="hover:bg-surface transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-tertiary text-on-tertiary flex items-center justify-center font-bold mr-4 text-xs">N</div>
+<span class="font-body-md text-body-md font-semibold text-primary">Nexus Health</span>
+</div>
+</td>
+<td class="py-5 px-6 font-body-sm text-body-sm text-on-surface-variant">Healthcare Tech</td>
+<td class="py-5 px-6"><span class="inline-block px-3 py-1 bg-surface-variant text-primary-fixed-variant rounded-full font-label-bold text-[10px]">Series C</span></td>
+<td class="py-5 px-6 font-body-md text-body-md font-semibold text-primary text-right">₹840</td>
+<td class="py-5 px-6 text-center"><span class="material-symbols-outlined text-secondary">chevron_right</span></td>
+</tr>
+<tr class="hover:bg-surface transition-colors">
+<td class="py-5 px-6">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold mr-4 text-xs">V</div>
+<span class="font-body-md text-body-md font-semibold text-primary">Vanguard Space</span>
+</div>
+</td>
+<td class="py-5 px-6 font-body-sm text-body-sm text-on-surface-variant">Aerospace</td>
+<td class="py-5 px-6"><span class="inline-block px-3 py-1 bg-surface-variant text-primary-fixed-variant rounded-full font-label-bold text-[10px]">Series B</span></td>
+<td class="py-5 px-6 font-body-md text-body-md font-semibold text-primary text-right">₹420</td>
+<td class="py-5 px-6 text-center"><span class="material-symbols-outlined text-secondary">chevron_right</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">Dynamic Unlisted Shares</h4>
+<p class="font-body-sm text-on-surface-variant">A dedicated, frequently updated section listing unlisted shares currently available for acquisition. Pricing and availability are dynamic and subject to frequent change; contact us for the latest inventory and indicative pricing.</p>
+</div>
+<div class="mt-6"><h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">Ecosystem Support &amp; Exit Solutions</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><p class="font-body-sm text-on-surface-variant">Cap table clearance for founders</p></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><p class="font-body-sm text-on-surface-variant">Exit facilitation for angel investors looking to monetize early-stage positions</p></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><p class="font-body-sm text-on-surface-variant">Secondary exit structuring for venture capital fund managers approaching end-of-fund life</p></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><p class="font-body-sm text-on-surface-variant">Profitable ESOP liquidity programs for employees and ESOP holders seeking to convert vested options into cash</p></li>
+</ul></div>
+</div>
+`
+    },
+    fpi: {
+        title: 'FPI Hub',
+        desc: 'Streamlined access for Foreign Portfolio Investors.',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAySjA5w2Ujf9qweKQ77AarSNKgX14PDH_LuAc8LfyUnzisVa3iORcykQ1wc6Thycoa6w9WrI9pAynXwOV3_i1XQFOwKuFaQeXOiVG5diZFtr9NYULpO8-rpXbsuEiMMv8yVfDz4ZI2bhR6CyIpAGVI4AynKEeqT6MHVZVCMA6rAFSpe8ZANnA6qaapRzvgopzVDi-ktF3tStz3KvbJv83xTvHaq2czyoUputCfzc6UtDZh7gFbYlN7VA',
+        body: `
+<h2 class="font-headline-lg text-primary mb-4">FPI Integration</h2>
+<p class="font-body-md text-on-surface-variant mb-2 border-l-2 border-secondary pl-4">Helping global investors access India's private markets. Your partner for entering and exiting India's private markets.</p>
+<p class="font-body-md text-on-surface-variant mb-8 italic pl-4">We enable Foreign Portfolio Investors to participate seamlessly in India's high-growth private markets, navigating regulatory frameworks, custody requirements, and exit strategies with precision and speed.</p>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">What we offer</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Identification of unlisted/pre-IPO opportunities</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Structuring entry</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">FEMA and RBI compliance</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Exit strategy advisory (block deals, IPO-linked exits)</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Currency risk/hedging</p></div></li>
+</ul>
+</div>
+<div class="mt-6">
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">Target FPI profile</h4>
+<p class="font-body-sm text-on-surface-variant">Offshore funds with India mandates, Family offices (Singapore, Mauritius, UAE, Cayman), Sovereign wealth funds/endowments, Global PE/VC funds.</p>
+</div>
+</div>
+`
+    },
+    credit: {
+        title: 'Credit Papers',
+        desc: 'Lender-ready credit papers for your financing needs.',
+        img: null,
+        body: `
+<h2 class="font-headline-lg text-primary mb-4">Credit Papers</h2>
+<p class="font-body-md text-on-surface-variant mb-8 border-l-2 border-secondary pl-4">Lender-ready credit papers for your financing needs.</p>
+<div class="grid grid-cols-1 gap-6">
+<div>
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">What we offer</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Lender-ready credit papers/IMs</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Financial analysis/credit assessment</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Business model/industry analysis</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Debt servicing/cash flow assessment</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Financial projections</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Identification of lending institutions</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Documentation support</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Coordination with lenders</p></div></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span><div><p class="font-body-sm text-on-surface-variant">Presentation support</p></div></li>
+</ul>
+</div>
+<div class="mt-6">
+<h4 class="font-label-bold text-label-bold text-secondary mb-4 uppercase tracking-wider">Who should use this</h4>
+<p class="font-body-sm text-on-surface-variant">Businesses seeking working/growth capital, Companies approaching banks/NBFCs, Startups raising venture debt, Companies refinancing debt, Businesses seeking structured/private credit.</p>
+</div>
+</div>
+`
+    }
+};
+
+let activeIBPanel = null;
+
+function toggleIBPanel(type) {
+    const grid = document.getElementById('desktop-grid');
+    const panel = document.getElementById('ib-desktop-panel');
+    const content = document.getElementById('ib-desktop-panel-content');
+    const clickedCard = document.getElementById('card-' + type);
+
+    if (activeIBPanel === type) {
+        closeIBPanel();
+        return;
+    }
+
+    content.innerHTML = ibData[type].body;
+
+    const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
+
+    // Clicked card moves to the left of row 1 (order 1) and grows slightly;
+    // the panel fills the rest of row 1 (order 2); every other card drops
+    // below (order 3), shrinking and dimming.
+    cards.forEach(c => {
+        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-60', 'border-secondary', 'shadow-lg', 'scale-105', 'z-10');
+        const desc = c.querySelector('p');
+        if (c === clickedCard) {
+            c.style.order = '1';
+            c.classList.add('h-[440px]', 'border-secondary', 'shadow-lg', 'scale-105', 'z-10');
+            if (desc) desc.classList.remove('hidden');
+        } else {
+            c.style.order = '3';
+            c.classList.add('h-[260px]', 'opacity-60');
+            if (desc) desc.classList.add('hidden');
+        }
+    });
+
+    panel.style.order = '2';
+    panel.classList.remove('hidden');
+    panel.classList.add('animate-fade-in');
+
+    activeIBPanel = type;
+
+    // Every card lands in the same spot once clicked, so we always just
+    // scroll to the same fixed point: the "Capabilities" heading, so it
+    // stays visible above the grid.
+    document.getElementById('ib-capabilities-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closeIBPanel() {
+    const grid = document.getElementById('desktop-grid');
+    const panel = document.getElementById('ib-desktop-panel');
+    const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
+
+    cards.forEach(c => {
+        c.style.order = '';
+        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-secondary', 'shadow-lg', 'scale-105', 'z-10');
+        c.classList.add('h-[400px]');
+        const desc = c.querySelector('p');
+        if (desc) desc.classList.remove('hidden');
+    });
+
+    panel.style.order = '';
+    panel.classList.add('hidden');
+    panel.classList.remove('animate-fade-in');
+    activeIBPanel = null;
+}
+
+function initIBMobileAccordion() {
+    const container = document.getElementById('ib-mobile-accordion');
+    container.innerHTML = Object.keys(ibData).map(key => {
+        const data = ibData[key];
+        const thumb = data.img
+            ? `<img class="w-24 h-24 object-cover flex-shrink-0 self-stretch" src="${data.img}" alt="${data.title}">`
+            : `<div class="w-24 h-24 flex-shrink-0 self-stretch" style="background-color: #0B2A45;"></div>`;
+        return `
+            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden">
+                <div class="flex items-stretch cursor-pointer min-h-24" onclick="toggleIBMobile('${key}')">
+                    ${thumb}
+                    <div class="flex items-center flex-grow min-w-0 gap-2 p-4">
+                        <div class="flex-grow min-w-0">
+                            <h3 class="font-headline-md text-base text-primary truncate">${data.title}</h3>
+                            <p class="text-sm text-on-surface-variant truncate">${data.desc}</p>
+                        </div>
+                        <span class="material-symbols-outlined text-primary flex-shrink-0" id="ib-icon-${key}">add</span>
+                    </div>
+                </div>
+                <div class="hidden px-4 pt-4 pb-6 animate-fade-in border-t border-outline-variant/30" id="ib-content-mobile-${key}">
+                    ${data.body}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+let activeIBMobile = null;
+function toggleIBMobile(type) {
+    if (activeIBMobile === type) {
+        document.getElementById('ib-content-mobile-' + type).classList.add('hidden');
+        document.getElementById('ib-icon-' + type).textContent = 'add';
+        activeIBMobile = null;
+        return;
+    }
+    if (activeIBMobile) {
+        document.getElementById('ib-content-mobile-' + activeIBMobile).classList.add('hidden');
+        document.getElementById('ib-icon-' + activeIBMobile).textContent = 'add';
+    }
+    document.getElementById('ib-content-mobile-' + type).classList.remove('hidden');
+    document.getElementById('ib-icon-' + type).textContent = 'remove';
+    activeIBMobile = type;
+}
+
+initIBMobileAccordion();
+</script></div>
+</div>
+</section>
+<!-- Contact CTA -->
+<section class="bg-primary py-20 px-margin-mobile md:px-margin-desktop text-center">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-surface mb-4">Ready to Navigate Global Capital Markets?</h2>
+<p class="font-body-md text-body-md text-surface-variant max-w-2xl mx-auto mb-8">Speak with our team to discuss how our investment banking expertise can serve your goals.</p>
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary font-cta-text px-8 py-3 rounded shadow-sm hover:bg-primary-dark transition-colors inline-block text-center">Contact Us</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white py-16 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<!-- Brand & QR -->
+<div class="flex flex-col gap-6">
+<div class="w-48">
+<img alt="Rakhecha Finserv" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_AVmSf0lRo81EVepg3eiqO-lK5Ar3-EjOnaJfKxsUlZ6B-wiA9eKAWop0IQxzjjznFEuPMZxnJEIyGwhVUMZ3ipJdSQVqlEtPFg_8tSChHp5j1Y7xRVOSynhxCnwUeYcGcGUJ4GDpVI1dQ-8ETfc4zSszbzI6FKgFc7gZ4uDpqaalTK7BQn8as3HQeQjnBKysdEjAOhdWfoXVICFLJURw44Nri5OJhrk6HVqZc4GAkTNnSGjwKptcxKOkUf7rPX4oGa8"/>
+</div>
+<div class="space-y-4">
+<p class="text-label-bold font-label-bold uppercase tracking-widest">SCAN THIS!</p>
+<div class="w-32 h-32 bg-white p-2 rounded">
+<img alt="QR Code" class="w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI_pd5mBaYFC78HurnIgN_urBGvSGqsYWepPFvBjYnJoInJ1l-4jYjxgkFgjfWWyen_WE0Y7k7dFXhGt1yROHYV9r11r0HeWnigQSJo6E0z2FvVdeoMB55vuji_b3PL_H9WI75HcwMXORKMhYR0nVVTGgswk1nq0jUyg6aU5hciNWZ40AU4VxU4BfhWYqVMwHRXtXihX2kuR-ksW3VYjanfmUssZfM9fD6WgauMX72EYMfS2bdEXTvSQ"/>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Client%20Login%20page.html">Client Login</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Invest Online</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Schedule a Meeting</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="#">Sign Up</a></li>
+</ul>
+</div>
+<!-- Our Services -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Our Services</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="IB.html">Investment Banking</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Wealth%20Management.html">Wealth Management</a></li>
+<li class=""><a class="text-body-md hover:text-gold transition-colors" href="Insurance%20Page.html">Insurance</a></li>
+</ul>
+</div>
+<!-- Get In Touch -->
+<div>
+<h4 class="text-headline-md font-headline-md mb-6">Get In Touch</h4>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-gold" data-icon="location_on">location_on</span>
+<span class="text-body-md">13th Floor (1303) 8, Camac Street Shantiniketan Building, Kolkata - 700071</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="call">call</span>
+<span class="text-body-md">9748976371, 9836233380</span>
+</li>
+<li class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-gold" data-icon="mail">mail</span>
+<span class="text-body-md">customer.service@rakhechafinserv.com</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Compliance & Legal -->
+<div class="border-t border-white/10 pt-12 space-y-8">
+<div class="text-body-sm text-white/70 leading-relaxed">
+<p class="mb-4"><strong>Risk Factors –</strong> Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes. We deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.</p>
+<p class="text-center font-bold">AMFI Registered Mutual Fund Distributor – ARN 305993 | Date of initial registration – 20/08/2024 | Current validity of ARN – 19/08/2027</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 text-body-sm text-white/70">
+<div class="">© Copyright 2024 Rakhecha Finserv. All rights reserved.</div>
+<nav class="flex flex-wrap gap-4 justify-center">
+<a class="hover:text-gold transition-colors" href="#">Disclaimer</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Disclosure</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Privacy Policy</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SID/SAI/KIM</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">Code of Conduct</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">SEBI Circulars</a>
+<span class="">|</span>
+<a class="hover:text-gold transition-colors" href="#">AMFI Risk Factors</a>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
