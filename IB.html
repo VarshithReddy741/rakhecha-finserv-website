@@ -617,7 +617,7 @@ function initIBMobileAccordion() {
             ? `<img class="w-24 h-24 object-cover flex-shrink-0 self-stretch" src="${data.img}" alt="${data.title}">`
             : `<div class="w-24 h-24 flex-shrink-0 self-stretch" style="background-color: #0B2A45;"></div>`;
         return `
-            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden">
+            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden scroll-mt-24" id="ib-card-${key}">
                 <div class="flex items-stretch cursor-pointer min-h-24" onclick="toggleIBMobile('${key}')">
                     ${thumb}
                     <div class="flex items-center flex-grow min-w-0 gap-2 p-4">
@@ -651,6 +651,9 @@ function toggleIBMobile(type) {
     document.getElementById('ib-content-mobile-' + type).classList.remove('hidden');
     document.getElementById('ib-icon-' + type).textContent = 'remove';
     activeIBMobile = type;
+    requestAnimationFrame(function() {
+        document.getElementById('ib-card-' + type).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 }
 
 initIBMobileAccordion();

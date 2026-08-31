@@ -282,7 +282,7 @@ function initMobileAccordion() {
     container.innerHTML = Object.keys(insuranceData).map(key => {
         const data = insuranceData[key];
         return `
-            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden">
+            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden scroll-mt-24" id="insurance-card-${key}">
                 <div class="flex items-stretch cursor-pointer min-h-24" onclick="toggleInsuranceMobile('${key}')">
                     <img class="w-24 h-24 object-cover object-right flex-shrink-0 self-stretch" src="${data.img}" alt="${data.title}">
                     <div class="flex items-center flex-grow min-w-0 gap-2 p-4">
@@ -316,6 +316,9 @@ function toggleInsuranceMobile(type) {
     document.getElementById('insurance-content-mobile-' + type).classList.remove('hidden');
     document.getElementById('insurance-icon-' + type).textContent = 'remove';
     activeInsuranceMobile = type;
+    requestAnimationFrame(function() {
+        document.getElementById('insurance-card-' + type).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 }
 
 initMobileAccordion();

@@ -638,7 +638,7 @@ function initMobileAccordion() {
         const data = wmServiceData[key];
 
         return `
-            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden">
+            <div class="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 overflow-hidden scroll-mt-24" id="wm-card-${key}">
                 <div class="flex items-stretch cursor-pointer min-h-24" onclick="toggleWMMobile('${key}')">
                     <img class="w-24 h-24 object-cover flex-shrink-0 self-stretch" src="${data.img}" alt="${data.title}">
                     <div class="flex items-center flex-grow min-w-0 gap-2 p-4">
@@ -672,6 +672,9 @@ function toggleWMMobile(type) {
     document.getElementById('wm-content-mobile-' + type).classList.remove('hidden');
     document.getElementById('wm-icon-' + type).textContent = 'remove';
     activeWMMobile = type;
+    requestAnimationFrame(function() {
+        document.getElementById('wm-card-' + type).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 }
 
 initMobileAccordion();
