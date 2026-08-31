@@ -31,6 +31,22 @@ function toggleMobileSection(key) {
     activeMobileNavSection = key;
 }
 
+// Close the mobile nav panel whenever a link inside it is tapped. Needed
+// because same-page anchor links (e.g. About Us's "Our Story") don't
+// trigger a full navigation, so without this the panel would stay open
+// on top of the page after it scrolls to the section underneath.
+document.addEventListener('DOMContentLoaded', () => {
+    const panel = document.getElementById('mobile-nav-panel');
+    if (!panel) return;
+    panel.addEventListener('click', (e) => {
+        if (e.target.closest('a')) {
+            panel.classList.add('hidden');
+            const icon = document.getElementById('mobile-nav-icon');
+            if (icon) icon.textContent = 'menu';
+        }
+    });
+});
+
 // Slow auto-scroll for horizontally-scrolling card carousels (.auto-scroll-x).
 // Loops back to the start once it reaches the end. On breakpoints where a
 // carousel becomes a static grid (no overflow), incrementing scrollLeft is
