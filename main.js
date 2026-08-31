@@ -93,3 +93,82 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(step);
     });
 });
+
+// Shared "Our Leadership" founder cards. Single source of truth: edit this
+// data/markup here and every page that calls renderFounderCards() updates.
+const FOUNDER_CARDS = [
+    { alt: 'Dev Piyush Rakhecha', img: 'Dev.png', name: 'Dev Piyush Rakhecha', role: 'Founder &amp; Director', education: 'IIM Raipur' },
+    { alt: 'Nidhhi', img: 'Nidhhi.png', name: 'Nidhhi Rakhecha', role: 'Co-Founder &amp; Director', education: 'IIM Calcutta' },
+    { alt: 'Nitish', img: 'Nitish.png', name: 'Nitish Rakhecha', role: 'Co-Founder &amp; Director', education: 'NMIMS Mumbai' },
+    { alt: 'Megha', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnuFZXYIY7-QqhRA7Ihuxw2pqCYca9Oqm6KtpqE9Mk1RQbysOuPSpSOc10HC5u7byXMrxFrZQ0penwMEFZf99F_Cuo7hsreMn3EqojDcBDcby-ZAGTNQjn4S2xWmJWVNU23kUDKhBnoWn5wjmaAdS7-V2s1u3tlFly6R4kYd-vCdV8WKLeCiK-s5Kf7LH_Juoo-gEHGNJoCB3320t4euzjqB9LJ-A9_cdysDuuDLHRKJwwYd938zIlyw', name: 'Megha Rakhecha', role: 'Director', education: 'XYZ University' }
+];
+
+function founderCardHTML(f) {
+    return `
+<div class="group cursor-pointer rounded-2xl transition-all duration-300 md:hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:z-10 relative shrink-0 w-[85vw] md:w-auto aspect-[4/5] overflow-hidden bg-surface-variant snap-center" onclick="window.location.href='Founder%20Detail%20Page.html'"><div class="relative w-full h-full">
+<img alt="${f.alt}" class="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-110" src="${f.img}">
+<div class="absolute inset-x-0 bottom-0 px-3 pt-2 pb-1.5 group-hover:pb-3 transition-[padding] duration-500 bg-gradient-to-t from-[#1E63A0] from-0% via-[#1E63A0]/90 via-70% to-transparent to-100%">
+<h4 class="font-headline-md font-semibold text-sm md:text-base text-white leading-snug truncate pr-10">${f.name}</h4>
+<div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+<div class="overflow-hidden">
+<p class="text-white/80 text-[10px] md:text-xs uppercase tracking-wide mt-1 pr-32">${f.role}</p>
+<p class="text-white/60 text-[10px] md:text-xs italic mt-1 pr-32">${f.education}</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 z-10 flex items-center gap-1.5 bg-primary group-hover:bg-white rounded-tl-2xl px-2 py-1.5 group-hover:px-4 group-hover:py-2 transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap">
+<span class="max-w-0 group-hover:max-w-[120px] overflow-hidden transition-all duration-300 ease-in-out text-primary font-cta-text text-xs md:text-sm">Read More</span>
+<span class="material-symbols-outlined text-white group-hover:text-primary text-sm md:text-base transition-colors duration-300">arrow_forward</span>
+</div>
+</div></div>`;
+}
+
+function renderFounderCards(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = FOUNDER_CARDS.map(founderCardHTML).join('');
+}
+
+// Shared "Our Mission" / "Our Vision" block. Single source of truth: edit
+// this here and every page that calls renderMissionVision() updates.
+function missionVisionHTML() {
+    return `
+<!-- Mission -->
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-6"><h2 class="font-headline-md text-headline-md uppercase tracking-widest text-primary mb-4">Our Mission</h2><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To simplify complex wealth management by delivering research-driven asset allocation, proactive portfolio adaptation, and transparent client education. We commit to maximizing risk-adjusted returns while fostering a resilient community of informed, financially independent investors.</p></div>
+<div class="flex-1 w-full aspect-[1.5] relative rounded-2xl overflow-hidden shadow-xl">
+<img alt="Premium financial district skyline at dusk representing the firm's vision and global perspective in wealth management." class="w-full h-full object-cover" src="Mission.jpg.avif">
+</div>
+</div>
+<!-- Vision -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="flex-1 space-y-6"><h2 class="font-headline-md text-headline-md uppercase tracking-widest text-primary mb-4">Our Vision</h2><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">To be the most trusted and preferred financial growth partner, empowering families, entrepreneurs, and professionals to achieve lifelong financial security through data-backed, tailored wealth strategies.</p></div>
+<div class="flex-1 w-full aspect-[1.5] relative rounded-2xl overflow-hidden shadow-xl">
+<img alt="Close-up of a professional advisor in a high-touch consultation with a client in a bright, modern office." class="w-full h-full object-cover" src="Vision.jpg.avif">
+</div>
+</div>`;
+}
+
+function renderMissionVision(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = missionVisionHTML();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-founder-cards]').forEach(el => renderFounderCards(el.id));
+    document.querySelectorAll('[data-mission-vision]').forEach(el => renderMissionVision(el.id));
+});
+
+// Arrow buttons for the (manually, not auto-) scrollable founder-card
+// carousels on mobile. Each click scrolls by roughly one card width.
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.founder-scroll-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const target = document.getElementById(btn.dataset.scrollTarget);
+            if (!target) return;
+            const dir = Number(btn.dataset.scrollDir) || 1;
+            target.scrollBy({ left: dir * target.clientWidth * 0.85, behavior: 'smooth' });
+        });
+    });
+});
