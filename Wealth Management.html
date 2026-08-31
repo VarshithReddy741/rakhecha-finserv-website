@@ -83,13 +83,13 @@
 <!-- Main Content -->
 <main class="flex-grow flex flex-col">
 <!-- Hero Section -->
-<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+<section class="relative h-screen min-h-[600px] flex items-center justify-start overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Wealth growth" class="w-full h-full object-cover" src="Wealth%20home%20landscape.jpg"/>
+<img alt="Wealth growth" class="w-full h-full object-cover" src="Wealth%20home%20landscape.png"/>
 </div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="relative z-10 w-full max-w-container-max px-margin-mobile md:px-margin-desktop">
 <h1 class="text-display-lg font-display-lg text-primary mb-6 max-w-4xl">
-                    Helping you build, preserve, and grow your wealth.
+                    Helping you build, preserve,<br/>and grow your wealth.
                 </h1>
 <!--p class="font-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-2xl mb-10">
                     Comprehensive wealth management for discerning individuals, families, and institutions seeking sustained growth and capital preservation.
@@ -107,6 +107,7 @@
 <!-- AIF -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-aif" onclick="toggleWMPanel('aif')">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;Alternate%20Investmetns.jpeg&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Alternative Investment Funds</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Explore investment opportunities beyond traditional markets.</p>
@@ -118,7 +119,8 @@
 </div>
 <!-- PMS -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-pms" onclick="toggleWMPanel('pms')">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AEtjO1VLEOw8v_ld9c6VrpCKerbDTSSNw3G4m1qWUpTf2ImwpXHys2e5lVBApYCVCdqZsN1LP1gSDMtXLshO93Vw8gY-hQ4p4iPlpsTysUto5QevHYPsO_nYzGn76AJ2qWy7VUJ35rnECGxdc3WDAmBb_kaSouP7oWBkHxuRitpCGVsLunLnlRFAEUebx3baIDsR6tj7v6jfyY8sAKbM4RTFjMdliQhYaS07NmiFwpxZnzXeDO7bENP7k8QN1_2L&quot;);"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;PMS.jpeg&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Portfolio Management Services</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Professional portfolio management, tailored to your goals.</p>
@@ -130,7 +132,8 @@
 </div>
 <!-- Bonds -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-bonds" onclick="toggleWMPanel('bonds')">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AEtjO1UoN4zhCha5LBEUlrSf7i6PI_VL805y1bCCi40UryjJGrAMR4hF-uqLVUFI94nbU-GaBhjquX_n8tOdW6McdO1sSqGG4kJ4ql76WOGFaQlZRT74QAFcq7RWOh4OQ3ZRuZ5pDi0hOVeavwqNuhje5C0hfPkcudt76aZJgZOLwdtMz4ThpPGiW08vYcO-IacC6ET1gbl5azIC3eaDk_x-kpzJuVeD7N9Jwaum4mZzHqXY2QV3n5LfInB2J7b7&quot;);"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;Bonds.jpeg&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Bonds</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Predictable Returns. Principal Protection.</p>
@@ -143,6 +146,7 @@
 <!-- Mutual Funds -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-mutual-funds" onclick="toggleWMPanel('mutual-funds')">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;Mutual%20funds.png&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Mutual Funds</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Choose mutual funds that fit your investment goals.</p>
@@ -154,7 +158,8 @@
 </div>
 <!-- Invoice Discounting -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-invoice" onclick="toggleWMPanel('invoice')">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AEtjO1UNb0Sr5rXD9etVYwSOoDsCL2_tUw7J6u0YUw8jknhAD98TEbM__6lB_ZcdIinUHZiKFRmlKHWXvX08UFb_mpstYout_96KlXfH5UfuIwJ2FiNjw3R8qXgWgT__m5gp2zP_iBkennimocEcnHVtmalXtyW5E_kbWI6X5NYa2EPxVKZIFiu9wcdirRBJtmdSxO7vScyVf31Y2TpZelOlmURod7lBSQcho2mVYpRaLm94lLYu5Lh9IApIauvA&quot;);"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;Invoie%20discountig.jpeg&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Invoice Discounting</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Finance the Future. Earn Today.</p>
@@ -167,6 +172,7 @@
 <!-- Venture Capital -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-vc" onclick="toggleWMPanel('vc')">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;Venture%20capital.png&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Venture Capital Funds</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Explore curated opportunities in India's next generation of businesses.</p>
@@ -179,6 +185,7 @@
 <!-- Private Wealth -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-private-wealth" onclick="toggleWMPanel('private-wealth')">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;private%20wealth.jpg&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">Private Wealth</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Holistic wealth advisory for HNIs, UHNIs, and Family Offices.</p>
@@ -191,6 +198,7 @@
 <!-- NRI Services -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-nri-services" onclick="toggleWMPanel('nri-services')">
 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;NRI%20service.jpeg&quot;);"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">NRI Services</h3>
 <p class="font-body-sm text-body-sm text-surface-dim">Bespoke Access to India-Focused Asset Classes for Non-Resident Indians.</p>
@@ -228,7 +236,7 @@
                 </div>
             </div>
         
-            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(&quot;https://lh3.googleusercontent.com/aida/AEtjO1VLEOw8v_ld9c6VrpCKerbDTSSNw3G4m1qWUpTf2ImwpXHys2e5lVBApYCVCdqZsN1LP1gSDMtXLshO93Vw8gY-hQ4p4iPlpsTysUto5QevHYPsO_nYzGn76AJ2qWy7VUJ35rnECGxdc3WDAmBb_kaSouP7oWBkHxuRitpCGVsLunLnlRFAEUebx3baIDsR6tj7v6jfyY8sAKbM4RTFjMdliQhYaS07NmiFwpxZnzXeDO7bENP7k8QN1_2L&quot;); background-size: cover; background-position: center center;">
+            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(&quot;PMS.jpeg&quot;); background-size: cover; background-position: center center;">
                 <div class="flex items-center p-4 gap-4 cursor-pointer" onclick="toggleWMMobile('pms')">
                     <div class="flex-grow">
                         <h3 class="font-headline-md text-lg text-on-primary">Portfolio Management Services (PMS)</h3>
@@ -244,7 +252,7 @@
                 </div>
             </div>
         
-            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(&quot;https://lh3.googleusercontent.com/aida/AEtjO1UoN4zhCha5LBEUlrSf7i6PI_VL805y1bCCi40UryjJGrAMR4hF-uqLVUFI94nbU-GaBhjquX_n8tOdW6McdO1sSqGG4kJ4ql76WOGFaQlZRT74QAFcq7RWOh4OQ3ZRuZ5pDi0hOVeavwqNuhje5C0hfPkcudt76aZJgZOLwdtMz4ThpPGiW08vYcO-IacC6ET1gbl5azIC3eaDk_x-kpzJuVeD7N9Jwaum4mZzHqXY2QV3n5LfInB2J7b7&quot;); background-size: cover; background-position: center center;">
+            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(&quot;Bonds.jpeg&quot;); background-size: cover; background-position: center center;">
                 <div class="flex items-center p-4 gap-4 cursor-pointer" onclick="toggleWMMobile('bonds')">
                     <div class="flex-grow">
                         <h3 class="font-headline-md text-lg text-on-primary">Bonds &amp; Fixed Income</h3>
@@ -276,7 +284,7 @@
                 </div>
             </div>
         
-            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(&quot;https://lh3.googleusercontent.com/aida/AEtjO1UNb0Sr5rXD9etVYwSOoDsCL2_tUw7J6u0YUw8jknhAD98TEbM__6lB_ZcdIinUHZiKFRmlKHWXvX08UFb_mpstYout_96KlXfH5UfuIwJ2FiNjw3R8qXgWgT__m5gp2zP_iBkennimocEcnHVtmalXtyW5E_kbWI6X5NYa2EPxVKZIFiu9wcdirRBJtmdSxO7vScyVf31Y2TpZelOlmURod7lBSQcho2mVYpRaLm94lLYu5Lh9IApIauvA&quot;); background-size: cover; background-position: center center;">
+            <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/30 overflow-hidden" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(&quot;Invoie%20discountig.jpeg&quot;); background-size: cover; background-position: center center;">
                 <div class="flex items-center p-4 gap-4 cursor-pointer" onclick="toggleWMMobile('invoice')">
                     <div class="flex-grow">
                         <h3 class="font-headline-md text-lg text-on-primary">Invoice Discounting</h3>
@@ -401,7 +409,7 @@ const wmServiceData = {
     pms: {
         title: 'Portfolio Management Services (PMS)',
         desc: 'Professional portfolio management, tailored to your goals.',
-        img: 'https://lh3.googleusercontent.com/aida/AEtjO1VLEOw8v_ld9c6VrpCKerbDTSSNw3G4m1qWUpTf2ImwpXHys2e5lVBApYCVCdqZsN1LP1gSDMtXLshO93Vw8gY-hQ4p4iPlpsTysUto5QevHYPsO_nYzGn76AJ2qWy7VUJ35rnECGxdc3WDAmBb_kaSouP7oWBkHxuRitpCGVsLunLnlRFAEUebx3baIDsR6tj7v6jfyY8sAKbM4RTFjMdliQhYaS07NmiFwpxZnzXeDO7bENP7k8QN1_2L',
+        img: 'PMS.jpeg',
         items: [
             { name: 'Equity PMS', desc: 'Direct equity portfolios managed by experts.' },
             { name: 'Multi-Asset PMS', desc: 'Diversified exposure across asset classes.' },
@@ -412,7 +420,7 @@ const wmServiceData = {
     bonds: {
         title: 'Bonds & Fixed Income',
         desc: 'Predictable Returns. Principal Protection.',
-        img: 'https://lh3.googleusercontent.com/aida/AEtjO1UoN4zhCha5LBEUlrSf7i6PI_VL805y1bCCi40UryjJGrAMR4hF-uqLVUFI94nbU-GaBhjquX_n8tOdW6McdO1sSqGG4kJ4ql76WOGFaQlZRT74QAFcq7RWOh4OQ3ZRuZ5pDi0hOVeavwqNuhje5C0hfPkcudt76aZJgZOLwdtMz4ThpPGiW08vYcO-IacC6ET1gbl5azIC3eaDk_x-kpzJuVeD7N9Jwaum4mZzHqXY2QV3n5LfInB2J7b7',
+        img: 'Bonds.jpeg',
         items: [
             { name: 'G-Secs & T-Bills', desc: 'Sovereign backed instruments.' },
             { name: 'Corporate Bonds', desc: 'High-yield NCDs from blue-chip entities.' },
@@ -434,7 +442,7 @@ const wmServiceData = {
     invoice: {
         title: 'Invoice Discounting',
         desc: 'Finance the Future. Earn Today.',
-        img: 'https://lh3.googleusercontent.com/aida/AEtjO1UNb0Sr5rXD9etVYwSOoDsCL2_tUw7J6u0YUw8jknhAD98TEbM__6lB_ZcdIinUHZiKFRmlKHWXvX08UFb_mpstYout_96KlXfH5UfuIwJ2FiNjw3R8qXgWgT__m5gp2zP_iBkennimocEcnHVtmalXtyW5E_kbWI6X5NYa2EPxVKZIFiu9wcdirRBJtmdSxO7vScyVf31Y2TpZelOlmURod7lBSQcho2mVYpRaLm94lLYu5Lh9IApIauvA',
+        img: 'Invoie%20discountig.jpeg',
         items: [
             { name: 'Short-term Yield', desc: '30-120 day investment cycles.' },
             { name: 'Verified Invoices', desc: 'Exposure to blue-chip corporate receivables.' },
