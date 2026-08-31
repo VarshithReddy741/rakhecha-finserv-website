@@ -97,10 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // Shared "Our Leadership" founder cards. Single source of truth: edit this
 // data/markup here and every page that calls renderFounderCards() updates.
 const FOUNDER_CARDS = [
-    { alt: 'Dev Piyush Rakhecha', img: 'Dev.png', name: 'Dev Piyush Rakhecha', role: 'Founder &amp; Director', education: 'IIM Raipur' },
-    { alt: 'Nidhhi', img: 'Nidhhi.png', name: 'Nidhhi Rakhecha', role: 'Co-Founder &amp; Director', education: 'IIM Calcutta' },
-    { alt: 'Nitish', img: 'Nitish.png', name: 'Nitish Rakhecha', role: 'Co-Founder &amp; Director', education: 'NMIMS Mumbai' },
-    { alt: 'Megha', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnuFZXYIY7-QqhRA7Ihuxw2pqCYca9Oqm6KtpqE9Mk1RQbysOuPSpSOc10HC5u7byXMrxFrZQ0penwMEFZf99F_Cuo7hsreMn3EqojDcBDcby-ZAGTNQjn4S2xWmJWVNU23kUDKhBnoWn5wjmaAdS7-V2s1u3tlFly6R4kYd-vCdV8WKLeCiK-s5Kf7LH_Juoo-gEHGNJoCB3320t4euzjqB9LJ-A9_cdysDuuDLHRKJwwYd938zIlyw', name: 'Megha Rakhecha', role: 'Director', education: 'XYZ University' }
+    { alt: 'Dev Piyush Rakhecha', img: 'Dev.png', name: 'Dev Piyush Rakhecha', role: 'Co-Founder, Head of Wealth Management', education: 'MBA, IIM Raipur' },
+    { alt: 'Nidhhi', img: 'Nidhhi.png', name: 'Nidhhi Rakhecha', role: 'Co-Founder, Head of Investment Banking', education: 'MBA, IIM Calcutta' },
+    { alt: 'Nitish', img: 'Nitish.png', name: 'Nitish Rakhecha', role: 'Wealth Management Specialist, Unlisted Shares &amp; HNI Advisory', education: 'MBA, NMIMS Mumbai' },
+    { alt: 'Megha', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnuFZXYIY7-QqhRA7Ihuxw2pqCYca9Oqm6KtpqE9Mk1RQbysOuPSpSOc10HC5u7byXMrxFrZQ0penwMEFZf99F_Cuo7hsreMn3EqojDcBDcby-ZAGTNQjn4S2xWmJWVNU23kUDKhBnoWn5wjmaAdS7-V2s1u3tlFly6R4kYd-vCdV8WKLeCiK-s5Kf7LH_Juoo-gEHGNJoCB3320t4euzjqB9LJ-A9_cdysDuuDLHRKJwwYd938zIlyw', name: 'Megha Rakhecha', role: 'Head of Insurance', education: 'Lady Shriram College, Delhi' }
 ];
 
 function founderCardHTML(f) {
@@ -111,7 +111,7 @@ function founderCardHTML(f) {
 <h4 class="font-headline-md font-semibold text-sm md:text-base text-white leading-snug truncate pr-10">${f.name}</h4>
 <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
 <div class="overflow-hidden">
-<p class="text-white/80 text-[10px] md:text-xs uppercase tracking-wide mt-1 pr-32">${f.role}</p>
+<p class="text-white/80 text-[10px] md:text-xs uppercase tracking-wide mt-1">${f.role}</p>
 <p class="text-white/60 text-[10px] md:text-xs italic mt-1 pr-32">${f.education}</p>
 </div>
 </div>

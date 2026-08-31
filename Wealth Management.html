@@ -83,11 +83,12 @@
 <!-- Main Content -->
 <main class="flex-grow flex flex-col">
 <!-- Hero Section -->
-<section class="relative h-screen min-h-[600px] flex items-center justify-start overflow-hidden">
+<section class="relative h-screen min-h-[600px] flex items-start md:items-center justify-start overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Wealth growth" class="w-full h-full object-cover" src="Wealth%20home%20landscape.png"/>
+<img alt="Wealth growth" class="hidden md:block w-full h-full object-cover" src="Wealth%20home%20landscape.png"/>
+<img alt="Wealth growth" class="md:hidden w-full h-full object-cover object-bottom" src="wealth%20management%20mobile.png"/>
 </div>
-<div class="relative z-10 w-full max-w-container-max px-margin-mobile md:px-margin-desktop">
+<div class="relative z-10 w-full max-w-container-max px-margin-mobile md:px-margin-desktop pt-[28vh] md:pt-0">
 <h1 class="text-display-lg font-display-lg text-primary mb-6 max-w-4xl">
                     Helping you build, preserve,<br/>and grow your wealth.
                 </h1>
@@ -210,7 +211,7 @@
 </div>
 <!-- Desktop Detail Panel: sits beside the clicked card, in the same grid row -->
 <div class="hidden md:col-span-2" id="wm-desktop-panel">
-<div class="bg-white rounded-xl p-8 relative border border-primary-light shadow-xl h-[440px] overflow-y-auto">
+<div class="bg-white rounded-xl p-8 relative border border-primary-light shadow-xl max-h-[80vh] overflow-y-auto">
 <button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary" onclick="closeWMPanel()">
 <span class="material-symbols-outlined">close</span>
 </button>
@@ -347,44 +348,44 @@
                     
             <div class="mt-6 overflow-x-auto border border-outline-variant/30 rounded-lg">
                 <h3 class="font-headline-md text-md p-3 pb-1 text-on-primary">Products Available to NRIs</h3>
-                <table class="w-full text-left border-collapse min-w-[500px]">
+                <table class="w-full text-left border-collapse">
                     <thead class="bg-surface text-on-surface border-b border-outline-variant/30">
                         <tr>
-                            <th class="p-3 text-xs font-bold text-primary">Product</th>
-                            <th class="p-3 text-xs font-bold text-primary">NRI Eligibility</th>
-                            <th class="p-3 text-xs font-bold text-primary">Account Type</th>
+                            <th class="py-3 px-2 text-xs font-bold text-primary">Product</th>
+                            <th class="hidden md:table-cell p-3 text-xs font-bold text-primary">NRI Eligibility</th>
+                            <th class="py-3 px-2 text-xs font-bold text-primary text-right md:text-left whitespace-nowrap">Account Type</th>
                         </tr>
                     </thead>
                     <tbody class="text-xs text-on-surface-variant bg-surface-container-lowest">
                         <tr class="border-b border-outline-variant/30">
-                            <td class="p-3 font-semibold text-primary">Mutual Funds</td>
-                            <td class="p-3">NRIs eligible subject to US/Canada FATCA</td>
-                            <td class="p-3">NRE / NRO / FCNR</td>
+                            <td class="py-3 px-2 font-semibold text-primary">Mutual Funds<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">NRIs eligible subject to US/Canada FATCA</span></div></td>
+                            <td class="hidden md:table-cell p-3">NRIs eligible subject to US/Canada FATCA</td>
+                            <td class="py-3 px-2 text-right md:text-left whitespace-nowrap">NRE / NRO / FCNR</td>
                         </tr>
                         <tr class="border-b border-outline-variant/30">
-                            <td class="p-3 font-semibold text-primary">PMS</td>
-                            <td class="p-3">Fully eligible with SEBI-compliant KYC</td>
-                            <td class="p-3">NRE / NRO</td>
+                            <td class="py-3 px-2 font-semibold text-primary">PMS<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Fully eligible with SEBI-compliant KYC</span></div></td>
+                            <td class="hidden md:table-cell p-3">Fully eligible with SEBI-compliant KYC</td>
+                            <td class="py-3 px-2 text-right md:text-left whitespace-nowrap">NRE / NRO</td>
                         </tr>
                         <tr class="border-b border-outline-variant/30">
-                            <td class="p-3 font-semibold text-primary">AIFs</td>
-                            <td class="p-3">Category II &amp; III open to NRI LPs</td>
-                            <td class="p-3">NRE / NRO (Repat.)</td>
+                            <td class="py-3 px-2 font-semibold text-primary">AIFs<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Category II &amp; III open to NRI LPs</span></div></td>
+                            <td class="hidden md:table-cell p-3">Category II &amp; III open to NRI LPs</td>
+                            <td class="py-3 px-2 text-right md:text-left whitespace-nowrap">NRE / NRO (Repat.)</td>
                         </tr>
                         <tr class="border-b border-outline-variant/30">
-                            <td class="p-3 font-semibold text-primary">Bonds &amp; NCDs</td>
-                            <td class="p-3">Listed bonds eligible; unlisted on case basis</td>
-                            <td class="p-3">NRE / NRO</td>
+                            <td class="py-3 px-2 font-semibold text-primary">Bonds &amp; NCDs<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Listed bonds eligible; unlisted on case basis</span></div></td>
+                            <td class="hidden md:table-cell p-3">Listed bonds eligible; unlisted on case basis</td>
+                            <td class="py-3 px-2 text-right md:text-left whitespace-nowrap">NRE / NRO</td>
                         </tr>
                         <tr class="border-b border-outline-variant/30">
-                            <td class="p-3 font-semibold text-primary">Unlisted / Pre-IPO</td>
-                            <td class="p-3">Eligible under FEMA Sch. II (sectoral caps)</td>
-                            <td class="p-3">NRO (Non-repat.)</td>
+                            <td class="py-3 px-2 font-semibold text-primary">Unlisted / Pre-IPO<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Eligible under FEMA Sch. II (sectoral caps)</span></div></td>
+                            <td class="hidden md:table-cell p-3">Eligible under FEMA Sch. II (sectoral caps)</td>
+                            <td class="py-3 px-2 text-right md:text-left whitespace-nowrap">NRO (Non-repat.)</td>
                         </tr>
                         <tr>
-                            <td class="p-3 font-semibold text-primary">VC Funds</td>
-                            <td class="p-3">Eligible as LPs with AIF Cat I / II reg.</td>
-                            <td class="p-3">NRE / NRO</td>
+                            <td class="py-3 px-2 font-semibold text-primary">VC Funds<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Eligible as LPs with AIF Cat I / II reg.</span></div></td>
+                            <td class="hidden md:table-cell p-3">Eligible as LPs with AIF Cat I / II reg.</td>
+                            <td class="py-3 px-2 text-right md:text-left whitespace-nowrap">NRE / NRO</td>
                         </tr>
                     </tbody>
                 </table>
@@ -489,19 +490,31 @@ let activeWMPanel = null;
 
 function generateWMContent(type) {
     const data = wmServiceData[type];
+    const rows = [];
+    for (let i = 0; i < data.items.length; i += 2) rows.push(data.items.slice(i, i + 2));
     let content = `
-        <h2 class="font-headline-lg text-[34px] leading-[42px] font-bold text-primary mb-6">${data.title}</h2>
-        <p class="font-body-md text-lg text-on-surface-variant mb-8 border-l-2 border-primary-light pl-4">${data.desc}</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            ${data.items.map(item => `
-                <div class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-primary-light mt-1">arrow_circle_right</span>
-                    <div>
-                        <h3 class="font-headline-md text-[20px] font-bold text-primary">${item.name}</h3>
-                        <p class="font-body-sm text-base text-on-surface-variant">${item.desc}</p>
+        <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">${data.title}</h2>
+        <p class="font-body-md text-on-surface-variant mb-8">${data.desc}</p>
+        <hr class="border-outline-variant/30 mb-8">
+        <div class="grid grid-cols-1 gap-6">
+            <div>
+                <h4 class="font-label-bold text-label-bold text-primary-light mb-6 uppercase tracking-wider">Our Services</h4>
+                <div class="divide-y divide-outline-variant/30">
+                    ${rows.map((row, rIdx) => `
+                    <div class="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-outline-variant/30 py-3">
+                        ${row.map((item, cIdx) => `
+                        <div class="flex items-start gap-4${cIdx === 1 ? ' mt-4 md:mt-0 md:pl-8' : ''}">
+                            <span class="font-headline-md text-lg font-bold text-[#C9A84C] w-8 shrink-0">${String(rIdx * 2 + cIdx + 1).padStart(2, '0')}</span>
+                            <div>
+                                <p class="font-label-bold text-primary">${item.name}</p>
+                                <p class="font-body-sm text-on-surface-variant mt-0.5">${item.desc}</p>
+                            </div>
+                        </div>
+                        `).join('')}
                     </div>
+                    `).join('')}
                 </div>
-            `).join('')}
+            </div>
         </div>
     `;
 
@@ -509,44 +522,44 @@ function generateWMContent(type) {
         content += `
         <div class="mt-8 overflow-x-auto border border-outline-variant/30 rounded-lg">
             <h3 class="font-headline-md text-[20px] text-primary p-4 pb-2">Products Available to NRIs</h3>
-            <table class="w-full text-left border-collapse min-w-[600px]">
+            <table class="w-full text-left border-collapse">
                 <thead class="bg-surface text-on-surface border-b border-outline-variant/30">
                     <tr>
-                        <th class="p-4 font-label-bold font-bold text-primary">Product</th>
-                        <th class="p-4 font-label-bold font-bold text-primary">NRI Eligibility</th>
-                        <th class="p-4 font-label-bold font-bold text-primary">Account Type</th>
+                        <th class="py-4 px-3 md:p-4 font-label-bold font-bold text-primary">Product</th>
+                        <th class="hidden md:table-cell p-4 font-label-bold font-bold text-primary">NRI Eligibility</th>
+                        <th class="py-4 px-3 md:p-4 font-label-bold font-bold text-primary text-right md:text-left whitespace-nowrap">Account Type</th>
                     </tr>
                 </thead>
                 <tbody class="text-body-sm text-on-surface-variant bg-surface-container-lowest">
                     <tr class="border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors">
-                        <td class="p-4 font-semibold text-primary">Mutual Funds</td>
-                        <td class="p-4">NRIs eligible subject to US/Canada FATCA restrictions</td>
-                        <td class="p-4">NRE / NRO / FCNR</td>
+                        <td class="py-4 px-3 md:p-4 font-semibold text-primary">Mutual Funds<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">NRIs eligible subject to US/Canada FATCA restrictions</span></div></td>
+                        <td class="hidden md:table-cell p-4">NRIs eligible subject to US/Canada FATCA restrictions</td>
+                        <td class="py-4 px-3 md:p-4 text-right md:text-left whitespace-nowrap">NRE / NRO / FCNR</td>
                     </tr>
                     <tr class="border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors">
-                        <td class="p-4 font-semibold text-primary">PMS</td>
-                        <td class="p-4">Fully eligible with SEBI-compliant KYC</td>
-                        <td class="p-4">NRE / NRO</td>
+                        <td class="py-4 px-3 md:p-4 font-semibold text-primary">PMS<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Fully eligible with SEBI-compliant KYC</span></div></td>
+                        <td class="hidden md:table-cell p-4">Fully eligible with SEBI-compliant KYC</td>
+                        <td class="py-4 px-3 md:p-4 text-right md:text-left whitespace-nowrap">NRE / NRO</td>
                     </tr>
                     <tr class="border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors">
-                        <td class="p-4 font-semibold text-primary">AIFs</td>
-                        <td class="p-4">Category II &amp; III open to NRI LPs</td>
-                        <td class="p-4">NRE / NRO (Repatriable)</td>
+                        <td class="py-4 px-3 md:p-4 font-semibold text-primary">AIFs<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Category II &amp; III open to NRI LPs</span></div></td>
+                        <td class="hidden md:table-cell p-4">Category II &amp; III open to NRI LPs</td>
+                        <td class="py-4 px-3 md:p-4 text-right md:text-left whitespace-nowrap">NRE / NRO (Repatriable)</td>
                     </tr>
                     <tr class="border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors">
-                        <td class="p-4 font-semibold text-primary">Bonds &amp; NCDs</td>
-                        <td class="p-4">Listed bonds fully eligible; unlisted subject to case-by-case</td>
-                        <td class="p-4">NRE / NRO</td>
+                        <td class="py-4 px-3 md:p-4 font-semibold text-primary">Bonds &amp; NCDs<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Listed bonds fully eligible; unlisted subject to case-by-case</span></div></td>
+                        <td class="hidden md:table-cell p-4">Listed bonds fully eligible; unlisted subject to case-by-case</td>
+                        <td class="py-4 px-3 md:p-4 text-right md:text-left whitespace-nowrap">NRE / NRO</td>
                     </tr>
                     <tr class="border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors">
-                        <td class="p-4 font-semibold text-primary">Unlisted / Pre-IPO</td>
-                        <td class="p-4">Eligible under FEMA Schedule II (subject to sectoral caps)</td>
-                        <td class="p-4">NRO (non-repatriable)</td>
+                        <td class="py-4 px-3 md:p-4 font-semibold text-primary">Unlisted / Pre-IPO<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Eligible under FEMA Schedule II (subject to sectoral caps)</span></div></td>
+                        <td class="hidden md:table-cell p-4">Eligible under FEMA Schedule II (subject to sectoral caps)</td>
+                        <td class="py-4 px-3 md:p-4 text-right md:text-left whitespace-nowrap">NRO (non-repatriable)</td>
                     </tr>
                     <tr class="hover:bg-surface-container-low transition-colors">
-                        <td class="p-4 font-semibold text-primary">VC Funds</td>
-                        <td class="p-4">Eligible as LPs with AIF Category I / II registration</td>
-                        <td class="p-4">NRE / NRO</td>
+                        <td class="py-4 px-3 md:p-4 font-semibold text-primary">VC Funds<div class="md:hidden mt-1.5"><span class="inline-block px-2 py-1 bg-surface-variant text-primary-fixed-variant rounded-md font-normal text-[10px] leading-snug">Eligible as LPs with AIF Category I / II registration</span></div></td>
+                        <td class="hidden md:table-cell p-4">Eligible as LPs with AIF Category I / II registration</td>
+                        <td class="py-4 px-3 md:p-4 text-right md:text-left whitespace-nowrap">NRE / NRO</td>
                     </tr>
                 </tbody>
             </table>
@@ -576,15 +589,15 @@ function toggleWMPanel(type) {
     // the panel fills the rest of row 1 (order 2); every other card drops
     // below (order 3), shrinking and dimming.
     cards.forEach(c => {
-        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-80', 'border-primary-light', 'shadow-lg', 'scale-110', 'scale-95', 'z-10');
+        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
         const desc = c.querySelector('p');
         if (c === clickedCard) {
             c.style.order = '1';
-            c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-110', 'z-10');
+            c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
             if (desc) desc.classList.remove('hidden');
         } else {
             c.style.order = '3';
-            c.classList.add('h-[260px]', 'opacity-80');
+            c.classList.add('h-[260px]', 'opacity-60');
             if (desc) desc.classList.add('hidden');
         }
     });
@@ -608,7 +621,7 @@ function closeWMPanel() {
 
     cards.forEach(c => {
         c.style.order = '';
-        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-80', 'border-primary-light', 'shadow-lg', 'scale-110', 'scale-95', 'z-10');
+        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
         c.classList.add('h-[400px]');
         const desc = c.querySelector('p');
         if (desc) desc.classList.remove('hidden');
