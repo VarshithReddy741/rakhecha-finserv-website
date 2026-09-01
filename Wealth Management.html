@@ -102,7 +102,21 @@
 <div class="text-center mb-12 scroll-mt-28" id="wm-capabilities-heading">
 <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Capabilities</h3>
 </div>
-<div class="relative min-h-[600px] w-full" id="wm-interactive-container"><!-- Desktop Grid View -->
+<div class="relative min-h-[600px] w-full" id="wm-interactive-container"><!-- Active card + detail panel: its own isolated grid, separate from
+     desktop-grid below, so its sticky freeze/release is bounded by this
+     row's own content height and never bleeds into the other cards. -->
+<div class="mb-8" id="wm-active-row" style="display:none; gap:1.5rem;">
+<!-- Desktop Detail Panel: sits beside the clicked card, in the same grid row -->
+<div class="hidden md:col-span-2" id="wm-desktop-panel">
+<div class="rounded-xl p-8 relative">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary" onclick="closeWMPanel()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div id="wm-desktop-panel-content"></div>
+</div>
+</div>
+</div>
+<!-- Desktop Grid View -->
 <div class="hidden md:grid md:grid-cols-3 gap-6 mb-8" id="desktop-grid">
 <!-- AIF -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-aif" onclick="toggleWMPanel('aif')">
@@ -201,20 +215,11 @@
 <div class="absolute inset-0 bg-gradient-to-t from-black/75 from-0% to-transparent to-55%"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-end">
 <h3 class="font-headline-md text-[24px] leading-[32px] text-on-primary mb-2">NRI Services</h3>
-<p class="font-body-sm text-body-sm text-surface-dim">Bespoke Access to India-Focused Asset Classes for Non-Resident Indians.</p>
+<p class="font-body-sm text-body-sm text-surface-dim">Invest in India's Growth Story for Non-Resident Indians.</p>
 <div class="absolute bottom-8 right-8 flex items-center gap-2 text-on-primary">
 <span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
 <span class="material-symbols-outlined">arrow_forward</span>
 </div>
-</div>
-</div>
-<!-- Desktop Detail Panel: sits beside the clicked card, in the same grid row -->
-<div class="hidden md:col-span-2" id="wm-desktop-panel">
-<div class="bg-white rounded-xl p-8 relative border border-primary-light shadow-xl max-h-[80vh] overflow-y-auto">
-<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary" onclick="closeWMPanel()">
-<span class="material-symbols-outlined">close</span>
-</button>
-<div id="wm-desktop-panel-content"></div>
 </div>
 </div>
 </div>
@@ -340,7 +345,7 @@
                     <span class="material-symbols-outlined text-on-primary" id="wm-icon-nri-services">add</span>
                 </div>
                 <div class="hidden px-4 pb-6 animate-fade-in bg-surface/90" id="wm-content-mobile-nri-services">
-                    <p class="text-sm text-on-surface-variant mb-4">Bespoke Access to India-Focused Asset Classes.</p>
+                    <p class="text-sm text-on-surface-variant mb-4">Invest in India's Growth Story.</p>
                     <div class="space-y-3">
                         <div class="text-sm"><span class="font-bold text-primary">Repatriation:</span> LRS and FEMA compliance advisory.</div><div class="text-sm"><span class="font-bold text-primary">NRE/NRO Accounts:</span> Banking coordination and setup.</div><div class="text-sm"><span class="font-bold text-primary">DTAA Benefits:</span> Tax optimization for cross-border income.</div><div class="text-sm"><span class="font-bold text-primary">India Desk:</span> Dedicated support for non-resident investors.</div>
                     </div>
@@ -474,7 +479,7 @@ const wmServiceData = {
     },
     'nri-services': {
         title: 'NRI Services',
-        desc: 'Bespoke Access to India-Focused Asset Classes.',
+        desc: "Invest in India's Growth Story.",
         img: 'NRI%20service.jpeg',
         items: [
             { name: 'Repatriation', desc: 'LRS and FEMA compliance advisory.' },
@@ -568,39 +573,69 @@ function generateWMContent(type) {
     return content;
 }
 
+// Remembers where the currently-active card was pulled from in #desktop-grid
+// (the sibling it sat before), so it can be put back in its original spot.
+let wmActiveCardAnchor = null;
+
+function restoreActiveCardToGrid() {
+    const grid = document.getElementById('desktop-grid');
+    const activeRow = document.getElementById('wm-active-row');
+    const activeCard = activeRow.querySelector('[id^="card-"]');
+    if (activeCard) {
+        const anchor = wmActiveCardAnchor && wmActiveCardAnchor.nextSibling;
+        if (anchor && anchor.parentNode === grid) {
+            grid.insertBefore(activeCard, anchor);
+        } else {
+            grid.appendChild(activeCard);
+        }
+    }
+    wmActiveCardAnchor = null;
+}
+
 function toggleWMPanel(type) {
     const grid = document.getElementById('desktop-grid');
+    const activeRow = document.getElementById('wm-active-row');
     const panel = document.getElementById('wm-desktop-panel');
     const content = document.getElementById('wm-desktop-panel-content');
-    const clickedCard = document.getElementById('card-' + type);
 
     if (activeWMPanel === type) {
         closeWMPanel();
         return;
     }
 
+    // Switching directly from one open panel to another: put the previous
+    // card back in the grid before pulling the newly-clicked one out.
+    restoreActiveCardToGrid();
+
+    const clickedCard = document.getElementById('card-' + type);
     content.innerHTML = generateWMContent(type);
 
     const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
 
-    // Clicked card moves to the left of row 1 (order 1) and grows slightly;
-    // the panel fills the rest of row 1 (order 2); every other card drops
-    // below (order 3), shrinking and dimming.
+    // Clicked card grows slightly (ceding attention to its panel);
+    // every other card shrinks and dims to recede.
     cards.forEach(c => {
         c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
         const desc = c.querySelector('p');
         if (c === clickedCard) {
-            c.style.order = '1';
-            c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
+            // Stays pinned in place while the (taller) panel beside it
+            // scrolls past, then scrolls away once the panel's content ends.
+            // #wm-active-row is its own isolated grid — separate from
+            // #desktop-grid below — so its sticky containing block is just
+            // this row, and release never bleeds into the other cards.
+            c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10', 'sticky', 'top-24', 'self-start');
             if (desc) desc.classList.remove('hidden');
         } else {
-            c.style.order = '3';
             c.classList.add('h-[260px]', 'opacity-60');
             if (desc) desc.classList.add('hidden');
         }
     });
 
-    panel.style.order = '2';
+    wmActiveCardAnchor = { nextSibling: clickedCard.nextElementSibling };
+    activeRow.insertBefore(clickedCard, activeRow.firstElementChild);
+    activeRow.style.display = 'grid';
+    activeRow.style.gridTemplateColumns = '0.75fr 1.125fr 1.125fr';
+
     panel.classList.remove('hidden');
     panel.classList.add('animate-fade-in');
 
@@ -614,18 +649,20 @@ function toggleWMPanel(type) {
 
 function closeWMPanel() {
     const grid = document.getElementById('desktop-grid');
+    const activeRow = document.getElementById('wm-active-row');
     const panel = document.getElementById('wm-desktop-panel');
-    const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
 
+    restoreActiveCardToGrid();
+
+    const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
     cards.forEach(c => {
-        c.style.order = '';
-        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
+        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10', 'sticky', 'top-24', 'self-start');
         c.classList.add('h-[400px]');
         const desc = c.querySelector('p');
         if (desc) desc.classList.remove('hidden');
     });
 
-    panel.style.order = '';
+    activeRow.style.display = 'none';
     panel.classList.add('hidden');
     panel.classList.remove('animate-fade-in');
     activeWMPanel = null;

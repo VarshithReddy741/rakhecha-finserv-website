@@ -102,7 +102,21 @@
 <div class="text-center mb-12 scroll-mt-28" id="insurance-capabilities-heading">
 <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Capabilities</h3>
 </div>
-<div class="relative md:min-h-[600px] w-full" id="insurance-interactive-container"><!-- Desktop Grid View -->
+<div class="relative md:min-h-[600px] w-full" id="insurance-interactive-container"><!-- Active card + detail panel: its own isolated grid, separate from
+     desktop-grid below, so its sticky freeze/release is bounded by this
+     row's own content height and never bleeds into the other card. -->
+<div class="mb-8" id="insurance-active-row" style="display:none; gap:1.5rem;">
+<!-- Desktop Detail Panel: sits beside the clicked card, in the same grid row -->
+<div class="hidden md:col-span-2" id="insurance-desktop-panel">
+<div class="rounded-xl p-8 relative">
+<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary" onclick="closeInsurancePanel()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div id="insurance-desktop-panel-content"></div>
+</div>
+</div>
+</div>
+<!-- Desktop Grid View -->
 <div class="hidden md:grid md:grid-cols-2 gap-6 mb-8" id="desktop-grid">
 <!-- Individual -->
 <div class="relative overflow-hidden rounded-xl group h-[400px] border border-outline-variant/30 cursor-pointer transition-all duration-300" id="card-individual" onclick="toggleInsurancePanel('individual')">
@@ -128,15 +142,6 @@
 <span class="opacity-0 group-hover:opacity-100 transition-opacity font-cta-text text-sm">Learn more</span>
 <span class="material-symbols-outlined">arrow_forward</span>
 </div>
-</div>
-</div>
-<!-- Desktop Detail Panel: sits beside the clicked card, in the same grid row -->
-<div class="hidden md:col-span-2" id="insurance-desktop-panel">
-<div class="bg-white rounded-xl p-8 relative border border-primary-light shadow-xl max-h-[80vh] overflow-y-auto">
-<button class="absolute top-6 right-6 text-on-surface-variant hover:text-primary" onclick="closeInsurancePanel()">
-<span class="material-symbols-outlined">close</span>
-</button>
-<div id="insurance-desktop-panel-content"></div>
 </div>
 </div>
 </div>
@@ -207,42 +212,69 @@ function generateInsuranceContent(type) {
     `;
 }
 
+// Remembers where the currently-active card was pulled from in #desktop-grid
+// (the sibling it sat before), so it can be put back in its original spot.
+let insuranceActiveCardAnchor = null;
+
+function restoreActiveCardToGrid() {
+    const grid = document.getElementById('desktop-grid');
+    const activeRow = document.getElementById('insurance-active-row');
+    const activeCard = activeRow.querySelector('[id^="card-"]');
+    if (activeCard) {
+        const anchor = insuranceActiveCardAnchor && insuranceActiveCardAnchor.nextSibling;
+        if (anchor && anchor.parentNode === grid) {
+            grid.insertBefore(activeCard, anchor);
+        } else {
+            grid.appendChild(activeCard);
+        }
+    }
+    insuranceActiveCardAnchor = null;
+}
+
 function toggleInsurancePanel(type) {
     const grid = document.getElementById('desktop-grid');
+    const activeRow = document.getElementById('insurance-active-row');
     const panel = document.getElementById('insurance-desktop-panel');
     const content = document.getElementById('insurance-desktop-panel-content');
-    const clickedCard = document.getElementById('card-' + type);
 
     if (activeInsurancePanel === type) {
         closeInsurancePanel();
         return;
     }
 
-    content.innerHTML = generateInsuranceContent(type);
+    // Switching directly from one open panel to another: put the previous
+    // card back in the grid before pulling the newly-clicked one out.
+    restoreActiveCardToGrid();
 
-    grid.classList.remove('md:grid-cols-2');
-    grid.classList.add('md:grid-cols-3');
+    const clickedCard = document.getElementById('card-' + type);
+    content.innerHTML = generateInsuranceContent(type);
 
     const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
 
-    // Clicked card moves to the left of row 1 (order 1) and grows slightly;
-    // the panel fills the rest of row 1 (order 2); the other card drops
-    // below (order 3), shrinking and dimming.
+    // Clicked card grows slightly (ceding attention to its panel);
+    // the other card shrinks, dims, and stretches full-width to recede.
     cards.forEach(c => {
-        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10', 'md:col-span-3');
+        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10', 'md:col-span-2');
         const desc = c.querySelector('p');
         if (c === clickedCard) {
-            c.style.order = '1';
-            c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
+            // Stays pinned in place while the (taller) panel beside it
+            // scrolls past, then scrolls away once the panel's content ends.
+            // #insurance-active-row is its own isolated grid — separate from
+            // #desktop-grid below — so its sticky containing block is just
+            // this row, and release never bleeds into the other card.
+            c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10', 'sticky', 'top-24', 'self-start');
             if (desc) desc.classList.remove('hidden');
         } else {
-            c.style.order = '3';
-            c.classList.add('h-[260px]', 'opacity-60', 'md:col-span-3');
+            c.classList.add('h-[260px]', 'opacity-60', 'md:col-span-2');
             if (desc) desc.classList.add('hidden');
         }
     });
 
-    panel.style.order = '2';
+    insuranceActiveCardAnchor = { nextSibling: clickedCard.nextElementSibling };
+    activeRow.insertBefore(clickedCard, activeRow.firstElementChild);
+    activeRow.style.display = 'grid';
+    activeRow.style.gridTemplateColumns = '0.75fr 1.125fr 1.125fr';
+
     panel.classList.remove('hidden');
     panel.classList.add('animate-fade-in');
 
@@ -256,21 +288,20 @@ function toggleInsurancePanel(type) {
 
 function closeInsurancePanel() {
     const grid = document.getElementById('desktop-grid');
+    const activeRow = document.getElementById('insurance-active-row');
     const panel = document.getElementById('insurance-desktop-panel');
+
+    restoreActiveCardToGrid();
+
     const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
-
-    grid.classList.remove('md:grid-cols-3');
-    grid.classList.add('md:grid-cols-2');
-
     cards.forEach(c => {
-        c.style.order = '';
-        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10', 'md:col-span-3');
+        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10', 'md:col-span-2', 'sticky', 'top-24', 'self-start');
         c.classList.add('h-[400px]');
         const desc = c.querySelector('p');
         if (desc) desc.classList.remove('hidden');
     });
 
-    panel.style.order = '';
+    activeRow.style.display = 'none';
     panel.classList.add('hidden');
     panel.classList.remove('animate-fade-in');
     activeInsurancePanel = null;
