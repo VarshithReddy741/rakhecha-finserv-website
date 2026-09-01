@@ -17,6 +17,21 @@
             backdrop-filter: blur(10px);
             border: 1px solid #E2E8F0;
         }
+
+        /* Entrance animation for the "Our Businesses" hero card titles,
+           triggered when each card scrolls into view (see main.js). */
+        .hero-card-anim {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .hero-card-anim.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-card-anim-1 { transition-delay: 0.1s; }
+        .hero-card-anim-2 { transition-delay: 0.25s; }
+        .hero-card-anim-3 { transition-delay: 0.4s; }
 </style>
 <link rel="stylesheet" href="theme.css"/>
 </head>
@@ -76,17 +91,17 @@
 </header>
 <script src="main.js"></script>
 <!-- Hero Section -->
-<section class="relative w-full h-screen md:h-[819px] min-h-[600px] flex items-start md:items-center bg-white overflow-hidden">
+<section class="relative w-full h-screen md:h-[819px] min-h-[600px] bg-white overflow-hidden" id="hero-slideshow">
+<div class="hero-track flex w-full h-full transition-transform duration-700 ease-in-out" id="hero-track">
+<!-- Slide 1 -->
+<div class="hero-slide relative w-full h-full flex-shrink-0 flex items-start md:items-center">
 <div class="absolute inset-0 z-0">
 <img alt="Modern glass skyscraper against a clear sky" class="hidden md:block w-full h-full object-cover" src="Homepage%20image%20web.png"/>
 <img alt="Modern glass skyscraper against a clear sky" class="md:hidden w-full h-full object-cover object-bottom" src="Home%20page%20moblie.png"/>
 </div>
 <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-[20vh] md:pt-0">
 <div class="max-w-2xl md:max-w-none">
-<h1 class="text-display-lg font-display-lg text-primary mb-6 leading-tight md:whitespace-nowrap">Invest Today for a Better Tomorrow</h1>
-<!--p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-xl">
-                    Independent, bespoke financial advisory and wealth management for institutions and ultra-high-net-worth individuals. We align our interests exclusively with yours.
-                </p-->
+<h1 class="text-display-lg font-display-lg text-primary mb-6 leading-tight md:whitespace-nowrap">Invest Today for a<br class="md:hidden"/> Better Tomorrow</h1>
 <div class="flex gap-4">
 <a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary px-8 py-3 rounded text-cta-text font-cta-text hover:bg-primary-dark transition-colors duration-300 inline-block text-center">
                         Contact Us
@@ -94,7 +109,110 @@
 </div>
 </div>
 </div>
+</div>
+<!-- Slide 2 -->
+<div class="hero-slide relative w-full h-full flex-shrink-0 flex items-start md:items-center">
+<div class="absolute inset-0 z-0">
+<img alt="NRI investors reviewing India investment opportunities" class="w-full h-full object-cover object-right md:object-center" src="NRI%20services%20web.png"/>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-[20vh] md:pt-0">
+<div class="max-w-2xl md:max-w-none">
+<h1 class="text-display-lg font-display-lg text-primary mb-6 leading-tight">Invest in India's<br class="md:hidden"/> Growth Story</h1>
+<div class="flex gap-4">
+<a href="Contact%20us%20page.html" class="bg-primary text-white border border-secondary px-8 py-3 rounded text-cta-text font-cta-text hover:bg-primary-dark transition-colors duration-300 inline-block text-center">
+                        Contact Us
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide arrows: full opacity on mobile (no hover), revealed on desktop only
+     when the cursor is over that half of the hero (see script below) -->
+<button aria-label="Previous slide" class="hero-arrow opacity-60 md:opacity-0 transition-opacity duration-300 absolute left-4 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-11 h-11 rounded-full bg-primary/70 text-white hover:bg-primary/90" id="hero-prev" type="button">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button aria-label="Next slide" class="hero-arrow opacity-60 md:opacity-0 transition-opacity duration-300 absolute right-4 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-11 h-11 rounded-full bg-primary/70 text-white hover:bg-primary/90" id="hero-next" type="button">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
 </section>
+<script>
+(function() {
+    const section = document.getElementById('hero-slideshow');
+    const track = document.getElementById('hero-track');
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
+
+    // True infinite loop: clone the last slide to the front and the first
+    // slide to the back, so the track can keep sliding the same direction
+    // forever. After a clone finishes its transition into view, we jump
+    // instantly (no transition) to the matching real slide at the other
+    // end, which looks identical to the viewer.
+    const realSlides = Array.from(track.children);
+    const firstClone = realSlides[0].cloneNode(true);
+    const lastClone = realSlides[realSlides.length - 1].cloneNode(true);
+    firstClone.setAttribute('aria-hidden', 'true');
+    lastClone.setAttribute('aria-hidden', 'true');
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, realSlides[0]);
+
+    const slides = Array.from(track.children);
+    const realCount = realSlides.length;
+    let current = 1; // start on the first real slide
+    let timer = null;
+
+    function goTo(index, withTransition) {
+        track.style.transition = withTransition ? '' : 'none';
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        current = index;
+        if (!withTransition) {
+            // Force layout so the next transform change (re-enabling the
+            // transition) doesn't get batched with this jump.
+            void track.offsetWidth;
+            track.style.transition = '';
+        }
+    }
+
+    function next() { goTo(current + 1, true); }
+    function prev() { goTo(current - 1, true); }
+
+    track.addEventListener('transitionend', () => {
+        if (current === slides.length - 1) {
+            goTo(1, false);
+        } else if (current === 0) {
+            goTo(realCount, false);
+        }
+    });
+
+    function startAuto() {
+        clearInterval(timer);
+        timer = setInterval(next, 3000);
+    }
+
+    prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+    nextBtn.addEventListener('click', () => { next(); startAuto(); });
+
+    // Desktop only: reveal the left arrow while hovering the left half of
+    // the hero, and the right arrow while hovering the right half.
+    section.addEventListener('mousemove', (e) => {
+        const rect = section.getBoundingClientRect();
+        const overLeftHalf = (e.clientX - rect.left) < rect.width / 2;
+        prevBtn.classList.toggle('md:opacity-100', overLeftHalf);
+        prevBtn.classList.toggle('md:opacity-0', !overLeftHalf);
+        nextBtn.classList.toggle('md:opacity-100', !overLeftHalf);
+        nextBtn.classList.toggle('md:opacity-0', overLeftHalf);
+    });
+    section.addEventListener('mouseleave', () => {
+        prevBtn.classList.remove('md:opacity-100');
+        prevBtn.classList.add('md:opacity-0');
+        nextBtn.classList.remove('md:opacity-100');
+        nextBtn.classList.add('md:opacity-0');
+    });
+
+    goTo(1, false);
+    startAuto();
+})();
+</script>
 <!-- Stats Strip -->
 <section class="bg-surface py-10">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -140,7 +258,7 @@
 <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.65) 100%);"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-between">
 <div class="space-y-2">
-<h3 class="text-headline-md font-headline-md text-white">Wealth Management</h3>
+<h3 class="text-headline-md font-headline-md text-white hero-card-anim hero-card-anim-1">Wealth Management</h3>
 </div>
 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
 <p class="text-white/90 text-body-md mb-6 max-w-md">Comprehensive Wealth Management solutions to protect and grow your assets.</p>
@@ -156,7 +274,7 @@
 <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.65) 100%);"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-between">
 <div class="space-y-2">
-<h3 class="text-headline-md font-headline-md text-white">Investment Banking</h3>
+<h3 class="text-headline-md font-headline-md text-white hero-card-anim hero-card-anim-2">Investment Banking</h3>
 </div>
 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
 <p class="text-white/90 text-body-md mb-6 max-w-md">Strategic advisory for mergers, acquisitions, and capital raising, delivering bespoke solutions for complex corporate transactions.</p>
@@ -172,7 +290,7 @@
 <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.65) 100%);"></div>
 <div class="absolute inset-0 p-8 flex flex-col justify-between">
 <div class="space-y-2">
-<h3 class="text-headline-md font-headline-md text-white">Insurance</h3>
+<h3 class="text-headline-md font-headline-md text-white hero-card-anim hero-card-anim-3">Insurance</h3>
 </div>
 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
 <p class="text-white/90 text-body-md mb-6 max-w-md">Insurance solutions designed to protect your assets and provide peace of mind.</p>
@@ -191,7 +309,7 @@
 <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.65) 100%);"></div>
 <div class="absolute inset-0 p-6 flex flex-col justify-between">
 <div class="space-y-2">
-<h3 class="text-headline-md font-headline-md text-white">Wealth Management</h3>
+<h3 class="text-headline-md font-headline-md text-white hero-card-anim hero-card-anim-1">Wealth Management</h3>
 </div>
 <div>
 <p class="text-white/90 text-body-sm mb-4">Comprehensive wealth structuring and portfolio management tailored to generational wealth preservation.</p>
@@ -207,7 +325,7 @@
 <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.65) 100%);"></div>
 <div class="absolute inset-0 p-6 flex flex-col justify-between">
 <div class="space-y-2">
-<h3 class="text-headline-md font-headline-md text-white">Investment Banking</h3>
+<h3 class="text-headline-md font-headline-md text-white hero-card-anim hero-card-anim-2">Investment Banking</h3>
 </div>
 <div>
 <p class="text-white/90 text-body-sm mb-4">Strategic advisory for mergers, acquisitions, and capital raising for complex corporate transactions.</p>
@@ -223,7 +341,7 @@
 <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.65) 100%);"></div>
 <div class="absolute inset-0 p-6 flex flex-col justify-between">
 <div class="space-y-2">
-<h3 class="text-headline-md font-headline-md text-white">Insurance</h3>
+<h3 class="text-headline-md font-headline-md text-white hero-card-anim hero-card-anim-3">Insurance</h3>
 </div>
 <div>
 <p class="text-white/90 text-body-sm mb-4">Comprehensive insurance solutions designed to protect your assets and provide peace of mind.</p>

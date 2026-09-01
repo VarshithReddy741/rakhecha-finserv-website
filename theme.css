@@ -17,6 +17,16 @@
     box-shadow: 0 4px 24px rgba(18, 59, 93, 0.04);
 }
 
+/* Smooth scroll hand-off for nested scrollable boxes (service detail
+   panels, mobile nav panel, scrollable tables, etc.) — without this,
+   iOS Safari scrolls these in a choppy, non-momentum way and doesn't
+   hand off cleanly to the page scroll once the box's content ends. */
+.overflow-y-auto,
+.overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: auto;
+}
+
 /* ==========================================================================
    Typography system — Public Sans, matched to the Spark Capital scale.
    Font family/base sizes live in tailwind-config.js; the responsive and

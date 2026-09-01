@@ -21,6 +21,39 @@
         .animate-fade-in {
             animation: fadeIn 0.4s ease-out forwards;
         }
+
+        /* Extra elevation for the Fundraising detail panel, so it reads as
+           a distinct, raised surface rather than blending into the page. */
+        .panel-pop {
+            box-shadow: 0 2px 8px rgba(18, 59, 93, 0.06), 0 24px 48px -12px rgba(18, 59, 93, 0.28) !important;
+        }
+
+        /* Staggered entrance for the Fundraising panel's text sections. */
+        .fund-anim {
+            opacity: 0;
+            transform: translateY(36px) scale(0.97);
+            filter: blur(4px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fund-anim.in-view {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+        .fund-anim-1 { transition-delay: 0.05s; }
+        .fund-anim-2 { transition-delay: 0.2s; }
+        .fund-anim-3 { transition-delay: 0.35s; }
+        .fund-anim-4 { transition-delay: 0.5s; }
+
+        /* Subtle hover highlight for individual service / audience points. */
+        .fund-point {
+            transition: background-color 0.2s ease-out;
+        }
+        .fund-point:hover {
+            background-color: rgba(43, 88, 122, 0.06);
+        }
 </style>
 <link rel="stylesheet" href="theme.css"/>
 </head>
@@ -214,40 +247,29 @@ const ibData = {
         desc: 'Strategic capital structuring across Equity &amp; Debt markets.',
         img: 'fundraising.jpg',
         body: `
-<h2 class="font-headline-lg text-4xl md:text-5xl font-bold text-primary mb-4">Fundraising</h2>
-<p class="font-body-md text-on-surface-variant mb-3">We advise startups, growth-stage companies, and established businesses in raising capital across equity, quasi-equity, and structured debt instruments. Our end-to-end fundraising mandate covers everything from pitch preparation to investor outreach, term sheet negotiation, and deal closure.</p>
-<hr class="border-outline-variant/30 mb-8">
-<div class="grid grid-cols-1 gap-6">
-<div>
-<h4 class="font-label-bold text-base font-bold text-primary-light mb-6 uppercase tracking-wider">Our Services</h4>
-<div class="divide-y divide-outline-variant/30">
-<div class="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-outline-variant/30 py-3">
-<div class="flex items-start gap-4"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><div><p class="font-label-bold text-primary">Equity fundraising</p><p class="font-body-sm text-on-surface-variant mt-0.5">Seed, Series A to E, Pre-IPO</p></div></div>
-<div class="flex items-start gap-4 mt-4 md:mt-0 md:pl-8"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><div><p class="font-label-bold text-primary">Debt fundraising</p><p class="font-body-sm text-on-surface-variant mt-0.5">NCDs, venture debt, structured finance</p></div></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-outline-variant/30 py-3">
-<div class="flex items-start gap-4"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><p class="font-label-bold text-primary">Strategic investor identification</p></div>
-<div class="flex items-start gap-4 mt-4 md:mt-0 md:pl-8"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><p class="font-label-bold text-primary">Business plan &amp; financial model review</p></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-outline-variant/30 py-3">
-<div class="flex items-start gap-4"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><p class="font-label-bold text-primary">Investor deck &amp; data room preparation</p></div>
-<div class="flex items-start gap-4 mt-4 md:mt-0 md:pl-8"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><p class="font-label-bold text-primary">Term sheet review</p></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-outline-variant/30 py-3">
-<div class="flex items-start gap-4"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><p class="font-label-bold text-primary">Post-deal IR support</p></div>
-<div class="flex items-start gap-4 mt-4 md:mt-0 md:pl-8"><svg class="w-5 h-5 text-yellow-500 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0 L14.5 9.5 L24 12 L14.5 14.5 L12 24 L9.5 14.5 L0 12 L9.5 9.5 Z"/></svg><p class="font-label-bold text-primary">Credit paper preparation</p></div>
+<h2 class="fund-anim fund-anim-1 font-headline-lg text-4xl md:text-5xl font-bold text-primary mb-5">Fundraising</h2>
+<p class="fund-anim fund-anim-2 font-body-md text-on-surface-variant max-w-2xl leading-relaxed mb-12">We advise startups, growth-stage companies, and established businesses in raising capital across equity, quasi-equity, and structured debt instruments. Our end-to-end fundraising mandate covers everything from pitch preparation to investor outreach, term sheet negotiation, and deal closure.</p>
+<div class="fund-anim fund-anim-3">
+<h4 class="font-label-bold text-base font-bold text-primary-light mb-8 uppercase tracking-wider">Our Services</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Equity fundraising</p><p class="font-body-sm text-on-surface-variant mt-0.5">Seed, Series A to E, Pre-IPO</p></div>
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Debt fundraising</p><p class="font-body-sm text-on-surface-variant mt-0.5">NCDs, venture debt, structured finance</p></div>
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Strategic investor identification</p></div>
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Business plan &amp; financial model review</p></div>
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Investor deck &amp; data room preparation</p></div>
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Term sheet review</p></div>
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Post-deal IR support</p></div>
+<div class="fund-point rounded-lg -mx-3 px-3 py-2"><p class="font-label-bold text-primary">Credit paper preparation</p></div>
 </div>
 </div>
-</div>
-<div class="mt-6">
-<h4 class="font-label-bold text-base font-bold text-primary mb-4 uppercase tracking-wider">Who should use this</h4>
-<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-light mt-1">arrow_circle_right</span><p class="font-body-sm text-on-surface-variant">Startups seeking capital</p></li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-light mt-1">arrow_circle_right</span><p class="font-body-sm text-on-surface-variant">Growth-stage companies planning expansion</p></li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-light mt-1">arrow_circle_right</span><p class="font-body-sm text-on-surface-variant">Promoters looking for PE/VC</p></li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-light mt-1">arrow_circle_right</span><p class="font-body-sm text-on-surface-variant">Companies preparing to go public</p></li>
+<div class="fund-anim fund-anim-4 mt-14 pt-8 border-t border-primary-light/15">
+<h4 class="font-label-bold text-base font-bold text-primary-light mb-6 uppercase tracking-wider">Who should use this</h4>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+<li class="fund-point flex items-start gap-3.5 rounded-lg -mx-3 px-3 py-2"><span class="mt-2 w-1 h-1 rounded-full bg-primary-light/50 flex-shrink-0"></span><p class="font-body-sm text-on-surface-variant">Startups seeking capital</p></li>
+<li class="fund-point flex items-start gap-3.5 rounded-lg -mx-3 px-3 py-2"><span class="mt-2 w-1 h-1 rounded-full bg-primary-light/50 flex-shrink-0"></span><p class="font-body-sm text-on-surface-variant">Growth-stage companies planning expansion</p></li>
+<li class="fund-point flex items-start gap-3.5 rounded-lg -mx-3 px-3 py-2"><span class="mt-2 w-1 h-1 rounded-full bg-primary-light/50 flex-shrink-0"></span><p class="font-body-sm text-on-surface-variant">Promoters looking for PE/VC</p></li>
+<li class="fund-point flex items-start gap-3.5 rounded-lg -mx-3 px-3 py-2"><span class="mt-2 w-1 h-1 rounded-full bg-primary-light/50 flex-shrink-0"></span><p class="font-body-sm text-on-surface-variant">Companies preparing to go public</p></li>
 </ul>
-</div>
 </div>
 `
     },
@@ -448,7 +470,7 @@ const ibData = {
 </div>
 <p class="font-body-sm text-on-surface-variant italic text-xs mt-3">Pricing and availability are dynamic and subject to frequent change; contact us for the latest inventory and indicative pricing.</p>
 </div>
-<div class="mt-6"><h4 class="font-label-bold text-base font-bold text-primary mb-4 uppercase tracking-wider">Ecosystem Support &amp; Exit Solutions</h4>
+<div class="mt-6 bg-secondary-fixed rounded-xl p-6"><h4 class="font-label-bold text-base font-bold text-primary mb-4 uppercase tracking-wider">Ecosystem Support &amp; Exit Solutions</h4>
 <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-light mt-1">arrow_circle_right</span><p class="font-body-sm text-on-surface-variant">Cap table clearance for founders</p></li>
 <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary-light mt-1">arrow_circle_right</span><p class="font-body-sm text-on-surface-variant">Exit facilitation for angel investors looking to monetize early-stage positions</p></li>
@@ -546,6 +568,22 @@ const ibData = {
 
 let activeIBPanel = null;
 
+// Plays the staggered fade/slide-up entrance for a panel's .fund-anim
+// sections. Needs a forced reflow between setting the initial (hidden)
+// styles and adding "in-view", otherwise the browser collapses the two
+// states into one and no transition plays.
+function triggerFundAnim(root) {
+    const els = root.querySelectorAll('.fund-anim');
+    if (!els.length) return;
+    els.forEach(el => el.classList.remove('in-view'));
+    void root.offsetWidth;
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            els.forEach(el => el.classList.add('in-view'));
+        });
+    });
+}
+
 function toggleIBPanel(type) {
     const grid = document.getElementById('desktop-grid');
     const panel = document.getElementById('ib-desktop-panel');
@@ -561,15 +599,20 @@ function toggleIBPanel(type) {
 
     const cards = Array.from(grid.children).filter(el => el.id && el.id.startsWith('card-'));
 
-    // Clicked card moves to the left of row 1 (order 1) and grows slightly;
-    // the panel fills the rest of row 1 (order 2); every other card drops
-    // below (order 3), shrinking and dimming.
+    // Clicked card moves to the left of row 1 (order 1) and grows slightly
+    // (Fundraising instead shrinks to 75% size, ceding attention to its
+    // panel); the panel fills the rest of row 1 (order 2); every other
+    // card drops below (order 3), shrinking and dimming.
     cards.forEach(c => {
-        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
+        c.classList.remove('h-[400px]', 'h-[440px]', 'h-[300px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
         const desc = c.querySelector('p');
         if (c === clickedCard) {
             c.style.order = '1';
-            c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
+            if (type === 'fundraising') {
+                c.classList.add('h-[300px]', 'border-primary-light', 'shadow-lg', 'z-10');
+            } else {
+                c.classList.add('h-[440px]', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
+            }
             if (desc) desc.classList.remove('hidden');
         } else {
             c.style.order = '3';
@@ -578,9 +621,25 @@ function toggleIBPanel(type) {
         }
     });
 
+    // Fundraising's clicked card actually shrinks its grid track (rather
+    // than just its own box), so the panel's column genuinely starts right
+    // where the card now ends and widens to fill the reclaimed space.
+    grid.style.gridTemplateColumns = type === 'fundraising' ? '0.75fr 1.125fr 1.125fr' : '';
+
     panel.style.order = '2';
     panel.classList.remove('hidden');
     panel.classList.add('animate-fade-in');
+
+    const panelBox = panel.querySelector(':scope > div');
+    panelBox.classList.remove('bg-white', 'bg-surface-blue', 'bg-surface-yellow-light', 'panel-pop');
+    if (type === 'fundraising') {
+        panelBox.classList.add('bg-surface-blue', 'panel-pop');
+        triggerFundAnim(panelBox);
+    } else if (type === 'secondary') {
+        panelBox.classList.add('bg-surface-yellow-light');
+    } else {
+        panelBox.classList.add('bg-white');
+    }
 
     activeIBPanel = type;
 
@@ -597,12 +656,13 @@ function closeIBPanel() {
 
     cards.forEach(c => {
         c.style.order = '';
-        c.classList.remove('h-[440px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
+        c.classList.remove('h-[440px]', 'h-[300px]', 'h-[260px]', 'opacity-60', 'border-primary-light', 'shadow-lg', 'scale-105', 'z-10');
         c.classList.add('h-[400px]');
         const desc = c.querySelector('p');
         if (desc) desc.classList.remove('hidden');
     });
 
+    grid.style.gridTemplateColumns = '';
     panel.style.order = '';
     panel.classList.add('hidden');
     panel.classList.remove('animate-fade-in');
@@ -628,7 +688,7 @@ function initIBMobileAccordion() {
                         <span class="material-symbols-outlined text-primary flex-shrink-0" id="ib-icon-${key}">add</span>
                     </div>
                 </div>
-                <div class="hidden px-4 pt-4 pb-6 animate-fade-in border-t border-outline-variant/30" id="ib-content-mobile-${key}">
+                <div class="hidden px-4 pt-4 pb-6 animate-fade-in ${key === 'fundraising' ? 'bg-surface-blue panel-pop rounded-b-2xl' : key === 'secondary' ? 'bg-surface-yellow-light border-t border-outline-variant/30' : 'border-t border-outline-variant/30'}" id="ib-content-mobile-${key}">
                     ${data.body}
                 </div>
             </div>
@@ -653,6 +713,9 @@ function toggleIBMobile(type) {
         document.getElementById('ib-content-mobile-' + type).classList.remove('hidden');
         document.getElementById('ib-icon-' + type).textContent = 'remove';
         activeIBMobile = type;
+        if (type === 'fundraising') {
+            triggerFundAnim(document.getElementById('ib-content-mobile-' + type));
+        }
     }
 
     const afterY = header.getBoundingClientRect().top;
@@ -671,7 +734,7 @@ initIBMobileAccordion();
 <h2 class="font-headline-lg text-headline-lg mb-2">Ready to Navigate Global Capital Markets?</h2>
 <p class="font-body-md text-body-md text-primary-fixed opacity-90">Speak with our team to discuss how our investment banking expertise can serve your goals.</p>
 </div>
-<a href="Contact%20us%20page.html" class="bg-secondary-container text-on-secondary-container font-cta-text text-cta-text px-6 py-3 rounded-lg hover:bg-secondary-fixed transition-colors whitespace-nowrap inline-block text-center">Contact Us</a>
+<a href="Contact%20us%20page.html" class="bg-secondary-fixed text-on-secondary-fixed font-cta-text text-cta-text px-6 py-3 rounded-lg hover:bg-secondary-fixed-dim transition-colors whitespace-nowrap inline-block text-center">Contact Us</a>
 </div>
 </div>
 </section>

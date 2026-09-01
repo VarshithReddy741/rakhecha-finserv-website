@@ -188,3 +188,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Reveal-on-scroll: any element with class "hero-card-anim" (see the
+// Home Page "Our Businesses" cards) fades/slides in the first time it
+// enters the viewport, rather than animating immediately on page load
+// where it'd likely be missed if the element starts below the fold.
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.hero-card-anim');
+    if (!targets.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('in-view'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    targets.forEach(el => observer.observe(el));
+});
